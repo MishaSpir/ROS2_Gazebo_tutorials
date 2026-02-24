@@ -1,0 +1,55 @@
+[0.057s] Invoking command in '/home/misha/Documents/navigation_ws/build/robot_odometry': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/misha/Documents/navigation_ws/src/robot_odometry -DCMAKE_INSTALL_PREFIX=/home/misha/Documents/navigation_ws/install/robot_odometry
+[0.240s] -- The C compiler identification is GNU 11.4.0
+[0.423s] -- The CXX compiler identification is GNU 11.4.0
+[0.442s] -- Detecting C compiler ABI info
+[0.571s] -- Detecting C compiler ABI info - done
+[0.589s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.589s] -- Detecting C compile features
+[0.590s] -- Detecting C compile features - done
+[0.597s] -- Detecting CXX compiler ABI info
+[0.777s] -- Detecting CXX compiler ABI info - done
+[0.792s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.792s] -- Detecting CXX compile features
+[0.793s] -- Detecting CXX compile features - done
+[0.800s] -- Found ament_cmake: 1.3.13 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.117s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.322s] -- Found rclcpp: 16.0.18 (/opt/ros/humble/share/rclcpp/cmake)
+[1.412s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.424s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.448s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.481s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.528s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.624s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.629s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.786s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.842s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.926s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.946s] -- Looking for pthread.h
+[2.077s] -- Looking for pthread.h - found
+[2.079s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.208s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[2.211s] -- Found Threads: TRUE  
+[2.347s] -- Found nav_msgs: 4.9.1 (/opt/ros/humble/share/nav_msgs/cmake)
+[2.416s] -- Found sensor_msgs: 4.9.1 (/opt/ros/humble/share/sensor_msgs/cmake)
+[2.453s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.617s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.617s] -- Configured cppcheck include dirs: 
+[2.617s] -- Configured cppcheck exclude dirs and/or files: 
+[2.619s] -- Added test 'lint_cmake' to check CMake code style
+[2.622s] -- Added test 'uncrustify' to check C / C++ code style
+[2.622s] -- Configured uncrustify additional arguments: 
+[2.623s] -- Added test 'xmllint' to check XML markup files
+[2.629s] -- Configuring done
+[2.656s] -- Generating done
+[2.667s] -- Build files have been written to: /home/misha/Documents/navigation_ws/build/robot_odometry
+[2.691s] Invoked command in '/home/misha/Documents/navigation_ws/build/robot_odometry' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/misha/Documents/navigation_ws/src/robot_odometry -DCMAKE_INSTALL_PREFIX=/home/misha/Documents/navigation_ws/install/robot_odometry
+[2.694s] Invoking command in '/home/misha/Documents/navigation_ws/build/robot_odometry': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/misha/Documents/navigation_ws/build/robot_odometry -- -j8 -l8
+[2.789s] [ 50%] [32mBuilding CXX object CMakeFiles/robot_odometry_node.dir/src/robot_odometry_node.cpp.o[0m
+[3.291s] [01m[K/home/misha/Documents/navigation_ws/src/robot_odometry/src/robot_odometry_node.cpp:4:10:[m[K [01;31m[Kfatal error: [m[Ktf2_ros/transform_broadcaster.h: No such file or directory
+[3.291s]     4 | #include [01;31m[K<tf2_ros/transform_broadcaster.h>[m[K // для созданние публикатора трансформации
+[3.291s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.291s] compilation terminated.
+[3.295s] gmake[2]: *** [CMakeFiles/robot_odometry_node.dir/build.make:76: CMakeFiles/robot_odometry_node.dir/src/robot_odometry_node.cpp.o] Error 1
+[3.296s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/robot_odometry_node.dir/all] Error 2
+[3.297s] gmake: *** [Makefile:146: all] Error 2
+[3.300s] Invoked command in '/home/misha/Documents/navigation_ws/build/robot_odometry' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/misha/Documents/navigation_ws/build/robot_odometry -- -j8 -l8

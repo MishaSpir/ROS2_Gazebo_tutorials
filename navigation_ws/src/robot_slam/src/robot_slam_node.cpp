@@ -52,12 +52,48 @@ public:
             return Eigen::Matrix4f::Identity();
         }
 
+        // ВЫполнение ICP
+        pcl::GeneralizedIterativeClosestPoint<pcl::PointXYZRGB, pcl::PointXYZRGB> icp;
+        icp.setInputSource(prev_cloud);  // Источник — предыдущее (накопленное) облако
+        icp.setInputTarget(cloud);  // Цель — текущее облако
+        icp.setMaximumIterations(100);   // Максимальное количество итераций
+        icp.setEuclideanFitnessEpsilon(1e-6); // Критерий сходимости по ошибке
+        icp.setMaxCorrespondenceDistance(0.5); // Макс. дистанция соответствия точек
+        pcl::PointCloud<pcl::PointXYZRGB>::Ptr output(new pcl::PointCloud<pcl::PointXYZRGB>);
+
+        // Запуск ICP с начальным приближением от одометрии (odom_tf)
+        icp.align(*output, odom_tf);
+        fitnessScore = icp.getFitnessScore();  // Получение метрики качества совпадения
+        std::cout<<"Fitness score: "<<fitnessScore<<std::endl;  // Вывод в терминал
+
+        // Накопление глобальной трансформации: умножаем на обратную трансформацию ICP
+        global_transformation = global_transformation * icp.getFinalTransformation().inverse();
+        std::cout<<"Global transformation"<<std::endl<<global_transformation<<std::endl;
+
+
         // Обновление предыдущего облака в зависимости от режима
         if (mode == MatcherMode::Pairwise) {
             // Режим Pairwise: просто заменяем предыдущее облако на текущее
             prev_cloud = cloud;
         }
         else if(mode == MatcherMode::Multiscan){
+            // Режим Multiscan: трансформируем накопленное облако по найденной трансформации
+            pcl::transformPointCloud(*prev_cloud, *prev_cloud, icp.getFinalTransformation());
+            *prev_cloud += *cloud;  // Добавляем текущий скан к накопленному облаку
+
+            // ФИЛЬТР1 - Фильтрация вокселями (уменьшение плотности облака для производительности)
+            pcl::VoxelGrid<pcl::PointXYZRGB> vox;
+            vox.setInputCloud(prev_cloud);
+            float leaf = 0.1f; // 4 см
+            vox.setLeafSize(leaf, leaf, leaf);  // Размер ячейки воксельной сетки (м)
+            vox.filter (*prev_cloud);
+
+            // ФИЛЬТР2 - Удаление статистических выбросов (шумовые точки)
+            pcl::StatisticalOutlierRemoval<pcl::PointXYZRGB> sor;
+            sor.setInputCloud(prev_cloud);
+            sor.setMeanK(30);  // Количество соседей для анализа
+            sor.setStddevMulThresh(1.5);  // Порог в стандартных отклонениях
+            sor.filter(*prev_cloud);
 
         }
 
@@ -148,9 +184,9 @@ public:
                       this, std::placeholders::_1));
         tf_broadcaster = std::make_unique<tf2_ros::TransformBroadcaster>(this); // Широковещатель трансформации
         
-        sm.setMode(MatcherMode::Pairwise); // Установка режима накопления карты
+        sm.setMode(MatcherMode::Multiscan); // Установка режима накопления карты
         // Таймер на 1 секунду — основной цикл обработки
-        timer = this->create_wall_timer(1000ms, std::bind(&RobotSlam::timer_callback, this));
+        timer = this->create_wall_timer(400ms, std::bind(&RobotSlam::timer_callback, this));
     }
 
     void scanCallback(const sensor_msgs::msg::LaserScan &scan) {

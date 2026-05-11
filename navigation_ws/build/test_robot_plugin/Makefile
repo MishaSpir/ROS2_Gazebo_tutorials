@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/misha/Documents/navigation_ws/src/test_robot_plugin
+CMAKE_SOURCE_DIR = /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/test_robot_plugin
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/misha/Documents/navigation_ws/build/test_robot_plugin
+CMAKE_BINARY_DIR = /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/test_robot_plugin
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,9 +142,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/misha/Documents/navigation_ws/build/test_robot_plugin/CMakeFiles /home/misha/Documents/navigation_ws/build/test_robot_plugin//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/test_robot_plugin/CMakeFiles /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/test_robot_plugin//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/misha/Documents/navigation_ws/build/test_robot_plugin/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/test_robot_plugin/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

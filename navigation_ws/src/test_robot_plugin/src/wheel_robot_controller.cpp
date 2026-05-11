@@ -16,7 +16,7 @@ public:
         // Инициализация ROS 2 узла, который взаимод с РОС в рамках плагина газебо
         node = gazebo_ros::Node::Get(sdf);
 
-        joint_right = model->GetJoint("right_wheel_joint");
+        joint_right = model->GetJoint("right_wheel_joint");//указатели на объекты
         joint_left = model->GetJoint("left_wheel_joint");
 
         if(!joint_right || !joint_left){
@@ -38,7 +38,7 @@ private:
     // ROS 2 узел
     gazebo_ros::Node::SharedPtr node;
 
-    // Сочленения колёс
+    // Сочленения колёс указатели на объекты
     gazebo::physics::JointPtr joint_right, joint_left;
 
     // Подписчик на команды скорости

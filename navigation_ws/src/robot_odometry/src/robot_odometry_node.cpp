@@ -1,10 +1,11 @@
 #include <rclcpp/rclcpp.hpp>
 #include <nav_msgs/msg/odometry.hpp>
-#include <sensor_msgs//msg/joint_state.hpp>
+#include <sensor_msgs/msg/joint_state.hpp>
 #include <tf2_ros/transform_broadcaster.h> // для созданние публикатора трансформации
 #include <geometry_msgs/msg/transform_stamped.hpp>
 #include <tf2/LinearMath/Quaternion.h>
 #include <Eigen/Dense> // для матриц
+
 
 
 using namespace std::chrono_literals;
@@ -82,6 +83,9 @@ class RobotOdometry : public rclcpp::Node
         // Находим разницу
         double delta_encoder_left = encoder_left_current - encoder_left_prev;
         double delta_encoder_right = encoder_right_current - encoder_right_prev;
+        encoder_left_prev = encoder_left_current;
+        encoder_right_prev = encoder_right_current;
+
 
         // Расчёт изменений расстояния для каждого колеса
         double delta_s_l = delta_encoder_left * wheel_radius;
@@ -116,9 +120,6 @@ class RobotOdometry : public rclcpp::Node
         publishOdom(dt, delta_s,delta_tetha);
         publishTF();
 
-        // ???
-        encoder_left_prev = encoder_left_current;
-        encoder_right_prev = encoder_right_current;
 
     }
     void publishOdom(double dt, double delta_s, double delta_tetha){

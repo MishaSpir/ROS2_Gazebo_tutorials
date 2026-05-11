@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/misha/Documents/navigation_ws/src/my_robot_bringup
+CMAKE_SOURCE_DIR = /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/my_robot_bringup
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/misha/Documents/navigation_ws/build/my_robot_bringup
+CMAKE_BINARY_DIR = /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/my_robot_bringup
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/misha/Documents/navigation_ws/build/my_robot_bringup && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/misha/Documents/navigation_ws/src/my_robot_bringup /home/misha/Documents/navigation_ws/src/my_robot_bringup /home/misha/Documents/navigation_ws/build/my_robot_bringup /home/misha/Documents/navigation_ws/build/my_robot_bringup /home/misha/Documents/navigation_ws/build/my_robot_bringup/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/my_robot_bringup && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/my_robot_bringup /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/my_robot_bringup /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/my_robot_bringup /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/my_robot_bringup /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/my_robot_bringup/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

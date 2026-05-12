@@ -175,13 +175,19 @@ class RobotSlam : public rclcpp::Node
 public:
     RobotSlam()
         :Node("robot_slam_node"),
-        is_new_scan(false)
+        is_new_scan(false),
+        odom_has_previous_pose(false)
     {
         pointCloud_pub = create_publisher<sensor_msgs::msg::PointCloud2>("/map_cloud", 1); // Публикатор карты
         // Подписчик на сканы лидара (топик /scan, очередь 10 сообщений)
         scan_sub = create_subscription<sensor_msgs::msg::LaserScan>(
             "/scan", 10, std::bind(&RobotSlam::scanCallback,
                       this, std::placeholders::_1));
+        // Подписчик на одометрию (топик /odom, очередь 1 сообщение)
+        odom_sub =
+            this->create_subscription<nav_msgs::msg::Odometry>("/odom", 1,
+                                                                      std::bind(&RobotSlam::odomCallback, this,
+                                                                                            std::placeholders::_1));              
         tf_broadcaster = std::make_unique<tf2_ros::TransformBroadcaster>(this); // Широковещатель трансформации
         
         sm.setMode(MatcherMode::Multiscan); // Установка режима накопления карты
@@ -194,12 +200,35 @@ public:
         is_new_scan = true;        
 
     }
+
+    void odomCallback(const nav_msgs::msg::Odometry &odom){
+        odom_current_pose = odom.pose.pose;  // Сохранение текущей позы из одометрии
+    }
+
     // Основной цикл обработки (вызывается таймером каждые 1000 мс)
     void timer_callback() {
         if(is_new_scan){ // Проверка флага: присутствует ли новый скан
 
+            
+            // Инициализация: запоминание первой позы одометрии
+            if (!odom_has_previous_pose) {
+                odom_previous_pose = odom_current_pose;
+                odom_has_previous_pose = true;
+                return;  // Выход до следующего скана
+            }
+
+            // Если инициализация проведена, то продолжаем
+            Eigen::Matrix4f odom_transformation = Eigen::Matrix4f::Identity();
+            // Если есть предыдущая поза, вычисляем разницу
+
+            // Вычисляем трансформацию между текущей и предыдущей позой одометрии
+            odom_transformation = computeTransformation(odom_previous_pose, odom_current_pose);
+
+
             // Получение данных от ICP
-            Eigen::Matrix4f icp_transformation = sm.addAndMatchScan(current_scan);
+            Eigen::Matrix4f icp_transformation = sm.addAndMatchScan(current_scan,odom_transformation);
+            odom_previous_pose = odom_current_pose;
+
             is_new_scan = false;
 
             // Публикация сопоставленного облака для визуализации 
@@ -208,9 +237,65 @@ public:
             pointCloud.header.stamp = now();  // Установка текущей метки времени
             pointCloud.header.frame_id = current_scan.header.frame_id;  // Установка фрейма
             pointCloud_pub->publish(pointCloud);
+
+
         }
     }            
     
+    // Вычисление относительной трансформации между двумя позами
+    // Возвращает матрицу 4x4 (трансформация в системе координат prev_pose)
+    Eigen::Matrix4f computeTransformation(
+        const geometry_msgs::msg::Pose& prev_pose,
+        const geometry_msgs::msg::Pose& curr_pose) {
+
+        // Извлекаем позиции (x, y, z) из поз
+        Eigen::Vector3f prev_position(
+            prev_pose.position.x,
+            prev_pose.position.y,
+            prev_pose.position.z);
+
+        Eigen::Vector3f curr_position(
+            curr_pose.position.x,
+            curr_pose.position.y,
+            curr_pose.position.z
+            );
+
+        // Извлекаем ориентации (кватернионы) из поз
+        Eigen::Quaternionf prev_quat(
+            prev_pose.orientation.w,
+            prev_pose.orientation.x,
+            prev_pose.orientation.y,
+            prev_pose.orientation.z
+            );
+
+        Eigen::Quaternionf curr_quat(
+            curr_pose.orientation.w,
+            curr_pose.orientation.x,
+            curr_pose.orientation.y,
+            curr_pose.orientation.z
+            );
+
+        // Вычисляем разницу в ориентации
+        // Для этого умножаем текущий кватернион на обратный предыдущий
+        Eigen::Quaternionf delta_quat = curr_quat * prev_quat.inverse();
+
+        // Вычисляем разницу в позиции в системе координат предыдущей позы
+        // Сначала переводим текущую позицию в систему координат предыдущей позы
+        Eigen::Vector3f delta_position = prev_quat.inverse() * (curr_position - prev_position);
+
+        // Создаём матрицу трансформации 4x4 (единичная матрица)
+        Eigen::Matrix4f transformation = Eigen::Matrix4f::Identity();
+
+        // Заполняем матрицу вращения (верхний левый угол 3x3)
+        transformation.block<3,3>(0,0) = delta_quat.toRotationMatrix();
+
+        // Заполняем вектор переноса (правый столбец 3x1)
+        transformation.block<3,1>(0,3) = delta_position;
+
+        return transformation;
+
+    }
+
     void publishTF(){
         // geometry_msgs::msg::TransformStamped transform_stamped;
 
@@ -252,6 +337,13 @@ private:
     sensor_msgs::msg::LaserScan current_scan;
     // Флаг наличия нового скана для обработки
     bool is_new_scan;
+
+
+    //=============ОДОМЕТРИЯ
+    rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr odom_sub;
+    geometry_msgs::msg::Pose odom_previous_pose;  // Предыдущая поза из одометрии
+    geometry_msgs::msg::Pose odom_current_pose;   // Текущая поза из одометрии
+    bool odom_has_previous_pose;  // Флаг инициализации (была ли получена первая поза)
 
 };
 

@@ -110,12 +110,12 @@ public:
         msg.angular.z = 0.0;
 
         // Линейное движение (W/S)
-        if (key_states[17] > 0) msg.linear.x = 1.0;   // W - вперед
-        if (key_states[31] > 0) msg.linear.x = -1.0;  // S - назад
+        if (key_states[17] > 0) msg.linear.x = 0.25;   // W - вперед
+        if (key_states[31] > 0) msg.linear.x = -0.25;  // S - назад
 
         // Поворот (A/D)
-        if (key_states[30] > 0) msg.angular.z = 1.0;  // A - поворот налево
-        if (key_states[32] > 0) msg.angular.z = -1.0; // D - поворот направо
+        if (key_states[30] > 0) msg.angular.z = 0.5;  // A - поворот налево
+        if (key_states[32] > 0) msg.angular.z = -0.5; // D - поворот направо
 
         // Комбинации работают автоматически!
         // W + A = вперед + поворот = движение по дуге

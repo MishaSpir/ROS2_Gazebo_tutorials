@@ -1,0 +1,1584 @@
+[0.000000] (-) TimerEvent: {}
+[0.000259] (my_robot_bringup) JobQueued: {'identifier': 'my_robot_bringup', 'dependencies': OrderedDict()}
+[0.000350] (robot_odometry) JobQueued: {'identifier': 'robot_odometry', 'dependencies': OrderedDict()}
+[0.000385] (robot_slam) JobQueued: {'identifier': 'robot_slam', 'dependencies': OrderedDict()}
+[0.000474] (robot_teleop) JobQueued: {'identifier': 'robot_teleop', 'dependencies': OrderedDict()}
+[0.000544] (robot_world) JobQueued: {'identifier': 'robot_world', 'dependencies': OrderedDict()}
+[0.000613] (test_robot_plugin) JobQueued: {'identifier': 'test_robot_plugin', 'dependencies': OrderedDict()}
+[0.000668] (my_robot_bringup) JobStarted: {'identifier': 'my_robot_bringup'}
+[0.011343] (robot_odometry) JobStarted: {'identifier': 'robot_odometry'}
+[0.022622] (robot_slam) JobStarted: {'identifier': 'robot_slam'}
+[0.035148] (robot_teleop) JobStarted: {'identifier': 'robot_teleop'}
+[0.046900] (robot_world) JobStarted: {'identifier': 'robot_world'}
+[0.062071] (test_robot_plugin) JobStarted: {'identifier': 'test_robot_plugin'}
+[0.082629] (my_robot_bringup) JobProgress: {'identifier': 'my_robot_bringup', 'progress': 'cmake'}
+[0.084274] (my_robot_bringup) JobProgress: {'identifier': 'my_robot_bringup', 'progress': 'build'}
+[0.086441] (my_robot_bringup) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/my_robot_bringup', '--', '-j8', '-l8'], 'cwd': '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/my_robot_bringup', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US'), ('USER', 'misha'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/misha'), ('CHROME_DESKTOP', 'code.desktop'), ('TERM_PROGRAM_VERSION', '1.109.5'), ('DESKTOP_SESSION', 'cinnamon'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('CINNAMON_VERSION', '5.4.12'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '38957'), ('QT_QPA_PLATFORMTHEME', 'qt5ct'), ('COLCON_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'misha'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GTK_OVERLAY_SCROLLING', '1'), ('XDG_SESSION_ID', 'c2'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/misha-ThinkPad-T480:@/tmp/.ICE-unix/1316,unix/misha-ThinkPad-T480:/tmp/.ICE-unix/1316'), ('GDM_LANG', 'en_US'), ('GTK3_MODULES', 'xapp-gtk3-module'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'X-Cinnamon'), ('XDG_SESSION_DESKTOP', 'cinnamon'), ('XAUTHORITY', '/home/misha/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-14122b7208.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/misha'), ('AMENT_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'cinnamon'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('XDG_VTNR', '7'), ('PWD', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/my_robot_bringup'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-cinnamon:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/cinnamon:/usr/share/gnome:/home/misha/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup:/opt/ros/humble')]), 'shell': False}
+[0.093693] (robot_odometry) JobProgress: {'identifier': 'robot_odometry', 'progress': 'cmake'}
+[0.095604] (robot_odometry) JobProgress: {'identifier': 'robot_odometry', 'progress': 'build'}
+[0.096437] (robot_odometry) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_odometry', '--', '-j8', '-l8'], 'cwd': '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_odometry', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US'), ('USER', 'misha'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/misha'), ('CHROME_DESKTOP', 'code.desktop'), ('TERM_PROGRAM_VERSION', '1.109.5'), ('DESKTOP_SESSION', 'cinnamon'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('CINNAMON_VERSION', '5.4.12'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '38957'), ('QT_QPA_PLATFORMTHEME', 'qt5ct'), ('COLCON_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'misha'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GTK_OVERLAY_SCROLLING', '1'), ('XDG_SESSION_ID', 'c2'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/misha-ThinkPad-T480:@/tmp/.ICE-unix/1316,unix/misha-ThinkPad-T480:/tmp/.ICE-unix/1316'), ('GDM_LANG', 'en_US'), ('GTK3_MODULES', 'xapp-gtk3-module'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'X-Cinnamon'), ('XDG_SESSION_DESKTOP', 'cinnamon'), ('XAUTHORITY', '/home/misha/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-14122b7208.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/misha'), ('AMENT_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'cinnamon'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('XDG_VTNR', '7'), ('PWD', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_odometry'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-cinnamon:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/cinnamon:/usr/share/gnome:/home/misha/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup:/opt/ros/humble')]), 'shell': False}
+[0.103858] (-) TimerEvent: {}
+[0.107737] (robot_slam) JobProgress: {'identifier': 'robot_slam', 'progress': 'cmake'}
+[0.112852] (robot_slam) JobProgress: {'identifier': 'robot_slam', 'progress': 'build'}
+[0.115763] (robot_slam) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_slam', '--', '-j8', '-l8'], 'cwd': '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_slam', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US'), ('USER', 'misha'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/misha'), ('CHROME_DESKTOP', 'code.desktop'), ('TERM_PROGRAM_VERSION', '1.109.5'), ('DESKTOP_SESSION', 'cinnamon'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('CINNAMON_VERSION', '5.4.12'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '38957'), ('QT_QPA_PLATFORMTHEME', 'qt5ct'), ('COLCON_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'misha'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GTK_OVERLAY_SCROLLING', '1'), ('XDG_SESSION_ID', 'c2'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/misha-ThinkPad-T480:@/tmp/.ICE-unix/1316,unix/misha-ThinkPad-T480:/tmp/.ICE-unix/1316'), ('GDM_LANG', 'en_US'), ('GTK3_MODULES', 'xapp-gtk3-module'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'X-Cinnamon'), ('XDG_SESSION_DESKTOP', 'cinnamon'), ('XAUTHORITY', '/home/misha/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-14122b7208.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/misha'), ('AMENT_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'cinnamon'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('XDG_VTNR', '7'), ('PWD', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_slam'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-cinnamon:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/cinnamon:/usr/share/gnome:/home/misha/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup:/opt/ros/humble')]), 'shell': False}
+[0.118957] (robot_teleop) JobProgress: {'identifier': 'robot_teleop', 'progress': 'cmake'}
+[0.120735] (robot_teleop) JobProgress: {'identifier': 'robot_teleop', 'progress': 'build'}
+[0.121787] (robot_teleop) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_teleop', '--', '-j8', '-l8'], 'cwd': '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_teleop', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US'), ('USER', 'misha'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/misha'), ('CHROME_DESKTOP', 'code.desktop'), ('TERM_PROGRAM_VERSION', '1.109.5'), ('DESKTOP_SESSION', 'cinnamon'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('CINNAMON_VERSION', '5.4.12'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '38957'), ('QT_QPA_PLATFORMTHEME', 'qt5ct'), ('COLCON_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'misha'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GTK_OVERLAY_SCROLLING', '1'), ('XDG_SESSION_ID', 'c2'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/misha-ThinkPad-T480:@/tmp/.ICE-unix/1316,unix/misha-ThinkPad-T480:/tmp/.ICE-unix/1316'), ('GDM_LANG', 'en_US'), ('GTK3_MODULES', 'xapp-gtk3-module'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'X-Cinnamon'), ('XDG_SESSION_DESKTOP', 'cinnamon'), ('XAUTHORITY', '/home/misha/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-14122b7208.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/misha'), ('AMENT_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'cinnamon'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('XDG_VTNR', '7'), ('PWD', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_teleop'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-cinnamon:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/cinnamon:/usr/share/gnome:/home/misha/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup:/opt/ros/humble')]), 'shell': False}
+[0.129878] (robot_world) JobProgress: {'identifier': 'robot_world', 'progress': 'cmake'}
+[0.136946] (robot_world) JobProgress: {'identifier': 'robot_world', 'progress': 'build'}
+[0.137577] (robot_world) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_world', '--', '-j8', '-l8'], 'cwd': '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_world', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US'), ('USER', 'misha'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/misha'), ('CHROME_DESKTOP', 'code.desktop'), ('TERM_PROGRAM_VERSION', '1.109.5'), ('DESKTOP_SESSION', 'cinnamon'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('CINNAMON_VERSION', '5.4.12'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '38957'), ('QT_QPA_PLATFORMTHEME', 'qt5ct'), ('COLCON_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'misha'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GTK_OVERLAY_SCROLLING', '1'), ('XDG_SESSION_ID', 'c2'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/misha-ThinkPad-T480:@/tmp/.ICE-unix/1316,unix/misha-ThinkPad-T480:/tmp/.ICE-unix/1316'), ('GDM_LANG', 'en_US'), ('GTK3_MODULES', 'xapp-gtk3-module'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'X-Cinnamon'), ('XDG_SESSION_DESKTOP', 'cinnamon'), ('XAUTHORITY', '/home/misha/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-14122b7208.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/misha'), ('AMENT_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'cinnamon'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('XDG_VTNR', '7'), ('PWD', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_world'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-cinnamon:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/cinnamon:/usr/share/gnome:/home/misha/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup:/opt/ros/humble')]), 'shell': False}
+[0.148184] (test_robot_plugin) JobProgress: {'identifier': 'test_robot_plugin', 'progress': 'cmake'}
+[0.153021] (test_robot_plugin) JobProgress: {'identifier': 'test_robot_plugin', 'progress': 'build'}
+[0.154710] (test_robot_plugin) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/test_robot_plugin', '--', '-j8', '-l8'], 'cwd': '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/test_robot_plugin', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US'), ('USER', 'misha'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/misha'), ('CHROME_DESKTOP', 'code.desktop'), ('TERM_PROGRAM_VERSION', '1.109.5'), ('DESKTOP_SESSION', 'cinnamon'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('CINNAMON_VERSION', '5.4.12'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '38957'), ('QT_QPA_PLATFORMTHEME', 'qt5ct'), ('COLCON_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'misha'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GTK_OVERLAY_SCROLLING', '1'), ('XDG_SESSION_ID', 'c2'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/misha-ThinkPad-T480:@/tmp/.ICE-unix/1316,unix/misha-ThinkPad-T480:/tmp/.ICE-unix/1316'), ('GDM_LANG', 'en_US'), ('GTK3_MODULES', 'xapp-gtk3-module'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'X-Cinnamon'), ('XDG_SESSION_DESKTOP', 'cinnamon'), ('XAUTHORITY', '/home/misha/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-14122b7208.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/misha'), ('AMENT_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'cinnamon'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('XDG_VTNR', '7'), ('PWD', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/test_robot_plugin'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-cinnamon:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/cinnamon:/usr/share/gnome:/home/misha/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup:/opt/ros/humble')]), 'shell': False}
+[0.204626] (-) TimerEvent: {}
+[0.228948] (my_robot_bringup) CommandEnded: {'returncode': 0}
+[0.231790] (my_robot_bringup) JobProgress: {'identifier': 'my_robot_bringup', 'progress': 'install'}
+[0.250517] (my_robot_bringup) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/my_robot_bringup'], 'cwd': '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/my_robot_bringup', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US'), ('USER', 'misha'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/misha'), ('CHROME_DESKTOP', 'code.desktop'), ('TERM_PROGRAM_VERSION', '1.109.5'), ('DESKTOP_SESSION', 'cinnamon'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('CINNAMON_VERSION', '5.4.12'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '38957'), ('QT_QPA_PLATFORMTHEME', 'qt5ct'), ('COLCON_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'misha'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GTK_OVERLAY_SCROLLING', '1'), ('XDG_SESSION_ID', 'c2'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/misha-ThinkPad-T480:@/tmp/.ICE-unix/1316,unix/misha-ThinkPad-T480:/tmp/.ICE-unix/1316'), ('GDM_LANG', 'en_US'), ('GTK3_MODULES', 'xapp-gtk3-module'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'X-Cinnamon'), ('XDG_SESSION_DESKTOP', 'cinnamon'), ('XAUTHORITY', '/home/misha/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-14122b7208.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/misha'), ('AMENT_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'cinnamon'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('XDG_VTNR', '7'), ('PWD', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/my_robot_bringup'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-cinnamon:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/cinnamon:/usr/share/gnome:/home/misha/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup:/opt/ros/humble')]), 'shell': False}
+[0.267496] (robot_world) CommandEnded: {'returncode': 0}
+[0.268377] (robot_world) JobProgress: {'identifier': 'robot_world', 'progress': 'install'}
+[0.268459] (robot_world) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_world'], 'cwd': '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_world', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US'), ('USER', 'misha'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/misha'), ('CHROME_DESKTOP', 'code.desktop'), ('TERM_PROGRAM_VERSION', '1.109.5'), ('DESKTOP_SESSION', 'cinnamon'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('CINNAMON_VERSION', '5.4.12'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '38957'), ('QT_QPA_PLATFORMTHEME', 'qt5ct'), ('COLCON_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'misha'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GTK_OVERLAY_SCROLLING', '1'), ('XDG_SESSION_ID', 'c2'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/misha-ThinkPad-T480:@/tmp/.ICE-unix/1316,unix/misha-ThinkPad-T480:/tmp/.ICE-unix/1316'), ('GDM_LANG', 'en_US'), ('GTK3_MODULES', 'xapp-gtk3-module'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'X-Cinnamon'), ('XDG_SESSION_DESKTOP', 'cinnamon'), ('XAUTHORITY', '/home/misha/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-14122b7208.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/misha'), ('AMENT_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'cinnamon'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('XDG_VTNR', '7'), ('PWD', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_world'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-cinnamon:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/cinnamon:/usr/share/gnome:/home/misha/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup:/opt/ros/humble')]), 'shell': False}
+[0.271850] (my_robot_bringup) StdoutLine: {'line': b'-- Install configuration: "Debug"\n'}
+[0.277344] (my_robot_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup/share/my_robot_bringup//launch\n'}
+[0.277702] (my_robot_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup/share/my_robot_bringup//launch/launch.py\n'}
+[0.277949] (my_robot_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup/share/ament_index/resource_index/package_run_dependencies/my_robot_bringup\n'}
+[0.278164] (my_robot_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup/share/ament_index/resource_index/parent_prefix_path/my_robot_bringup\n'}
+[0.290098] (my_robot_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup/share/my_robot_bringup/environment/ament_prefix_path.sh\n'}
+[0.290565] (my_robot_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup/share/my_robot_bringup/environment/ament_prefix_path.dsv\n'}
+[0.294636] (my_robot_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup/share/my_robot_bringup/environment/path.sh\n'}
+[0.295083] (my_robot_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup/share/my_robot_bringup/environment/path.dsv\n'}
+[0.295328] (my_robot_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup/share/my_robot_bringup/local_setup.bash\n'}
+[0.295549] (my_robot_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup/share/my_robot_bringup/local_setup.sh\n'}
+[0.295757] (my_robot_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup/share/my_robot_bringup/local_setup.zsh\n'}
+[0.295980] (my_robot_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup/share/my_robot_bringup/local_setup.dsv\n'}
+[0.296182] (my_robot_bringup) StdoutLine: {'line': b'-- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup/share/my_robot_bringup/package.dsv\n'}
+[0.296373] (my_robot_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup/share/ament_index/resource_index/packages/my_robot_bringup\n'}
+[0.296561] (my_robot_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup/share/my_robot_bringup/cmake/my_robot_bringupConfig.cmake\n'}
+[0.296771] (my_robot_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup/share/my_robot_bringup/cmake/my_robot_bringupConfig-version.cmake\n'}
+[0.296970] (my_robot_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup/share/my_robot_bringup/package.xml\n'}
+[0.321683] (my_robot_bringup) CommandEnded: {'returncode': 0}
+[0.323522] (-) TimerEvent: {}
+[0.329830] (robot_world) StdoutLine: {'line': b'-- Install configuration: "Debug"\n'}
+[0.330620] (robot_world) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world/share/robot_world/launch\n'}
+[0.331086] (robot_world) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world/share/robot_world/launch/robot_world_launch.py\n'}
+[0.331454] (robot_world) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world/share/ament_index/resource_index/package_run_dependencies/robot_world\n'}
+[0.331677] (robot_world) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world/share/ament_index/resource_index/parent_prefix_path/robot_world\n'}
+[0.331920] (robot_world) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world/share/robot_world/environment/ament_prefix_path.sh\n'}
+[0.332225] (robot_world) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world/share/robot_world/environment/ament_prefix_path.dsv\n'}
+[0.332426] (robot_world) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world/share/robot_world/environment/path.sh\n'}
+[0.332624] (robot_world) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world/share/robot_world/environment/path.dsv\n'}
+[0.332893] (robot_world) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world/share/robot_world/local_setup.bash\n'}
+[0.333070] (robot_world) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world/share/robot_world/local_setup.sh\n'}
+[0.333227] (robot_world) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world/share/robot_world/local_setup.zsh\n'}
+[0.333405] (robot_world) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world/share/robot_world/local_setup.dsv\n'}
+[0.333586] (robot_world) StdoutLine: {'line': b'-- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world/share/robot_world/package.dsv\n'}
+[0.333772] (robot_world) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world/share/ament_index/resource_index/packages/robot_world\n'}
+[0.334137] (robot_world) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world/share/robot_world/cmake/robot_worldConfig.cmake\n'}
+[0.334346] (robot_world) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world/share/robot_world/cmake/robot_worldConfig-version.cmake\n'}
+[0.334523] (robot_world) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world/share/robot_world/package.xml\n'}
+[0.334731] (robot_odometry) StdoutLine: {'line': b'[100%] Built target robot_odometry_node\n'}
+[0.335101] (robot_teleop) StdoutLine: {'line': b'[100%] Built target robot_teleop_node\n'}
+[0.343226] (robot_slam) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o\x1b[0m\n'}
+[0.390891] (my_robot_bringup) JobEnded: {'identifier': 'my_robot_bringup', 'rc': 0}
+[0.400932] (test_robot_plugin) StdoutLine: {'line': b'[100%] Built target wheel_robot_controller\n'}
+[0.401482] (robot_world) CommandEnded: {'returncode': 0}
+[0.423878] (-) TimerEvent: {}
+[0.454435] (robot_world) JobEnded: {'identifier': 'robot_world', 'rc': 0}
+[0.456387] (robot_odometry) CommandEnded: {'returncode': 0}
+[0.462876] (robot_odometry) JobProgress: {'identifier': 'robot_odometry', 'progress': 'install'}
+[0.464223] (robot_odometry) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_odometry'], 'cwd': '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_odometry', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US'), ('USER', 'misha'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/misha'), ('CHROME_DESKTOP', 'code.desktop'), ('TERM_PROGRAM_VERSION', '1.109.5'), ('DESKTOP_SESSION', 'cinnamon'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('CINNAMON_VERSION', '5.4.12'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '38957'), ('QT_QPA_PLATFORMTHEME', 'qt5ct'), ('COLCON_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'misha'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GTK_OVERLAY_SCROLLING', '1'), ('XDG_SESSION_ID', 'c2'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/misha-ThinkPad-T480:@/tmp/.ICE-unix/1316,unix/misha-ThinkPad-T480:/tmp/.ICE-unix/1316'), ('GDM_LANG', 'en_US'), ('GTK3_MODULES', 'xapp-gtk3-module'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'X-Cinnamon'), ('XDG_SESSION_DESKTOP', 'cinnamon'), ('XAUTHORITY', '/home/misha/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-14122b7208.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/misha'), ('AMENT_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'cinnamon'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('XDG_VTNR', '7'), ('PWD', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_odometry'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-cinnamon:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/cinnamon:/usr/share/gnome:/home/misha/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup:/opt/ros/humble')]), 'shell': False}
+[0.466369] (robot_teleop) CommandEnded: {'returncode': 0}
+[0.470218] (robot_teleop) JobProgress: {'identifier': 'robot_teleop', 'progress': 'install'}
+[0.470954] (robot_teleop) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_teleop'], 'cwd': '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_teleop', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US'), ('USER', 'misha'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/misha'), ('CHROME_DESKTOP', 'code.desktop'), ('TERM_PROGRAM_VERSION', '1.109.5'), ('DESKTOP_SESSION', 'cinnamon'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('CINNAMON_VERSION', '5.4.12'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '38957'), ('QT_QPA_PLATFORMTHEME', 'qt5ct'), ('COLCON_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'misha'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GTK_OVERLAY_SCROLLING', '1'), ('XDG_SESSION_ID', 'c2'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/misha-ThinkPad-T480:@/tmp/.ICE-unix/1316,unix/misha-ThinkPad-T480:/tmp/.ICE-unix/1316'), ('GDM_LANG', 'en_US'), ('GTK3_MODULES', 'xapp-gtk3-module'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'X-Cinnamon'), ('XDG_SESSION_DESKTOP', 'cinnamon'), ('XAUTHORITY', '/home/misha/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-14122b7208.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/misha'), ('AMENT_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'cinnamon'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('XDG_VTNR', '7'), ('PWD', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_teleop'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-cinnamon:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/cinnamon:/usr/share/gnome:/home/misha/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup:/opt/ros/humble')]), 'shell': False}
+[0.474350] (test_robot_plugin) CommandEnded: {'returncode': 0}
+[0.480218] (robot_odometry) StdoutLine: {'line': b'-- Install configuration: "Debug"\n'}
+[0.480708] (robot_odometry) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry/lib/robot_odometry/robot_odometry_node\n'}
+[0.481059] (robot_odometry) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry/share/ament_index/resource_index/package_run_dependencies/robot_odometry\n'}
+[0.481332] (robot_odometry) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry/share/ament_index/resource_index/parent_prefix_path/robot_odometry\n'}
+[0.481519] (robot_odometry) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry/share/robot_odometry/environment/ament_prefix_path.sh\n'}
+[0.481735] (robot_odometry) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry/share/robot_odometry/environment/ament_prefix_path.dsv\n'}
+[0.481923] (robot_odometry) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry/share/robot_odometry/environment/path.sh\n'}
+[0.482127] (robot_odometry) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry/share/robot_odometry/environment/path.dsv\n'}
+[0.482304] (robot_odometry) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry/share/robot_odometry/local_setup.bash\n'}
+[0.482494] (robot_odometry) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry/share/robot_odometry/local_setup.sh\n'}
+[0.482662] (robot_odometry) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry/share/robot_odometry/local_setup.zsh\n'}
+[0.482827] (robot_odometry) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry/share/robot_odometry/local_setup.dsv\n'}
+[0.482999] (robot_odometry) StdoutLine: {'line': b'-- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry/share/robot_odometry/package.dsv\n'}
+[0.483378] (robot_odometry) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry/share/ament_index/resource_index/packages/robot_odometry\n'}
+[0.483619] (robot_odometry) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry/share/robot_odometry/cmake/robot_odometryConfig.cmake\n'}
+[0.483795] (robot_odometry) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry/share/robot_odometry/cmake/robot_odometryConfig-version.cmake\n'}
+[0.484178] (robot_odometry) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry/share/robot_odometry/package.xml\n'}
+[0.484687] (test_robot_plugin) JobProgress: {'identifier': 'test_robot_plugin', 'progress': 'install'}
+[0.484846] (robot_teleop) StdoutLine: {'line': b'-- Install configuration: "Debug"\n'}
+[0.486962] (test_robot_plugin) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/test_robot_plugin'], 'cwd': '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/test_robot_plugin', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US'), ('USER', 'misha'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/misha'), ('CHROME_DESKTOP', 'code.desktop'), ('TERM_PROGRAM_VERSION', '1.109.5'), ('DESKTOP_SESSION', 'cinnamon'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('CINNAMON_VERSION', '5.4.12'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '38957'), ('QT_QPA_PLATFORMTHEME', 'qt5ct'), ('COLCON_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'misha'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GTK_OVERLAY_SCROLLING', '1'), ('XDG_SESSION_ID', 'c2'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/misha-ThinkPad-T480:@/tmp/.ICE-unix/1316,unix/misha-ThinkPad-T480:/tmp/.ICE-unix/1316'), ('GDM_LANG', 'en_US'), ('GTK3_MODULES', 'xapp-gtk3-module'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'X-Cinnamon'), ('XDG_SESSION_DESKTOP', 'cinnamon'), ('XAUTHORITY', '/home/misha/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-14122b7208.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/misha'), ('AMENT_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'cinnamon'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('XDG_VTNR', '7'), ('PWD', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/test_robot_plugin'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-cinnamon:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/cinnamon:/usr/share/gnome:/home/misha/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup:/opt/ros/humble')]), 'shell': False}
+[0.490024] (robot_teleop) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop/lib/robot_teleop/robot_teleop_node\n'}
+[0.501237] (robot_teleop) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop/share/ament_index/resource_index/package_run_dependencies/robot_teleop\n'}
+[0.501602] (robot_teleop) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop/share/ament_index/resource_index/parent_prefix_path/robot_teleop\n'}
+[0.501886] (robot_teleop) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop/share/robot_teleop/environment/ament_prefix_path.sh\n'}
+[0.502486] (robot_teleop) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop/share/robot_teleop/environment/ament_prefix_path.dsv\n'}
+[0.503449] (robot_teleop) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop/share/robot_teleop/environment/path.sh\n'}
+[0.507054] (robot_teleop) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop/share/robot_teleop/environment/path.dsv\n'}
+[0.508980] (robot_teleop) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop/share/robot_teleop/local_setup.bash\n'}
+[0.509534] (robot_teleop) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop/share/robot_teleop/local_setup.sh\n'}
+[0.511831] (robot_teleop) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop/share/robot_teleop/local_setup.zsh\n'}
+[0.512169] (robot_teleop) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop/share/robot_teleop/local_setup.dsv\n'}
+[0.512365] (robot_teleop) StdoutLine: {'line': b'-- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop/share/robot_teleop/package.dsv\n'}
+[0.512572] (robot_teleop) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop/share/ament_index/resource_index/packages/robot_teleop\n'}
+[0.512746] (robot_teleop) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop/share/robot_teleop/cmake/robot_teleopConfig.cmake\n'}
+[0.512960] (robot_teleop) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop/share/robot_teleop/cmake/robot_teleopConfig-version.cmake\n'}
+[0.513181] (robot_teleop) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop/share/robot_teleop/package.xml\n'}
+[0.513397] (robot_odometry) CommandEnded: {'returncode': 0}
+[0.514421] (test_robot_plugin) StdoutLine: {'line': b'-- Install configuration: "Debug"\n'}
+[0.514739] (test_robot_plugin) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin/lib/libwheel_robot_controller.so\n'}
+[0.514931] (test_robot_plugin) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin/share/ament_index/resource_index/package_run_dependencies/test_robot_plugin\n'}
+[0.515112] (test_robot_plugin) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin/share/ament_index/resource_index/parent_prefix_path/test_robot_plugin\n'}
+[0.515282] (test_robot_plugin) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin/share/test_robot_plugin/environment/ament_prefix_path.sh\n'}
+[0.515455] (test_robot_plugin) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin/share/test_robot_plugin/environment/ament_prefix_path.dsv\n'}
+[0.515624] (test_robot_plugin) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin/share/test_robot_plugin/environment/path.sh\n'}
+[0.515790] (test_robot_plugin) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin/share/test_robot_plugin/environment/path.dsv\n'}
+[0.516019] (test_robot_plugin) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin/share/test_robot_plugin/local_setup.bash\n'}
+[0.516269] (test_robot_plugin) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin/share/test_robot_plugin/local_setup.sh\n'}
+[0.516637] (test_robot_plugin) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin/share/test_robot_plugin/local_setup.zsh\n'}
+[0.517593] (test_robot_plugin) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin/share/test_robot_plugin/local_setup.dsv\n'}
+[0.518725] (test_robot_plugin) StdoutLine: {'line': b'-- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin/share/test_robot_plugin/package.dsv\n'}
+[0.519041] (test_robot_plugin) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin/share/ament_index/resource_index/packages/test_robot_plugin\n'}
+[0.519389] (test_robot_plugin) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin/share/test_robot_plugin/cmake/test_robot_pluginConfig.cmake\n'}
+[0.520080] (test_robot_plugin) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin/share/test_robot_plugin/cmake/test_robot_pluginConfig-version.cmake\n'}
+[0.520907] (test_robot_plugin) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin/share/test_robot_plugin/package.xml\n'}
+[0.524569] (-) TimerEvent: {}
+[0.539002] (robot_odometry) JobEnded: {'identifier': 'robot_odometry', 'rc': 0}
+[0.541466] (robot_teleop) CommandEnded: {'returncode': 0}
+[0.575373] (robot_teleop) JobEnded: {'identifier': 'robot_teleop', 'rc': 0}
+[0.579744] (test_robot_plugin) CommandEnded: {'returncode': 0}
+[0.625871] (-) TimerEvent: {}
+[0.647278] (test_robot_plugin) JobEnded: {'identifier': 'test_robot_plugin', 'rc': 0}
+[0.726206] (-) TimerEvent: {}
+[0.827299] (-) TimerEvent: {}
+[0.928211] (-) TimerEvent: {}
+[1.029308] (-) TimerEvent: {}
+[1.130577] (-) TimerEvent: {}
+[1.232371] (-) TimerEvent: {}
+[1.333607] (-) TimerEvent: {}
+[1.435561] (-) TimerEvent: {}
+[1.537184] (-) TimerEvent: {}
+[1.638066] (-) TimerEvent: {}
+[1.739720] (-) TimerEvent: {}
+[1.841655] (-) TimerEvent: {}
+[1.942627] (-) TimerEvent: {}
+[2.044006] (-) TimerEvent: {}
+[2.144633] (-) TimerEvent: {}
+[2.245165] (-) TimerEvent: {}
+[2.345898] (-) TimerEvent: {}
+[2.447128] (-) TimerEvent: {}
+[2.548276] (-) TimerEvent: {}
+[2.649593] (-) TimerEvent: {}
+[2.750197] (-) TimerEvent: {}
+[2.850928] (-) TimerEvent: {}
+[2.952603] (-) TimerEvent: {}
+[3.053541] (-) TimerEvent: {}
+[3.154850] (-) TimerEvent: {}
+[3.256354] (-) TimerEvent: {}
+[3.357841] (-) TimerEvent: {}
+[3.459505] (-) TimerEvent: {}
+[3.560293] (-) TimerEvent: {}
+[3.660945] (-) TimerEvent: {}
+[3.761467] (-) TimerEvent: {}
+[3.861877] (-) TimerEvent: {}
+[3.962558] (-) TimerEvent: {}
+[4.063538] (-) TimerEvent: {}
+[4.165013] (-) TimerEvent: {}
+[4.266794] (-) TimerEvent: {}
+[4.368539] (-) TimerEvent: {}
+[4.469395] (-) TimerEvent: {}
+[4.571355] (-) TimerEvent: {}
+[4.672895] (-) TimerEvent: {}
+[4.774389] (-) TimerEvent: {}
+[4.876031] (-) TimerEvent: {}
+[4.977357] (-) TimerEvent: {}
+[5.077855] (-) TimerEvent: {}
+[5.178254] (-) TimerEvent: {}
+[5.278643] (-) TimerEvent: {}
+[5.379078] (-) TimerEvent: {}
+[5.479723] (-) TimerEvent: {}
+[5.581558] (-) TimerEvent: {}
+[5.683912] (-) TimerEvent: {}
+[5.785680] (-) TimerEvent: {}
+[5.887425] (-) TimerEvent: {}
+[5.988849] (-) TimerEvent: {}
+[6.089904] (-) TimerEvent: {}
+[6.190887] (-) TimerEvent: {}
+[6.292314] (-) TimerEvent: {}
+[6.394388] (-) TimerEvent: {}
+[6.496335] (-) TimerEvent: {}
+[6.597506] (-) TimerEvent: {}
+[6.697956] (-) TimerEvent: {}
+[6.798509] (-) TimerEvent: {}
+[6.899242] (-) TimerEvent: {}
+[7.000812] (-) TimerEvent: {}
+[7.102396] (-) TimerEvent: {}
+[7.203618] (-) TimerEvent: {}
+[7.304594] (-) TimerEvent: {}
+[7.405235] (-) TimerEvent: {}
+[7.506659] (-) TimerEvent: {}
+[7.607858] (-) TimerEvent: {}
+[7.709499] (-) TimerEvent: {}
+[7.811156] (-) TimerEvent: {}
+[7.911761] (-) TimerEvent: {}
+[8.012394] (-) TimerEvent: {}
+[8.112899] (-) TimerEvent: {}
+[8.213715] (-) TimerEvent: {}
+[8.315621] (-) TimerEvent: {}
+[8.417552] (-) TimerEvent: {}
+[8.519480] (-) TimerEvent: {}
+[8.620951] (-) TimerEvent: {}
+[8.722331] (-) TimerEvent: {}
+[8.823590] (-) TimerEvent: {}
+[8.924985] (-) TimerEvent: {}
+[9.026158] (-) TimerEvent: {}
+[9.127725] (-) TimerEvent: {}
+[9.229056] (-) TimerEvent: {}
+[9.329573] (-) TimerEvent: {}
+[9.429991] (-) TimerEvent: {}
+[9.530787] (-) TimerEvent: {}
+[9.632429] (-) TimerEvent: {}
+[9.733784] (-) TimerEvent: {}
+[9.835449] (-) TimerEvent: {}
+[9.936832] (-) TimerEvent: {}
+[10.038410] (-) TimerEvent: {}
+[10.140093] (-) TimerEvent: {}
+[10.241285] (-) TimerEvent: {}
+[10.342497] (-) TimerEvent: {}
+[10.442959] (-) TimerEvent: {}
+[10.543530] (-) TimerEvent: {}
+[10.644119] (-) TimerEvent: {}
+[10.744737] (-) TimerEvent: {}
+[10.845644] (-) TimerEvent: {}
+[10.947326] (-) TimerEvent: {}
+[11.048557] (-) TimerEvent: {}
+[11.149607] (-) TimerEvent: {}
+[11.250243] (-) TimerEvent: {}
+[11.351087] (-) TimerEvent: {}
+[11.452216] (-) TimerEvent: {}
+[11.552889] (-) TimerEvent: {}
+[11.653442] (-) TimerEvent: {}
+[11.753940] (-) TimerEvent: {}
+[11.854450] (-) TimerEvent: {}
+[11.955305] (-) TimerEvent: {}
+[12.057097] (-) TimerEvent: {}
+[12.158998] (-) TimerEvent: {}
+[12.260449] (-) TimerEvent: {}
+[12.360955] (-) TimerEvent: {}
+[12.461501] (-) TimerEvent: {}
+[12.562397] (-) TimerEvent: {}
+[12.663897] (-) TimerEvent: {}
+[12.765576] (-) TimerEvent: {}
+[12.866979] (-) TimerEvent: {}
+[12.967909] (-) TimerEvent: {}
+[13.068471] (-) TimerEvent: {}
+[13.169228] (-) TimerEvent: {}
+[13.270731] (-) TimerEvent: {}
+[13.372525] (-) TimerEvent: {}
+[13.474083] (-) TimerEvent: {}
+[13.575308] (-) TimerEvent: {}
+[13.676520] (-) TimerEvent: {}
+[13.778032] (-) TimerEvent: {}
+[13.879568] (-) TimerEvent: {}
+[13.981328] (-) TimerEvent: {}
+[14.082963] (-) TimerEvent: {}
+[14.183711] (-) TimerEvent: {}
+[14.284736] (-) TimerEvent: {}
+[14.385726] (-) TimerEvent: {}
+[14.487290] (-) TimerEvent: {}
+[14.588248] (-) TimerEvent: {}
+[14.689583] (-) TimerEvent: {}
+[14.791261] (-) TimerEvent: {}
+[14.892616] (-) TimerEvent: {}
+[14.993306] (-) TimerEvent: {}
+[15.094041] (-) TimerEvent: {}
+[15.194682] (-) TimerEvent: {}
+[15.295941] (-) TimerEvent: {}
+[15.397686] (-) TimerEvent: {}
+[15.499421] (-) TimerEvent: {}
+[15.600808] (-) TimerEvent: {}
+[15.702124] (-) TimerEvent: {}
+[15.803545] (-) TimerEvent: {}
+[15.904655] (-) TimerEvent: {}
+[16.005358] (-) TimerEvent: {}
+[16.106149] (-) TimerEvent: {}
+[16.207152] (-) TimerEvent: {}
+[16.307666] (-) TimerEvent: {}
+[16.408963] (-) TimerEvent: {}
+[16.510686] (-) TimerEvent: {}
+[16.611211] (-) TimerEvent: {}
+[16.712118] (-) TimerEvent: {}
+[16.813372] (-) TimerEvent: {}
+[16.914556] (-) TimerEvent: {}
+[17.015092] (-) TimerEvent: {}
+[17.115687] (-) TimerEvent: {}
+[17.216342] (-) TimerEvent: {}
+[17.316875] (-) TimerEvent: {}
+[17.417341] (-) TimerEvent: {}
+[17.517774] (-) TimerEvent: {}
+[17.619000] (-) TimerEvent: {}
+[17.720445] (-) TimerEvent: {}
+[17.821411] (-) TimerEvent: {}
+[17.923180] (-) TimerEvent: {}
+[18.024209] (-) TimerEvent: {}
+[18.124862] (-) TimerEvent: {}
+[18.225367] (-) TimerEvent: {}
+[18.325940] (-) TimerEvent: {}
+[18.426501] (-) TimerEvent: {}
+[18.527101] (-) TimerEvent: {}
+[18.627857] (-) TimerEvent: {}
+[18.728451] (-) TimerEvent: {}
+[18.829041] (-) TimerEvent: {}
+[18.930224] (-) TimerEvent: {}
+[19.030823] (-) TimerEvent: {}
+[19.131344] (-) TimerEvent: {}
+[19.231918] (-) TimerEvent: {}
+[19.332474] (-) TimerEvent: {}
+[19.432995] (-) TimerEvent: {}
+[19.534063] (-) TimerEvent: {}
+[19.635444] (-) TimerEvent: {}
+[19.737397] (-) TimerEvent: {}
+[19.839149] (-) TimerEvent: {}
+[19.940844] (-) TimerEvent: {}
+[20.042536] (-) TimerEvent: {}
+[20.144157] (-) TimerEvent: {}
+[20.246227] (-) TimerEvent: {}
+[20.348218] (-) TimerEvent: {}
+[20.449940] (-) TimerEvent: {}
+[20.550953] (-) TimerEvent: {}
+[20.652150] (-) TimerEvent: {}
+[20.753069] (-) TimerEvent: {}
+[20.854869] (-) TimerEvent: {}
+[20.955743] (-) TimerEvent: {}
+[21.056589] (-) TimerEvent: {}
+[21.158476] (-) TimerEvent: {}
+[21.260327] (-) TimerEvent: {}
+[21.361702] (-) TimerEvent: {}
+[21.463200] (-) TimerEvent: {}
+[21.564814] (-) TimerEvent: {}
+[21.665262] (-) TimerEvent: {}
+[21.765721] (-) TimerEvent: {}
+[21.866225] (-) TimerEvent: {}
+[21.967378] (-) TimerEvent: {}
+[22.069025] (-) TimerEvent: {}
+[22.170501] (-) TimerEvent: {}
+[22.272139] (-) TimerEvent: {}
+[22.373501] (-) TimerEvent: {}
+[22.474551] (-) TimerEvent: {}
+[22.576000] (-) TimerEvent: {}
+[22.677403] (-) TimerEvent: {}
+[22.778151] (-) TimerEvent: {}
+[22.879289] (-) TimerEvent: {}
+[22.980854] (-) TimerEvent: {}
+[23.082108] (-) TimerEvent: {}
+[23.182639] (-) TimerEvent: {}
+[23.283181] (-) TimerEvent: {}
+[23.383749] (-) TimerEvent: {}
+[23.484763] (-) TimerEvent: {}
+[23.585342] (-) TimerEvent: {}
+[23.685874] (-) TimerEvent: {}
+[23.786376] (-) TimerEvent: {}
+[23.886905] (-) TimerEvent: {}
+[23.987419] (-) TimerEvent: {}
+[24.088265] (-) TimerEvent: {}
+[24.189997] (-) TimerEvent: {}
+[24.291582] (-) TimerEvent: {}
+[24.396560] (-) TimerEvent: {}
+[24.497968] (-) TimerEvent: {}
+[24.598953] (-) TimerEvent: {}
+[24.700062] (-) TimerEvent: {}
+[24.800739] (-) TimerEvent: {}
+[24.902087] (-) TimerEvent: {}
+[25.002602] (-) TimerEvent: {}
+[25.103177] (-) TimerEvent: {}
+[25.203709] (-) TimerEvent: {}
+[25.304190] (-) TimerEvent: {}
+[25.404718] (-) TimerEvent: {}
+[25.505205] (-) TimerEvent: {}
+[25.605623] (-) TimerEvent: {}
+[25.706118] (-) TimerEvent: {}
+[25.806607] (-) TimerEvent: {}
+[25.907062] (-) TimerEvent: {}
+[26.007529] (-) TimerEvent: {}
+[26.108275] (-) TimerEvent: {}
+[26.209627] (-) TimerEvent: {}
+[26.311424] (-) TimerEvent: {}
+[26.412080] (-) TimerEvent: {}
+[26.512882] (-) TimerEvent: {}
+[26.613673] (-) TimerEvent: {}
+[26.714246] (-) TimerEvent: {}
+[26.814843] (-) TimerEvent: {}
+[26.915308] (-) TimerEvent: {}
+[27.016208] (-) TimerEvent: {}
+[27.117541] (-) TimerEvent: {}
+[27.218801] (-) TimerEvent: {}
+[27.319563] (-) TimerEvent: {}
+[27.420364] (-) TimerEvent: {}
+[27.521313] (-) TimerEvent: {}
+[27.621805] (-) TimerEvent: {}
+[27.722337] (-) TimerEvent: {}
+[27.822770] (-) TimerEvent: {}
+[27.923188] (-) TimerEvent: {}
+[28.023607] (-) TimerEvent: {}
+[28.124172] (-) TimerEvent: {}
+[28.224599] (-) TimerEvent: {}
+[28.325196] (-) TimerEvent: {}
+[28.426340] (-) TimerEvent: {}
+[28.526795] (-) TimerEvent: {}
+[28.627516] (-) TimerEvent: {}
+[28.728433] (-) TimerEvent: {}
+[28.828920] (-) TimerEvent: {}
+[28.929386] (-) TimerEvent: {}
+[29.029995] (-) TimerEvent: {}
+[29.130894] (-) TimerEvent: {}
+[29.232345] (-) TimerEvent: {}
+[29.333907] (-) TimerEvent: {}
+[29.434725] (-) TimerEvent: {}
+[29.535148] (-) TimerEvent: {}
+[29.635659] (-) TimerEvent: {}
+[29.736161] (-) TimerEvent: {}
+[29.836619] (-) TimerEvent: {}
+[29.937035] (-) TimerEvent: {}
+[30.037534] (-) TimerEvent: {}
+[30.137947] (-) TimerEvent: {}
+[30.238383] (-) TimerEvent: {}
+[30.338918] (-) TimerEvent: {}
+[30.439714] (-) TimerEvent: {}
+[30.541351] (-) TimerEvent: {}
+[30.642789] (-) TimerEvent: {}
+[30.743397] (-) TimerEvent: {}
+[30.844091] (-) TimerEvent: {}
+[30.944649] (-) TimerEvent: {}
+[31.045232] (-) TimerEvent: {}
+[31.145893] (-) TimerEvent: {}
+[31.247030] (-) TimerEvent: {}
+[31.348084] (-) TimerEvent: {}
+[31.449109] (-) TimerEvent: {}
+[31.550637] (-) TimerEvent: {}
+[31.651797] (-) TimerEvent: {}
+[31.753469] (-) TimerEvent: {}
+[31.855072] (-) TimerEvent: {}
+[31.956637] (-) TimerEvent: {}
+[32.058057] (-) TimerEvent: {}
+[32.160127] (-) TimerEvent: {}
+[32.261902] (-) TimerEvent: {}
+[32.363461] (-) TimerEvent: {}
+[32.464031] (-) TimerEvent: {}
+[32.564749] (-) TimerEvent: {}
+[32.666486] (-) TimerEvent: {}
+[32.768108] (-) TimerEvent: {}
+[32.869390] (-) TimerEvent: {}
+[32.970909] (-) TimerEvent: {}
+[33.072491] (-) TimerEvent: {}
+[33.173609] (-) TimerEvent: {}
+[33.274816] (-) TimerEvent: {}
+[33.376655] (-) TimerEvent: {}
+[33.478285] (-) TimerEvent: {}
+[33.579762] (-) TimerEvent: {}
+[33.681236] (-) TimerEvent: {}
+[33.782955] (-) TimerEvent: {}
+[33.883461] (-) TimerEvent: {}
+[33.983995] (-) TimerEvent: {}
+[34.084794] (-) TimerEvent: {}
+[34.185255] (-) TimerEvent: {}
+[34.286047] (-) TimerEvent: {}
+[34.388679] (-) TimerEvent: {}
+[34.490267] (-) TimerEvent: {}
+[34.591875] (-) TimerEvent: {}
+[34.693248] (-) TimerEvent: {}
+[34.794152] (-) TimerEvent: {}
+[34.895524] (-) TimerEvent: {}
+[34.996755] (-) TimerEvent: {}
+[35.097911] (-) TimerEvent: {}
+[35.198787] (-) TimerEvent: {}
+[35.299756] (-) TimerEvent: {}
+[35.401108] (-) TimerEvent: {}
+[35.501630] (-) TimerEvent: {}
+[35.602073] (-) TimerEvent: {}
+[35.702625] (-) TimerEvent: {}
+[35.803328] (-) TimerEvent: {}
+[35.903934] (-) TimerEvent: {}
+[36.004479] (-) TimerEvent: {}
+[36.105003] (-) TimerEvent: {}
+[36.205518] (-) TimerEvent: {}
+[36.306381] (-) TimerEvent: {}
+[36.407367] (-) TimerEvent: {}
+[36.509103] (-) TimerEvent: {}
+[36.610764] (-) TimerEvent: {}
+[36.711283] (-) TimerEvent: {}
+[36.811714] (-) TimerEvent: {}
+[36.912221] (-) TimerEvent: {}
+[37.012797] (-) TimerEvent: {}
+[37.113281] (-) TimerEvent: {}
+[37.213847] (-) TimerEvent: {}
+[37.314297] (-) TimerEvent: {}
+[37.414951] (-) TimerEvent: {}
+[37.515702] (-) TimerEvent: {}
+[37.617200] (-) TimerEvent: {}
+[37.718581] (-) TimerEvent: {}
+[37.820247] (-) TimerEvent: {}
+[37.921840] (-) TimerEvent: {}
+[38.022934] (-) TimerEvent: {}
+[38.123818] (-) TimerEvent: {}
+[38.224646] (-) TimerEvent: {}
+[38.325647] (-) TimerEvent: {}
+[38.427264] (-) TimerEvent: {}
+[38.528113] (-) TimerEvent: {}
+[38.629330] (-) TimerEvent: {}
+[38.730666] (-) TimerEvent: {}
+[38.832498] (-) TimerEvent: {}
+[38.933631] (-) TimerEvent: {}
+[39.034322] (-) TimerEvent: {}
+[39.135217] (-) TimerEvent: {}
+[39.235808] (-) TimerEvent: {}
+[39.336361] (-) TimerEvent: {}
+[39.436849] (-) TimerEvent: {}
+[39.537453] (-) TimerEvent: {}
+[39.638294] (-) TimerEvent: {}
+[39.739405] (-) TimerEvent: {}
+[39.839846] (-) TimerEvent: {}
+[39.940354] (-) TimerEvent: {}
+[40.040821] (-) TimerEvent: {}
+[40.141273] (-) TimerEvent: {}
+[40.241675] (-) TimerEvent: {}
+[40.342058] (-) TimerEvent: {}
+[40.442478] (-) TimerEvent: {}
+[40.543055] (-) TimerEvent: {}
+[40.643586] (-) TimerEvent: {}
+[40.744317] (-) TimerEvent: {}
+[40.844917] (-) TimerEvent: {}
+[40.945470] (-) TimerEvent: {}
+[41.046917] (-) TimerEvent: {}
+[41.148787] (-) TimerEvent: {}
+[41.249717] (-) TimerEvent: {}
+[41.351160] (-) TimerEvent: {}
+[41.452943] (-) TimerEvent: {}
+[41.554392] (-) TimerEvent: {}
+[41.656058] (-) TimerEvent: {}
+[41.757459] (-) TimerEvent: {}
+[41.858646] (-) TimerEvent: {}
+[41.959790] (-) TimerEvent: {}
+[42.061163] (-) TimerEvent: {}
+[42.162774] (-) TimerEvent: {}
+[42.263806] (-) TimerEvent: {}
+[42.365035] (-) TimerEvent: {}
+[42.466565] (-) TimerEvent: {}
+[42.568246] (-) TimerEvent: {}
+[42.669861] (-) TimerEvent: {}
+[42.771177] (-) TimerEvent: {}
+[42.872598] (-) TimerEvent: {}
+[42.973866] (-) TimerEvent: {}
+[43.075416] (-) TimerEvent: {}
+[43.177238] (-) TimerEvent: {}
+[43.278657] (-) TimerEvent: {}
+[43.382984] (-) TimerEvent: {}
+[43.483695] (-) TimerEvent: {}
+[43.584391] (-) TimerEvent: {}
+[43.684987] (-) TimerEvent: {}
+[43.785611] (-) TimerEvent: {}
+[43.886813] (-) TimerEvent: {}
+[43.987891] (-) TimerEvent: {}
+[44.088394] (-) TimerEvent: {}
+[44.189270] (-) TimerEvent: {}
+[44.289783] (-) TimerEvent: {}
+[44.390215] (-) TimerEvent: {}
+[44.490604] (-) TimerEvent: {}
+[44.591094] (-) TimerEvent: {}
+[44.691562] (-) TimerEvent: {}
+[44.792100] (-) TimerEvent: {}
+[44.893007] (-) TimerEvent: {}
+[44.993639] (-) TimerEvent: {}
+[45.094223] (-) TimerEvent: {}
+[45.194960] (-) TimerEvent: {}
+[45.296081] (-) TimerEvent: {}
+[45.397233] (-) TimerEvent: {}
+[45.497948] (-) TimerEvent: {}
+[45.598991] (-) TimerEvent: {}
+[45.700904] (-) TimerEvent: {}
+[45.802729] (-) TimerEvent: {}
+[45.904265] (-) TimerEvent: {}
+[46.005920] (-) TimerEvent: {}
+[46.107274] (-) TimerEvent: {}
+[46.208641] (-) TimerEvent: {}
+[46.310027] (-) TimerEvent: {}
+[46.411366] (-) TimerEvent: {}
+[46.512906] (-) TimerEvent: {}
+[46.613923] (-) TimerEvent: {}
+[46.715154] (-) TimerEvent: {}
+[46.816006] (-) TimerEvent: {}
+[46.918074] (-) TimerEvent: {}
+[47.018885] (-) TimerEvent: {}
+[47.120387] (-) TimerEvent: {}
+[47.221099] (-) TimerEvent: {}
+[47.321807] (-) TimerEvent: {}
+[47.422248] (-) TimerEvent: {}
+[47.522639] (-) TimerEvent: {}
+[47.623178] (-) TimerEvent: {}
+[47.723705] (-) TimerEvent: {}
+[47.824277] (-) TimerEvent: {}
+[47.924780] (-) TimerEvent: {}
+[48.025513] (-) TimerEvent: {}
+[48.126742] (-) TimerEvent: {}
+[48.228294] (-) TimerEvent: {}
+[48.329595] (-) TimerEvent: {}
+[48.431065] (-) TimerEvent: {}
+[48.531936] (-) TimerEvent: {}
+[48.632471] (-) TimerEvent: {}
+[48.733275] (-) TimerEvent: {}
+[48.833974] (-) TimerEvent: {}
+[48.934534] (-) TimerEvent: {}
+[49.035656] (-) TimerEvent: {}
+[49.136810] (-) TimerEvent: {}
+[49.237636] (-) TimerEvent: {}
+[49.338990] (-) TimerEvent: {}
+[49.440632] (-) TimerEvent: {}
+[49.541871] (-) TimerEvent: {}
+[49.642907] (-) TimerEvent: {}
+[49.743451] (-) TimerEvent: {}
+[49.844824] (-) TimerEvent: {}
+[49.945961] (-) TimerEvent: {}
+[50.046600] (-) TimerEvent: {}
+[50.147415] (-) TimerEvent: {}
+[50.249082] (-) TimerEvent: {}
+[50.350751] (-) TimerEvent: {}
+[50.452469] (-) TimerEvent: {}
+[50.554060] (-) TimerEvent: {}
+[50.655579] (-) TimerEvent: {}
+[50.757047] (-) TimerEvent: {}
+[50.857985] (-) TimerEvent: {}
+[50.959237] (-) TimerEvent: {}
+[51.060804] (-) TimerEvent: {}
+[51.162206] (-) TimerEvent: {}
+[51.263725] (-) TimerEvent: {}
+[51.365295] (-) TimerEvent: {}
+[51.466106] (-) TimerEvent: {}
+[51.566979] (-) TimerEvent: {}
+[51.668175] (-) TimerEvent: {}
+[51.768825] (-) TimerEvent: {}
+[51.869557] (-) TimerEvent: {}
+[51.970520] (-) TimerEvent: {}
+[52.071865] (-) TimerEvent: {}
+[52.173215] (-) TimerEvent: {}
+[52.273688] (-) TimerEvent: {}
+[52.374295] (-) TimerEvent: {}
+[52.475355] (-) TimerEvent: {}
+[52.576898] (-) TimerEvent: {}
+[52.678381] (-) TimerEvent: {}
+[52.778861] (-) TimerEvent: {}
+[52.879411] (-) TimerEvent: {}
+[52.979919] (-) TimerEvent: {}
+[53.080450] (-) TimerEvent: {}
+[53.181387] (-) TimerEvent: {}
+[53.281866] (-) TimerEvent: {}
+[53.382955] (-) TimerEvent: {}
+[53.484039] (-) TimerEvent: {}
+[53.584733] (-) TimerEvent: {}
+[53.685511] (-) TimerEvent: {}
+[53.786050] (-) TimerEvent: {}
+[53.886848] (-) TimerEvent: {}
+[53.988039] (-) TimerEvent: {}
+[54.088531] (-) TimerEvent: {}
+[54.189143] (-) TimerEvent: {}
+[54.289583] (-) TimerEvent: {}
+[54.390095] (-) TimerEvent: {}
+[54.490537] (-) TimerEvent: {}
+[54.590983] (-) TimerEvent: {}
+[54.691488] (-) TimerEvent: {}
+[54.791982] (-) TimerEvent: {}
+[54.892464] (-) TimerEvent: {}
+[54.992992] (-) TimerEvent: {}
+[55.093553] (-) TimerEvent: {}
+[55.194207] (-) TimerEvent: {}
+[55.294713] (-) TimerEvent: {}
+[55.395190] (-) TimerEvent: {}
+[55.495872] (-) TimerEvent: {}
+[55.597605] (-) TimerEvent: {}
+[55.699657] (-) TimerEvent: {}
+[55.806411] (-) TimerEvent: {}
+[55.916831] (-) TimerEvent: {}
+[56.019034] (-) TimerEvent: {}
+[56.120427] (-) TimerEvent: {}
+[56.222202] (-) TimerEvent: {}
+[56.324688] (-) TimerEvent: {}
+[56.426719] (-) TimerEvent: {}
+[56.529031] (-) TimerEvent: {}
+[56.631071] (-) TimerEvent: {}
+[56.733218] (-) TimerEvent: {}
+[56.834794] (-) TimerEvent: {}
+[56.936283] (-) TimerEvent: {}
+[57.038495] (-) TimerEvent: {}
+[57.141134] (-) TimerEvent: {}
+[57.242494] (-) TimerEvent: {}
+[57.344380] (-) TimerEvent: {}
+[57.446520] (-) TimerEvent: {}
+[57.548049] (-) TimerEvent: {}
+[57.649118] (-) TimerEvent: {}
+[57.749731] (-) TimerEvent: {}
+[57.853252] (-) TimerEvent: {}
+[57.954981] (-) TimerEvent: {}
+[58.055998] (-) TimerEvent: {}
+[58.156492] (-) TimerEvent: {}
+[58.257314] (-) TimerEvent: {}
+[58.359142] (-) TimerEvent: {}
+[58.460269] (-) TimerEvent: {}
+[58.560842] (-) TimerEvent: {}
+[58.661608] (-) TimerEvent: {}
+[58.763210] (-) TimerEvent: {}
+[58.863716] (-) TimerEvent: {}
+[58.964795] (-) TimerEvent: {}
+[59.065862] (-) TimerEvent: {}
+[59.166329] (-) TimerEvent: {}
+[59.267187] (-) TimerEvent: {}
+[59.368840] (-) TimerEvent: {}
+[59.469949] (-) TimerEvent: {}
+[59.571642] (-) TimerEvent: {}
+[59.673309] (-) TimerEvent: {}
+[59.774878] (-) TimerEvent: {}
+[59.876868] (-) TimerEvent: {}
+[59.978479] (-) TimerEvent: {}
+[60.079712] (-) TimerEvent: {}
+[60.180972] (-) TimerEvent: {}
+[60.282839] (-) TimerEvent: {}
+[60.384834] (-) TimerEvent: {}
+[60.486331] (-) TimerEvent: {}
+[60.587230] (-) TimerEvent: {}
+[60.688834] (-) TimerEvent: {}
+[60.790582] (-) TimerEvent: {}
+[60.892085] (-) TimerEvent: {}
+[60.993825] (-) TimerEvent: {}
+[61.095409] (-) TimerEvent: {}
+[61.197014] (-) TimerEvent: {}
+[61.298706] (-) TimerEvent: {}
+[61.400319] (-) TimerEvent: {}
+[61.501631] (-) TimerEvent: {}
+[61.602456] (-) TimerEvent: {}
+[61.704179] (-) TimerEvent: {}
+[61.805832] (-) TimerEvent: {}
+[61.906850] (-) TimerEvent: {}
+[62.007336] (-) TimerEvent: {}
+[62.107793] (-) TimerEvent: {}
+[62.208175] (-) TimerEvent: {}
+[62.308732] (-) TimerEvent: {}
+[62.410210] (-) TimerEvent: {}
+[62.510939] (-) TimerEvent: {}
+[62.611413] (-) TimerEvent: {}
+[62.711828] (-) TimerEvent: {}
+[62.812502] (-) TimerEvent: {}
+[62.913586] (-) TimerEvent: {}
+[63.014624] (-) TimerEvent: {}
+[63.115094] (-) TimerEvent: {}
+[63.215507] (-) TimerEvent: {}
+[63.315976] (-) TimerEvent: {}
+[63.416440] (-) TimerEvent: {}
+[63.516932] (-) TimerEvent: {}
+[63.617342] (-) TimerEvent: {}
+[63.717723] (-) TimerEvent: {}
+[63.818125] (-) TimerEvent: {}
+[63.918458] (-) TimerEvent: {}
+[64.018786] (-) TimerEvent: {}
+[64.119159] (-) TimerEvent: {}
+[64.219662] (-) TimerEvent: {}
+[64.320057] (-) TimerEvent: {}
+[64.420408] (-) TimerEvent: {}
+[64.520829] (-) TimerEvent: {}
+[64.621203] (-) TimerEvent: {}
+[64.721592] (-) TimerEvent: {}
+[64.821985] (-) TimerEvent: {}
+[64.922342] (-) TimerEvent: {}
+[65.022703] (-) TimerEvent: {}
+[65.123037] (-) TimerEvent: {}
+[65.223356] (-) TimerEvent: {}
+[65.323815] (-) TimerEvent: {}
+[65.424329] (-) TimerEvent: {}
+[65.525027] (-) TimerEvent: {}
+[65.626592] (-) TimerEvent: {}
+[65.727148] (-) TimerEvent: {}
+[65.827846] (-) TimerEvent: {}
+[65.928722] (-) TimerEvent: {}
+[66.029264] (-) TimerEvent: {}
+[66.129815] (-) TimerEvent: {}
+[66.230410] (-) TimerEvent: {}
+[66.330923] (-) TimerEvent: {}
+[66.431626] (-) TimerEvent: {}
+[66.532029] (-) TimerEvent: {}
+[66.632433] (-) TimerEvent: {}
+[66.732817] (-) TimerEvent: {}
+[66.833264] (-) TimerEvent: {}
+[66.933649] (-) TimerEvent: {}
+[67.034051] (-) TimerEvent: {}
+[67.134391] (-) TimerEvent: {}
+[67.234727] (-) TimerEvent: {}
+[67.335103] (-) TimerEvent: {}
+[67.435479] (-) TimerEvent: {}
+[67.535865] (-) TimerEvent: {}
+[67.636268] (-) TimerEvent: {}
+[67.736640] (-) TimerEvent: {}
+[67.837104] (-) TimerEvent: {}
+[67.937427] (-) TimerEvent: {}
+[68.037766] (-) TimerEvent: {}
+[68.138111] (-) TimerEvent: {}
+[68.238431] (-) TimerEvent: {}
+[68.338760] (-) TimerEvent: {}
+[68.439143] (-) TimerEvent: {}
+[68.539491] (-) TimerEvent: {}
+[68.639877] (-) TimerEvent: {}
+[68.740208] (-) TimerEvent: {}
+[68.840568] (-) TimerEvent: {}
+[68.940959] (-) TimerEvent: {}
+[69.041377] (-) TimerEvent: {}
+[69.141784] (-) TimerEvent: {}
+[69.242253] (-) TimerEvent: {}
+[69.342963] (-) TimerEvent: {}
+[69.444200] (-) TimerEvent: {}
+[69.544597] (-) TimerEvent: {}
+[69.645063] (-) TimerEvent: {}
+[69.746050] (-) TimerEvent: {}
+[69.846949] (-) TimerEvent: {}
+[69.947596] (-) TimerEvent: {}
+[70.048281] (-) TimerEvent: {}
+[70.149415] (-) TimerEvent: {}
+[70.250566] (-) TimerEvent: {}
+[70.351988] (-) TimerEvent: {}
+[70.453291] (-) TimerEvent: {}
+[70.554599] (-) TimerEvent: {}
+[70.656036] (-) TimerEvent: {}
+[70.757418] (-) TimerEvent: {}
+[70.858451] (-) TimerEvent: {}
+[70.959034] (-) TimerEvent: {}
+[71.059980] (-) TimerEvent: {}
+[71.161124] (-) TimerEvent: {}
+[71.262149] (-) TimerEvent: {}
+[71.362530] (-) TimerEvent: {}
+[71.462994] (-) TimerEvent: {}
+[71.563376] (-) TimerEvent: {}
+[71.663721] (-) TimerEvent: {}
+[71.764047] (-) TimerEvent: {}
+[71.864410] (-) TimerEvent: {}
+[71.964992] (-) TimerEvent: {}
+[72.065720] (-) TimerEvent: {}
+[72.166280] (-) TimerEvent: {}
+[72.266644] (-) TimerEvent: {}
+[72.367071] (-) TimerEvent: {}
+[72.467422] (-) TimerEvent: {}
+[72.567736] (-) TimerEvent: {}
+[72.668174] (-) TimerEvent: {}
+[72.768587] (-) TimerEvent: {}
+[72.869024] (-) TimerEvent: {}
+[72.969388] (-) TimerEvent: {}
+[73.069797] (-) TimerEvent: {}
+[73.170217] (-) TimerEvent: {}
+[73.270585] (-) TimerEvent: {}
+[73.371110] (-) TimerEvent: {}
+[73.471546] (-) TimerEvent: {}
+[73.571935] (-) TimerEvent: {}
+[73.672330] (-) TimerEvent: {}
+[73.772766] (-) TimerEvent: {}
+[73.873248] (-) TimerEvent: {}
+[73.973657] (-) TimerEvent: {}
+[74.074099] (-) TimerEvent: {}
+[74.174906] (-) TimerEvent: {}
+[74.276076] (-) TimerEvent: {}
+[74.376618] (-) TimerEvent: {}
+[74.477168] (-) TimerEvent: {}
+[74.577913] (-) TimerEvent: {}
+[74.679214] (-) TimerEvent: {}
+[74.779931] (-) TimerEvent: {}
+[74.880535] (-) TimerEvent: {}
+[74.981010] (-) TimerEvent: {}
+[75.081443] (-) TimerEvent: {}
+[75.182015] (-) TimerEvent: {}
+[75.282477] (-) TimerEvent: {}
+[75.382892] (-) TimerEvent: {}
+[75.483312] (-) TimerEvent: {}
+[75.583692] (-) TimerEvent: {}
+[75.684237] (-) TimerEvent: {}
+[75.785014] (-) TimerEvent: {}
+[75.885434] (-) TimerEvent: {}
+[75.985851] (-) TimerEvent: {}
+[76.086258] (-) TimerEvent: {}
+[76.186705] (-) TimerEvent: {}
+[76.287240] (-) TimerEvent: {}
+[76.387683] (-) TimerEvent: {}
+[76.488123] (-) TimerEvent: {}
+[76.588580] (-) TimerEvent: {}
+[76.689060] (-) TimerEvent: {}
+[76.789599] (-) TimerEvent: {}
+[76.890245] (-) TimerEvent: {}
+[76.990790] (-) TimerEvent: {}
+[77.091580] (-) TimerEvent: {}
+[77.192515] (-) TimerEvent: {}
+[77.293814] (-) TimerEvent: {}
+[77.394185] (-) TimerEvent: {}
+[77.494689] (-) TimerEvent: {}
+[77.595216] (-) TimerEvent: {}
+[77.695759] (-) TimerEvent: {}
+[77.796459] (-) TimerEvent: {}
+[77.897036] (-) TimerEvent: {}
+[77.998050] (-) TimerEvent: {}
+[78.098859] (-) TimerEvent: {}
+[78.200118] (-) TimerEvent: {}
+[78.301458] (-) TimerEvent: {}
+[78.402807] (-) TimerEvent: {}
+[78.504117] (-) TimerEvent: {}
+[78.605319] (-) TimerEvent: {}
+[78.706852] (-) TimerEvent: {}
+[78.808309] (-) TimerEvent: {}
+[78.909403] (-) TimerEvent: {}
+[79.010415] (-) TimerEvent: {}
+[79.111102] (-) TimerEvent: {}
+[79.211606] (-) TimerEvent: {}
+[79.312253] (-) TimerEvent: {}
+[79.413103] (-) TimerEvent: {}
+[79.513471] (-) TimerEvent: {}
+[79.613967] (-) TimerEvent: {}
+[79.714467] (-) TimerEvent: {}
+[79.814967] (-) TimerEvent: {}
+[79.915409] (-) TimerEvent: {}
+[80.015863] (-) TimerEvent: {}
+[80.116338] (-) TimerEvent: {}
+[80.217000] (-) TimerEvent: {}
+[80.317518] (-) TimerEvent: {}
+[80.417997] (-) TimerEvent: {}
+[80.518482] (-) TimerEvent: {}
+[80.618944] (-) TimerEvent: {}
+[80.719453] (-) TimerEvent: {}
+[80.819910] (-) TimerEvent: {}
+[80.920378] (-) TimerEvent: {}
+[81.021029] (-) TimerEvent: {}
+[81.121486] (-) TimerEvent: {}
+[81.222240] (-) TimerEvent: {}
+[81.322762] (-) TimerEvent: {}
+[81.423149] (-) TimerEvent: {}
+[81.523839] (-) TimerEvent: {}
+[81.624804] (-) TimerEvent: {}
+[81.725482] (-) TimerEvent: {}
+[81.825962] (-) TimerEvent: {}
+[81.926468] (-) TimerEvent: {}
+[82.026900] (-) TimerEvent: {}
+[82.127425] (-) TimerEvent: {}
+[82.227844] (-) TimerEvent: {}
+[82.328383] (-) TimerEvent: {}
+[82.429304] (-) TimerEvent: {}
+[82.530065] (-) TimerEvent: {}
+[82.630563] (-) TimerEvent: {}
+[82.731289] (-) TimerEvent: {}
+[82.831781] (-) TimerEvent: {}
+[82.932239] (-) TimerEvent: {}
+[83.032786] (-) TimerEvent: {}
+[83.133580] (-) TimerEvent: {}
+[83.234033] (-) TimerEvent: {}
+[83.334479] (-) TimerEvent: {}
+[83.434864] (-) TimerEvent: {}
+[83.535352] (-) TimerEvent: {}
+[83.635786] (-) TimerEvent: {}
+[83.736256] (-) TimerEvent: {}
+[83.837408] (-) TimerEvent: {}
+[83.938996] (-) TimerEvent: {}
+[84.039942] (-) TimerEvent: {}
+[84.141134] (-) TimerEvent: {}
+[84.242198] (-) TimerEvent: {}
+[84.343202] (-) TimerEvent: {}
+[84.444136] (-) TimerEvent: {}
+[84.544923] (-) TimerEvent: {}
+[84.645640] (-) TimerEvent: {}
+[84.745994] (-) TimerEvent: {}
+[84.846370] (-) TimerEvent: {}
+[84.946728] (-) TimerEvent: {}
+[85.047088] (-) TimerEvent: {}
+[85.147489] (-) TimerEvent: {}
+[85.247825] (-) TimerEvent: {}
+[85.348192] (-) TimerEvent: {}
+[85.448560] (-) TimerEvent: {}
+[85.548912] (-) TimerEvent: {}
+[85.649265] (-) TimerEvent: {}
+[85.749639] (-) TimerEvent: {}
+[85.849968] (-) TimerEvent: {}
+[85.950364] (-) TimerEvent: {}
+[86.050719] (-) TimerEvent: {}
+[86.151177] (-) TimerEvent: {}
+[86.251770] (-) TimerEvent: {}
+[86.352200] (-) TimerEvent: {}
+[86.452718] (-) TimerEvent: {}
+[86.553460] (-) TimerEvent: {}
+[86.653833] (-) TimerEvent: {}
+[86.754356] (-) TimerEvent: {}
+[86.855220] (-) TimerEvent: {}
+[86.956026] (-) TimerEvent: {}
+[87.056449] (-) TimerEvent: {}
+[87.156936] (-) TimerEvent: {}
+[87.257581] (-) TimerEvent: {}
+[87.358033] (-) TimerEvent: {}
+[87.458356] (-) TimerEvent: {}
+[87.558698] (-) TimerEvent: {}
+[87.659028] (-) TimerEvent: {}
+[87.759376] (-) TimerEvent: {}
+[87.859726] (-) TimerEvent: {}
+[87.960081] (-) TimerEvent: {}
+[88.060680] (-) TimerEvent: {}
+[88.161035] (-) TimerEvent: {}
+[88.261431] (-) TimerEvent: {}
+[88.361818] (-) TimerEvent: {}
+[88.462154] (-) TimerEvent: {}
+[88.562666] (-) TimerEvent: {}
+[88.663114] (-) TimerEvent: {}
+[88.763587] (-) TimerEvent: {}
+[88.864473] (-) TimerEvent: {}
+[88.965681] (-) TimerEvent: {}
+[89.066894] (-) TimerEvent: {}
+[89.168090] (-) TimerEvent: {}
+[89.269440] (-) TimerEvent: {}
+[89.370868] (-) TimerEvent: {}
+[89.472467] (-) TimerEvent: {}
+[89.573855] (-) TimerEvent: {}
+[89.674826] (-) TimerEvent: {}
+[89.775619] (-) TimerEvent: {}
+[89.876392] (-) TimerEvent: {}
+[89.977560] (-) TimerEvent: {}
+[90.078113] (-) TimerEvent: {}
+[90.178774] (-) TimerEvent: {}
+[90.279576] (-) TimerEvent: {}
+[90.379946] (-) TimerEvent: {}
+[90.480287] (-) TimerEvent: {}
+[90.580698] (-) TimerEvent: {}
+[90.681113] (-) TimerEvent: {}
+[90.781603] (-) TimerEvent: {}
+[90.882378] (-) TimerEvent: {}
+[90.982951] (-) TimerEvent: {}
+[91.083315] (-) TimerEvent: {}
+[91.183821] (-) TimerEvent: {}
+[91.284238] (-) TimerEvent: {}
+[91.384713] (-) TimerEvent: {}
+[91.485400] (-) TimerEvent: {}
+[91.586405] (-) TimerEvent: {}
+[91.687561] (-) TimerEvent: {}
+[91.788757] (-) TimerEvent: {}
+[91.889270] (-) TimerEvent: {}
+[91.989757] (-) TimerEvent: {}
+[92.090209] (-) TimerEvent: {}
+[92.190647] (-) TimerEvent: {}
+[92.291170] (-) TimerEvent: {}
+[92.392048] (-) TimerEvent: {}
+[92.493055] (-) TimerEvent: {}
+[92.594449] (-) TimerEvent: {}
+[92.696048] (-) TimerEvent: {}
+[92.796862] (-) TimerEvent: {}
+[92.898523] (-) TimerEvent: {}
+[93.000263] (-) TimerEvent: {}
+[93.101639] (-) TimerEvent: {}
+[93.202356] (-) TimerEvent: {}
+[93.302872] (-) TimerEvent: {}
+[93.404089] (-) TimerEvent: {}
+[93.504831] (-) TimerEvent: {}
+[93.605136] (-) TimerEvent: {}
+[93.705545] (-) TimerEvent: {}
+[93.805915] (-) TimerEvent: {}
+[93.906244] (-) TimerEvent: {}
+[94.006625] (-) TimerEvent: {}
+[94.107147] (-) TimerEvent: {}
+[94.207526] (-) TimerEvent: {}
+[94.307874] (-) TimerEvent: {}
+[94.408283] (-) TimerEvent: {}
+[94.508639] (-) TimerEvent: {}
+[94.609095] (-) TimerEvent: {}
+[94.709441] (-) TimerEvent: {}
+[94.809757] (-) TimerEvent: {}
+[94.910099] (-) TimerEvent: {}
+[95.010437] (-) TimerEvent: {}
+[95.110769] (-) TimerEvent: {}
+[95.211119] (-) TimerEvent: {}
+[95.311462] (-) TimerEvent: {}
+[95.411773] (-) TimerEvent: {}
+[95.512361] (-) TimerEvent: {}
+[95.612794] (-) TimerEvent: {}
+[95.713127] (-) TimerEvent: {}
+[95.813698] (-) TimerEvent: {}
+[95.914726] (-) TimerEvent: {}
+[96.015838] (-) TimerEvent: {}
+[96.117210] (-) TimerEvent: {}
+[96.218868] (-) TimerEvent: {}
+[96.320367] (-) TimerEvent: {}
+[96.421841] (-) TimerEvent: {}
+[96.522713] (-) TimerEvent: {}
+[96.623768] (-) TimerEvent: {}
+[96.725080] (-) TimerEvent: {}
+[96.826357] (-) TimerEvent: {}
+[96.927603] (-) TimerEvent: {}
+[97.028401] (-) TimerEvent: {}
+[97.129064] (-) TimerEvent: {}
+[97.229631] (-) TimerEvent: {}
+[97.330588] (-) TimerEvent: {}
+[97.430926] (-) TimerEvent: {}
+[97.531254] (-) TimerEvent: {}
+[97.631860] (-) TimerEvent: {}
+[97.732787] (-) TimerEvent: {}
+[97.833294] (-) TimerEvent: {}
+[97.934241] (-) TimerEvent: {}
+[98.035070] (-) TimerEvent: {}
+[98.135454] (-) TimerEvent: {}
+[98.235824] (-) TimerEvent: {}
+[98.336195] (-) TimerEvent: {}
+[98.436523] (-) TimerEvent: {}
+[98.536998] (-) TimerEvent: {}
+[98.637324] (-) TimerEvent: {}
+[98.737648] (-) TimerEvent: {}
+[98.838131] (-) TimerEvent: {}
+[98.938464] (-) TimerEvent: {}
+[99.038819] (-) TimerEvent: {}
+[99.139178] (-) TimerEvent: {}
+[99.239530] (-) TimerEvent: {}
+[99.339854] (-) TimerEvent: {}
+[99.440164] (-) TimerEvent: {}
+[99.540473] (-) TimerEvent: {}
+[99.640908] (-) TimerEvent: {}
+[99.741256] (-) TimerEvent: {}
+[99.841615] (-) TimerEvent: {}
+[99.941923] (-) TimerEvent: {}
+[100.042240] (-) TimerEvent: {}
+[100.142555] (-) TimerEvent: {}
+[100.242880] (-) TimerEvent: {}
+[100.343236] (-) TimerEvent: {}
+[100.443590] (-) TimerEvent: {}
+[100.543954] (-) TimerEvent: {}
+[100.644268] (-) TimerEvent: {}
+[100.744620] (-) TimerEvent: {}
+[100.844975] (-) TimerEvent: {}
+[100.945361] (-) TimerEvent: {}
+[101.045749] (-) TimerEvent: {}
+[101.146145] (-) TimerEvent: {}
+[101.246450] (-) TimerEvent: {}
+[101.346960] (-) TimerEvent: {}
+[101.448411] (-) TimerEvent: {}
+[101.549765] (-) TimerEvent: {}
+[101.651564] (-) TimerEvent: {}
+[101.753035] (-) TimerEvent: {}
+[101.854490] (-) TimerEvent: {}
+[101.955797] (-) TimerEvent: {}
+[102.056829] (-) TimerEvent: {}
+[102.157836] (-) TimerEvent: {}
+[102.258318] (-) TimerEvent: {}
+[102.358754] (-) TimerEvent: {}
+[102.459115] (-) TimerEvent: {}
+[102.559442] (-) TimerEvent: {}
+[102.659805] (-) TimerEvent: {}
+[102.760132] (-) TimerEvent: {}
+[102.860485] (-) TimerEvent: {}
+[102.960808] (-) TimerEvent: {}
+[103.061165] (-) TimerEvent: {}
+[103.161506] (-) TimerEvent: {}
+[103.261931] (-) TimerEvent: {}
+[103.362306] (-) TimerEvent: {}
+[103.462700] (-) TimerEvent: {}
+[103.563428] (-) TimerEvent: {}
+[103.664456] (-) TimerEvent: {}
+[103.764811] (-) TimerEvent: {}
+[103.865352] (-) TimerEvent: {}
+[103.966171] (-) TimerEvent: {}
+[104.067300] (-) TimerEvent: {}
+[104.167785] (-) TimerEvent: {}
+[104.268487] (-) TimerEvent: {}
+[104.368819] (-) TimerEvent: {}
+[104.469112] (-) TimerEvent: {}
+[104.569446] (-) TimerEvent: {}
+[104.669857] (-) TimerEvent: {}
+[104.770236] (-) TimerEvent: {}
+[104.871035] (-) TimerEvent: {}
+[104.971399] (-) TimerEvent: {}
+[105.071749] (-) TimerEvent: {}
+[105.172094] (-) TimerEvent: {}
+[105.272511] (-) TimerEvent: {}
+[105.372916] (-) TimerEvent: {}
+[105.473298] (-) TimerEvent: {}
+[105.573674] (-) TimerEvent: {}
+[105.674049] (-) TimerEvent: {}
+[105.774446] (-) TimerEvent: {}
+[105.874839] (-) TimerEvent: {}
+[105.975201] (-) TimerEvent: {}
+[106.075571] (-) TimerEvent: {}
+[106.175897] (-) TimerEvent: {}
+[106.276211] (-) TimerEvent: {}
+[106.376537] (-) TimerEvent: {}
+[106.476839] (-) TimerEvent: {}
+[106.577201] (-) TimerEvent: {}
+[106.677608] (-) TimerEvent: {}
+[106.777941] (-) TimerEvent: {}
+[106.878306] (-) TimerEvent: {}
+[106.978669] (-) TimerEvent: {}
+[107.079120] (-) TimerEvent: {}
+[107.179487] (-) TimerEvent: {}
+[107.280283] (-) TimerEvent: {}
+[107.381333] (-) TimerEvent: {}
+[107.482567] (-) TimerEvent: {}
+[107.583864] (-) TimerEvent: {}
+[107.685323] (-) TimerEvent: {}
+[107.786798] (-) TimerEvent: {}
+[107.888143] (-) TimerEvent: {}
+[107.989684] (-) TimerEvent: {}
+[108.090808] (-) TimerEvent: {}
+[108.191709] (-) TimerEvent: {}
+[108.292656] (-) TimerEvent: {}
+[108.393621] (-) TimerEvent: {}
+[108.495065] (-) TimerEvent: {}
+[108.595842] (-) TimerEvent: {}
+[108.696253] (-) TimerEvent: {}
+[108.797054] (-) TimerEvent: {}
+[108.897955] (-) TimerEvent: {}
+[108.998523] (-) TimerEvent: {}
+[109.099275] (-) TimerEvent: {}
+[109.199695] (-) TimerEvent: {}
+[109.300241] (-) TimerEvent: {}
+[109.400617] (-) TimerEvent: {}
+[109.501011] (-) TimerEvent: {}
+[109.601342] (-) TimerEvent: {}
+[109.701667] (-) TimerEvent: {}
+[109.802056] (-) TimerEvent: {}
+[109.902391] (-) TimerEvent: {}
+[110.002737] (-) TimerEvent: {}
+[110.103143] (-) TimerEvent: {}
+[110.203536] (-) TimerEvent: {}
+[110.303846] (-) TimerEvent: {}
+[110.404208] (-) TimerEvent: {}
+[110.504521] (-) TimerEvent: {}
+[110.604900] (-) TimerEvent: {}
+[110.705253] (-) TimerEvent: {}
+[110.805621] (-) TimerEvent: {}
+[110.905972] (-) TimerEvent: {}
+[111.006348] (-) TimerEvent: {}
+[111.106723] (-) TimerEvent: {}
+[111.207115] (-) TimerEvent: {}
+[111.307503] (-) TimerEvent: {}
+[111.408030] (-) TimerEvent: {}
+[111.508744] (-) TimerEvent: {}
+[111.609636] (-) TimerEvent: {}
+[111.709959] (-) TimerEvent: {}
+[111.810269] (-) TimerEvent: {}
+[111.910616] (-) TimerEvent: {}
+[112.010953] (-) TimerEvent: {}
+[112.111519] (-) TimerEvent: {}
+[112.212788] (-) TimerEvent: {}
+[112.313616] (-) TimerEvent: {}
+[112.414167] (-) TimerEvent: {}
+[112.514781] (-) TimerEvent: {}
+[112.615414] (-) TimerEvent: {}
+[112.716623] (-) TimerEvent: {}
+[112.817950] (-) TimerEvent: {}
+[112.919054] (-) TimerEvent: {}
+[113.020165] (-) TimerEvent: {}
+[113.121305] (-) TimerEvent: {}
+[113.222476] (-) TimerEvent: {}
+[113.323469] (-) TimerEvent: {}
+[113.424562] (-) TimerEvent: {}
+[113.525271] (-) TimerEvent: {}
+[113.626004] (-) TimerEvent: {}
+[113.727662] (-) TimerEvent: {}
+[113.828734] (-) TimerEvent: {}
+[113.929774] (-) TimerEvent: {}
+[114.030823] (-) TimerEvent: {}
+[114.131477] (-) TimerEvent: {}
+[114.232073] (-) TimerEvent: {}
+[114.332493] (-) TimerEvent: {}
+[114.432835] (-) TimerEvent: {}
+[114.533282] (-) TimerEvent: {}
+[114.633617] (-) TimerEvent: {}
+[114.733994] (-) TimerEvent: {}
+[114.834347] (-) TimerEvent: {}
+[114.934697] (-) TimerEvent: {}
+[115.035042] (-) TimerEvent: {}
+[115.135393] (-) TimerEvent: {}
+[115.235729] (-) TimerEvent: {}
+[115.336093] (-) TimerEvent: {}
+[115.436464] (-) TimerEvent: {}
+[115.536866] (-) TimerEvent: {}
+[115.637214] (-) TimerEvent: {}
+[115.737563] (-) TimerEvent: {}
+[115.838005] (-) TimerEvent: {}
+[115.938303] (-) TimerEvent: {}
+[116.038629] (-) TimerEvent: {}
+[116.138962] (-) TimerEvent: {}
+[116.239299] (-) TimerEvent: {}
+[116.339626] (-) TimerEvent: {}
+[116.439937] (-) TimerEvent: {}
+[116.540331] (-) TimerEvent: {}
+[116.640624] (-) TimerEvent: {}
+[116.741011] (-) TimerEvent: {}
+[116.841359] (-) TimerEvent: {}
+[116.941677] (-) TimerEvent: {}
+[117.042042] (-) TimerEvent: {}
+[117.142411] (-) TimerEvent: {}
+[117.242748] (-) TimerEvent: {}
+[117.343210] (-) TimerEvent: {}
+[117.443884] (-) TimerEvent: {}
+[117.544227] (-) TimerEvent: {}
+[117.644701] (-) TimerEvent: {}
+[117.745912] (-) TimerEvent: {}
+[117.846769] (-) TimerEvent: {}
+[117.947063] (-) TimerEvent: {}
+[118.047622] (-) TimerEvent: {}
+[118.148399] (-) TimerEvent: {}
+[118.249706] (-) TimerEvent: {}
+[118.350920] (-) TimerEvent: {}
+[118.452248] (-) TimerEvent: {}
+[118.553441] (-) TimerEvent: {}
+[118.654702] (-) TimerEvent: {}
+[118.756185] (-) TimerEvent: {}
+[118.857280] (-) TimerEvent: {}
+[118.958633] (-) TimerEvent: {}
+[119.059451] (-) TimerEvent: {}
+[119.160404] (-) TimerEvent: {}
+[119.261715] (-) TimerEvent: {}
+[119.363076] (-) TimerEvent: {}
+[119.463621] (-) TimerEvent: {}
+[119.564583] (-) TimerEvent: {}
+[119.664970] (-) TimerEvent: {}
+[119.765295] (-) TimerEvent: {}
+[119.865685] (-) TimerEvent: {}
+[119.966053] (-) TimerEvent: {}
+[120.066423] (-) TimerEvent: {}
+[120.166887] (-) TimerEvent: {}
+[120.267496] (-) TimerEvent: {}
+[120.368245] (-) TimerEvent: {}
+[120.468795] (-) TimerEvent: {}
+[120.569251] (-) TimerEvent: {}
+[120.669763] (-) TimerEvent: {}
+[120.770571] (-) TimerEvent: {}
+[120.871747] (-) TimerEvent: {}
+[120.972083] (-) TimerEvent: {}
+[121.072404] (-) TimerEvent: {}
+[121.172819] (-) TimerEvent: {}
+[121.273156] (-) TimerEvent: {}
+[121.373503] (-) TimerEvent: {}
+[121.473877] (-) TimerEvent: {}
+[121.574262] (-) TimerEvent: {}
+[121.674584] (-) TimerEvent: {}
+[121.774997] (-) TimerEvent: {}
+[121.875533] (-) TimerEvent: {}
+[121.976391] (-) TimerEvent: {}
+[122.076951] (-) TimerEvent: {}
+[122.177551] (-) TimerEvent: {}
+[122.277896] (-) TimerEvent: {}
+[122.378252] (-) TimerEvent: {}
+[122.478598] (-) TimerEvent: {}
+[122.578974] (-) TimerEvent: {}
+[122.679318] (-) TimerEvent: {}
+[122.779727] (-) TimerEvent: {}
+[122.880061] (-) TimerEvent: {}
+[122.980430] (-) TimerEvent: {}
+[123.081014] (-) TimerEvent: {}
+[123.182635] (-) TimerEvent: {}
+[123.284289] (-) TimerEvent: {}
+[123.385340] (-) TimerEvent: {}
+[123.486572] (-) TimerEvent: {}
+[123.587898] (-) TimerEvent: {}
+[123.688903] (-) TimerEvent: {}
+[123.790063] (-) TimerEvent: {}
+[123.891035] (-) TimerEvent: {}
+[123.992355] (-) TimerEvent: {}
+[124.093511] (-) TimerEvent: {}
+[124.194397] (-) TimerEvent: {}
+[124.294992] (-) TimerEvent: {}
+[124.396097] (-) TimerEvent: {}
+[124.496912] (-) TimerEvent: {}
+[124.597260] (-) TimerEvent: {}
+[124.697739] (-) TimerEvent: {}
+[124.798439] (-) TimerEvent: {}
+[124.898842] (-) TimerEvent: {}
+[124.999235] (-) TimerEvent: {}
+[125.099682] (-) TimerEvent: {}
+[125.200023] (-) TimerEvent: {}
+[125.300363] (-) TimerEvent: {}
+[125.401027] (-) TimerEvent: {}
+[125.501573] (-) TimerEvent: {}
+[125.602108] (-) TimerEvent: {}
+[125.702993] (-) TimerEvent: {}
+[125.803367] (-) TimerEvent: {}
+[125.903733] (-) TimerEvent: {}
+[126.004064] (-) TimerEvent: {}
+[126.104363] (-) TimerEvent: {}
+[126.204671] (-) TimerEvent: {}
+[126.304983] (-) TimerEvent: {}
+[126.405360] (-) TimerEvent: {}
+[126.505720] (-) TimerEvent: {}
+[126.606097] (-) TimerEvent: {}
+[126.706470] (-) TimerEvent: {}
+[126.807461] (-) TimerEvent: {}
+[126.908188] (-) TimerEvent: {}
+[127.009550] (-) TimerEvent: {}
+[127.110521] (-) TimerEvent: {}
+[127.210829] (-) TimerEvent: {}
+[127.311201] (-) TimerEvent: {}
+[127.411714] (-) TimerEvent: {}
+[127.512553] (-) TimerEvent: {}
+[127.613215] (-) TimerEvent: {}
+[127.713930] (-) TimerEvent: {}
+[127.814841] (-) TimerEvent: {}
+[127.915813] (-) TimerEvent: {}
+[128.016405] (-) TimerEvent: {}
+[128.117090] (-) TimerEvent: {}
+[128.218138] (-) TimerEvent: {}
+[128.319555] (-) TimerEvent: {}
+[128.421245] (-) TimerEvent: {}
+[128.523063] (-) TimerEvent: {}
+[128.625212] (-) TimerEvent: {}
+[128.726567] (-) TimerEvent: {}
+[128.827973] (-) TimerEvent: {}
+[128.929065] (-) TimerEvent: {}
+[129.029890] (-) TimerEvent: {}
+[129.130485] (-) TimerEvent: {}
+[129.232095] (-) TimerEvent: {}
+[129.332559] (-) TimerEvent: {}
+[129.432922] (-) TimerEvent: {}
+[129.533360] (-) TimerEvent: {}
+[129.633857] (-) TimerEvent: {}
+[129.734368] (-) TimerEvent: {}
+[129.834850] (-) TimerEvent: {}
+[129.935247] (-) TimerEvent: {}
+[130.035682] (-) TimerEvent: {}
+[130.136251] (-) TimerEvent: {}
+[130.236706] (-) TimerEvent: {}
+[130.337045] (-) TimerEvent: {}
+[130.374965] (robot_slam) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable robot_slam_node\x1b[0m\n'}
+[130.437193] (-) TimerEvent: {}
+[130.537545] (-) TimerEvent: {}
+[130.637923] (-) TimerEvent: {}
+[130.738705] (-) TimerEvent: {}
+[130.840123] (-) TimerEvent: {}
+[130.941196] (-) TimerEvent: {}
+[131.042157] (-) TimerEvent: {}
+[131.143706] (-) TimerEvent: {}
+[131.244614] (-) TimerEvent: {}
+[131.345719] (-) TimerEvent: {}
+[131.447432] (-) TimerEvent: {}
+[131.548955] (-) TimerEvent: {}
+[131.649740] (-) TimerEvent: {}
+[131.750646] (-) TimerEvent: {}
+[131.851649] (-) TimerEvent: {}
+[131.953458] (-) TimerEvent: {}
+[132.055536] (-) TimerEvent: {}
+[132.157501] (-) TimerEvent: {}
+[132.260190] (-) TimerEvent: {}
+[132.362603] (-) TimerEvent: {}
+[132.463879] (-) TimerEvent: {}
+[132.564779] (-) TimerEvent: {}
+[132.665763] (-) TimerEvent: {}
+[132.766608] (-) TimerEvent: {}
+[132.867393] (-) TimerEvent: {}
+[132.968115] (-) TimerEvent: {}
+[133.068914] (-) TimerEvent: {}
+[133.170768] (-) TimerEvent: {}
+[133.272741] (-) TimerEvent: {}
+[133.374742] (-) TimerEvent: {}
+[133.475867] (-) TimerEvent: {}
+[133.577205] (-) TimerEvent: {}
+[133.678201] (-) TimerEvent: {}
+[133.778769] (-) TimerEvent: {}
+[133.879495] (-) TimerEvent: {}
+[133.980342] (-) TimerEvent: {}
+[134.081027] (-) TimerEvent: {}
+[134.181751] (-) TimerEvent: {}
+[134.282644] (-) TimerEvent: {}
+[134.383505] (-) TimerEvent: {}
+[134.484298] (-) TimerEvent: {}
+[134.586035] (-) TimerEvent: {}
+[134.688276] (-) TimerEvent: {}
+[134.790315] (-) TimerEvent: {}
+[134.891799] (-) TimerEvent: {}
+[134.993396] (-) TimerEvent: {}
+[135.095175] (-) TimerEvent: {}
+[135.197028] (-) TimerEvent: {}
+[135.299332] (-) TimerEvent: {}
+[135.400413] (-) TimerEvent: {}
+[135.501012] (-) TimerEvent: {}
+[135.601853] (-) TimerEvent: {}
+[135.703405] (-) TimerEvent: {}
+[135.805474] (-) TimerEvent: {}
+[135.906976] (-) TimerEvent: {}
+[136.008476] (-) TimerEvent: {}
+[136.109688] (-) TimerEvent: {}
+[136.210764] (-) TimerEvent: {}
+[136.312294] (-) TimerEvent: {}
+[136.414074] (-) TimerEvent: {}
+[136.515086] (-) TimerEvent: {}
+[136.616459] (-) TimerEvent: {}
+[136.717079] (-) TimerEvent: {}
+[136.817805] (-) TimerEvent: {}
+[136.918329] (-) TimerEvent: {}
+[137.018889] (-) TimerEvent: {}
+[137.119601] (-) TimerEvent: {}
+[137.220169] (-) TimerEvent: {}
+[137.320745] (-) TimerEvent: {}
+[137.421751] (-) TimerEvent: {}
+[137.523186] (-) TimerEvent: {}
+[137.624769] (-) TimerEvent: {}
+[137.725422] (-) TimerEvent: {}
+[137.826034] (-) TimerEvent: {}
+[137.926493] (-) TimerEvent: {}
+[138.028277] (-) TimerEvent: {}
+[138.128788] (-) TimerEvent: {}
+[138.229372] (-) TimerEvent: {}
+[138.329873] (-) TimerEvent: {}
+[138.430330] (-) TimerEvent: {}
+[138.530769] (-) TimerEvent: {}
+[138.631288] (-) TimerEvent: {}
+[138.732046] (-) TimerEvent: {}
+[138.833804] (-) TimerEvent: {}
+[138.935186] (-) TimerEvent: {}
+[139.036574] (-) TimerEvent: {}
+[139.137366] (-) TimerEvent: {}
+[139.238323] (-) TimerEvent: {}
+[139.339328] (-) TimerEvent: {}
+[139.439832] (-) TimerEvent: {}
+[139.540298] (-) TimerEvent: {}
+[139.640731] (-) TimerEvent: {}
+[139.741095] (-) TimerEvent: {}
+[139.841463] (-) TimerEvent: {}
+[139.941932] (-) TimerEvent: {}
+[140.042301] (-) TimerEvent: {}
+[140.142695] (-) TimerEvent: {}
+[140.243101] (-) TimerEvent: {}
+[140.343529] (-) TimerEvent: {}
+[140.444110] (-) TimerEvent: {}
+[140.544580] (-) TimerEvent: {}
+[140.645007] (-) TimerEvent: {}
+[140.745468] (-) TimerEvent: {}
+[140.845935] (-) TimerEvent: {}
+[140.946335] (-) TimerEvent: {}
+[141.046749] (-) TimerEvent: {}
+[141.147144] (-) TimerEvent: {}
+[141.247661] (-) TimerEvent: {}
+[141.348652] (-) TimerEvent: {}
+[141.450266] (-) TimerEvent: {}
+[141.551490] (-) TimerEvent: {}
+[141.652910] (-) TimerEvent: {}
+[141.754125] (-) TimerEvent: {}
+[141.855312] (-) TimerEvent: {}
+[141.956342] (-) TimerEvent: {}
+[141.967362] (robot_slam) StdoutLine: {'line': b'[100%] Built target robot_slam_node\n'}
+[142.002636] (robot_slam) CommandEnded: {'returncode': 0}
+[142.006996] (robot_slam) JobProgress: {'identifier': 'robot_slam', 'progress': 'install'}
+[142.009127] (robot_slam) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_slam'], 'cwd': '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_slam', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US'), ('USER', 'misha'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/misha'), ('CHROME_DESKTOP', 'code.desktop'), ('TERM_PROGRAM_VERSION', '1.109.5'), ('DESKTOP_SESSION', 'cinnamon'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('CINNAMON_VERSION', '5.4.12'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '38957'), ('QT_QPA_PLATFORMTHEME', 'qt5ct'), ('COLCON_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'misha'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GTK_OVERLAY_SCROLLING', '1'), ('XDG_SESSION_ID', 'c2'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/misha-ThinkPad-T480:@/tmp/.ICE-unix/1316,unix/misha-ThinkPad-T480:/tmp/.ICE-unix/1316'), ('GDM_LANG', 'en_US'), ('GTK3_MODULES', 'xapp-gtk3-module'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'X-Cinnamon'), ('XDG_SESSION_DESKTOP', 'cinnamon'), ('XAUTHORITY', '/home/misha/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-14122b7208.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/misha'), ('AMENT_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'cinnamon'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('XDG_VTNR', '7'), ('PWD', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_slam'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-cinnamon:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/cinnamon:/usr/share/gnome:/home/misha/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/test_robot_plugin:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_odometry:/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/my_robot_bringup:/opt/ros/humble')]), 'shell': False}
+[142.027790] (robot_slam) StdoutLine: {'line': b'-- Install configuration: "Debug"\n'}
+[142.028424] (robot_slam) StdoutLine: {'line': b'-- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam/lib/robot_slam/robot_slam_node\n'}
+[142.056678] (-) TimerEvent: {}
+[142.157932] (-) TimerEvent: {}
+[142.158913] (robot_slam) StdoutLine: {'line': b'-- Set runtime path of "/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam/lib/robot_slam/robot_slam_node" to ""\n'}
+[142.159323] (robot_slam) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam/share/robot_slam/launch\n'}
+[142.159505] (robot_slam) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam/share/robot_slam/launch/robot_slam_launch.py\n'}
+[142.159634] (robot_slam) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam/share/ament_index/resource_index/package_run_dependencies/robot_slam\n'}
+[142.159776] (robot_slam) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam/share/ament_index/resource_index/parent_prefix_path/robot_slam\n'}
+[142.159909] (robot_slam) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam/share/robot_slam/environment/ament_prefix_path.sh\n'}
+[142.160024] (robot_slam) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam/share/robot_slam/environment/ament_prefix_path.dsv\n'}
+[142.160115] (robot_slam) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam/share/robot_slam/environment/path.sh\n'}
+[142.160240] (robot_slam) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam/share/robot_slam/environment/path.dsv\n'}
+[142.160390] (robot_slam) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam/share/robot_slam/local_setup.bash\n'}
+[142.160480] (robot_slam) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam/share/robot_slam/local_setup.sh\n'}
+[142.160568] (robot_slam) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam/share/robot_slam/local_setup.zsh\n'}
+[142.160660] (robot_slam) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam/share/robot_slam/local_setup.dsv\n'}
+[142.160747] (robot_slam) StdoutLine: {'line': b'-- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam/share/robot_slam/package.dsv\n'}
+[142.160849] (robot_slam) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam/share/ament_index/resource_index/packages/robot_slam\n'}
+[142.160982] (robot_slam) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam/share/robot_slam/cmake/robot_slamConfig.cmake\n'}
+[142.161102] (robot_slam) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam/share/robot_slam/cmake/robot_slamConfig-version.cmake\n'}
+[142.161230] (robot_slam) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_slam/share/robot_slam/package.xml\n'}
+[142.162821] (robot_slam) CommandEnded: {'returncode': 0}
+[142.207160] (robot_slam) JobEnded: {'identifier': 'robot_slam', 'rc': 0}
+[142.208158] (-) EventReactorShutdown: {}

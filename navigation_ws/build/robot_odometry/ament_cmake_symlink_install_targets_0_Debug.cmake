@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_odometry/robot_odometry_node" "TARGETS" "robot_odometry_node" "DESTINATION" "lib/robot_odometry")

@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/test_robot_plugin/libwheel_robot_controller.so" "TARGETS" "wheel_robot_controller" "LIBRARY_DESTINATION" "lib")

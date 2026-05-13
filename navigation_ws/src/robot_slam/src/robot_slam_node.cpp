@@ -17,6 +17,10 @@
 #include <pcl/filters/voxel_grid.h>
 // Фильтр удаления выбросов на основе статистики соседей
 #include <pcl/filters/statistical_outlier_removal.h>
+// Тип сообщения позы с меткой времени (для публикации результата EKF)
+#include <geometry_msgs/msg/pose_stamped.hpp>
+// Конвертация геометрии (Pose, Transform) для TF
+#include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
 
 
 
@@ -30,11 +34,18 @@ enum MatcherMode {
 class ScanMatcher
 {
 public:
-    ScanMatcher():
+    ScanMatcher(int MaxIters, float EuclidFitEps, float MaxCorrespondDist, float leaf_in, float meank_in, float StddevMulThresh_in):
         global_transformation(Eigen::Matrix4f::Identity()),  // Начальная трансформация (положение работа в пр-ве по данным сопаставления). Вначале она единичная 4х4
         fitnessScore(0.01)  // Начальное значение функции качества
     {
-
+        
+        leaf = leaf_in;  // Размер вокселя для фильтра downsampling (м)
+        MaximumIterations = MaxIters;  // Максимальное число итераций ICP
+        EuclideanFitnessEpsilon = EuclidFitEps;  // Порог сходимости ICP по ошибке
+        MaxCorrespondenceDistance = MaxCorrespondDist;  // Макс. расстояние для соответствия точек (м)
+        MeanK = meank_in;  // Количество соседей для статистического фильтра выбросов
+        StddevMulThresh = StddevMulThresh_in;  // Порог стандартного отклонения для удаления выбросов
+    
     }
     // режим сопоставления
     void setMode(MatcherMode m){
@@ -56,9 +67,9 @@ public:
         pcl::GeneralizedIterativeClosestPoint<pcl::PointXYZRGB, pcl::PointXYZRGB> icp;
         icp.setInputSource(prev_cloud);  // Источник — предыдущее (накопленное) облако
         icp.setInputTarget(cloud);  // Цель — текущее облако
-        icp.setMaximumIterations(100);   // Максимальное количество итераций
-        icp.setEuclideanFitnessEpsilon(1e-6); // Критерий сходимости по ошибке
-        icp.setMaxCorrespondenceDistance(0.5); // Макс. дистанция соответствия точек
+        icp.setMaximumIterations(MaximumIterations);   // Максимальное количество итераций
+        icp.setEuclideanFitnessEpsilon(EuclideanFitnessEpsilon); // Критерий сходимости по ошибке
+        icp.setMaxCorrespondenceDistance(MaxCorrespondenceDistance); // Макс. дистанция соответствия точек
         pcl::PointCloud<pcl::PointXYZRGB>::Ptr output(new pcl::PointCloud<pcl::PointXYZRGB>);
 
         // Запуск ICP с начальным приближением от одометрии (odom_tf)
@@ -80,19 +91,31 @@ public:
             // Режим Multiscan: трансформируем накопленное облако по найденной трансформации
             pcl::transformPointCloud(*prev_cloud, *prev_cloud, icp.getFinalTransformation());
             *prev_cloud += *cloud;  // Добавляем текущий скан к накопленному облаку
+            
+            Eigen::Matrix4f transform = icp.getFinalTransformation();
+            float translation = sqrt(transform(0,3)*transform(0,3) + transform(1,3)*transform(1,3));
+            float rotation = atan2(transform(1,0), transform(0,0));
+            
+            if (translation > 0.5 || fabs(rotation) > 0.5) {  // >50 см или >30 градусов
+                RCLCPP_WARN(rclcpp::get_logger("ScanMatcher"), 
+                "Suspicious large transform: trans=%.2f, rot=%.2f, skipping",
+                translation, rotation);
+                return global_transformation;  // Пропускаем этот скан
+            }            
+            // Проверка, не слишком ли большая трансформация
+            
 
             // ФИЛЬТР1 - Фильтрация вокселями (уменьшение плотности облака для производительности)
             pcl::VoxelGrid<pcl::PointXYZRGB> vox;
             vox.setInputCloud(prev_cloud);
-            float leaf = 0.1f; // 4 см
             vox.setLeafSize(leaf, leaf, leaf);  // Размер ячейки воксельной сетки (м)
             vox.filter (*prev_cloud);
 
             // ФИЛЬТР2 - Удаление статистических выбросов (шумовые точки)
             pcl::StatisticalOutlierRemoval<pcl::PointXYZRGB> sor;
             sor.setInputCloud(prev_cloud);
-            sor.setMeanK(30);  // Количество соседей для анализа
-            sor.setStddevMulThresh(1.5);  // Порог в стандартных отклонениях
+            sor.setMeanK(MeanK);  // Количество соседей для анализа
+            sor.setStddevMulThresh(StddevMulThresh);  // Порог в стандартных отклонениях
             sor.filter(*prev_cloud);
 
         }
@@ -122,6 +145,15 @@ private:
     pcl::PointCloud<pcl::PointXYZRGB>::Ptr prev_cloud;
     // Глобальная трансформация (накопленная за всё время работы)
     Eigen::Matrix4f global_transformation;
+
+    // Параметры ICP и фильтров
+    int MaximumIterations;   // Максимальное количество итераций ICP
+    float EuclideanFitnessEpsilon; // Порог сходимости ICP по ошибке
+    float MaxCorrespondenceDistance; // Максимальное расстояние для соответствия точек
+    float leaf;  // Размер вокселя для фильтра downsampling
+    float MeanK;  // Количество соседей для статистического фильтра
+    float StddevMulThresh;  // Порог стандартного отклонения для удаления выбросов
+
     // Текущее значение функции качества ICP
     float fitnessScore;
 
@@ -175,10 +207,42 @@ class RobotSlam : public rclcpp::Node
 public:
     RobotSlam()
         :Node("robot_slam_node"),
+        motion_noise(declare_parameter("motion_noise", std::vector<double>{0.01, 0.01, 0.001})),
+        // Чтение параметров шума измерений из launch-файла (по умолчанию [0.05, 0.05, 0.01])
+        measurement_noise(declare_parameter("measurement_noise", std::vector<double>{0.05, 0.05, 0.01})),
+        // Инициализация ScanMatcher с параметрами ICP и фильтров
+        sm(declare_parameter("MaximumIterations", 100),
+            declare_parameter("EuclideanFitnessEpsilon", 1e-6),
+            declare_parameter("MaxCorrespondenceDistance", 0.3),
+            declare_parameter("Leaf", 0.1f),
+            declare_parameter("MeanK", 30),
+            declare_parameter("StddevMulThresh", 1.5)),
         is_new_scan(false),
         odom_has_previous_pose(false)
     {
+       
+
+        auto motion_noise_params = motion_noise;
+        auto measurement_noise_params = measurement_noise;
+        // Инициализация матриц ковариации шума
+        Q = Eigen::Matrix3d::Zero();
+        Q(0, 0) = motion_noise_params[0]; // dx — шум движения по оси X
+        Q(1, 1) = motion_noise_params[1]; // dy — шум движения по оси Y
+        Q(2, 2) = motion_noise_params[2]; // dtheta — шум поворота
+
+        R = Eigen::Matrix3d::Zero();
+        R(0, 0) = measurement_noise_params[0]; // x_icp — шум измерения X от ICP
+        R(1, 1) = measurement_noise_params[1]; // y_icp — шум измерения Y от ICP
+        R(2, 2) = measurement_noise_params[2]; // theta_icp — шум измерения угла от ICP
+
+        // Инициализация состояния и ковариации
+        x_hat = Eigen::Vector3d::Zero(); // [x=0, y=0, theta=0] — начальное состояние робота
+        P = Eigen::Matrix3d::Identity() * 0.1; // Начальная ковариация (неуверенность в состоянии)
+
+
+        //=================================================================================================
         pointCloud_pub = create_publisher<sensor_msgs::msg::PointCloud2>("/map_cloud", 1); // Публикатор карты
+        pose_publisher = create_publisher<geometry_msgs::msg::PoseStamped>("/ekf_pose", 1); // Публикатор позы EKF
         // Подписчик на сканы лидара (топик /scan, очередь 10 сообщений)
         scan_sub = create_subscription<sensor_msgs::msg::LaserScan>(
             "/scan", 10, std::bind(&RobotSlam::scanCallback,
@@ -192,7 +256,7 @@ public:
         
         sm.setMode(MatcherMode::Multiscan); // Установка режима накопления карты
         // Таймер на 1 секунду — основной цикл обработки
-        timer = this->create_wall_timer(400ms, std::bind(&RobotSlam::timer_callback, this));
+        timer = this->create_wall_timer(100ms, std::bind(&RobotSlam::timer_callback, this));
     }
 
     void scanCallback(const sensor_msgs::msg::LaserScan &scan) {
@@ -225,10 +289,34 @@ public:
             odom_transformation = computeTransformation(odom_previous_pose, odom_current_pose);
 
 
-            // Получение данных от ICP
-            Eigen::Matrix4f icp_transformation = sm.addAndMatchScan(current_scan,odom_transformation);
-            odom_previous_pose = odom_current_pose;
+            // Получение данных одометрии: пройденное расстояние между кадрами
+            double delta_d = sqrt(pow(odom_transformation(0, 3), 2) + pow(odom_transformation(1, 3), 2));
+            // Извлекаем матрицу вращения 3х3 из трансформации
+            Eigen::Matrix3f rotation_matrix = odom_transformation.block<3,3>(0,0);
+            // Предполагаем ZYX (yaw, pitch, roll) порядок вращения
+            // Формула выведена из того, как строится матрица вращения при ZYX
+            double delta_theta = std::atan2(rotation_matrix(1, 0), rotation_matrix(0, 0));
+            // Вектор управления u_t = [delta_d, delta_theta]
+            Eigen::Vector2d u_t;
+            u_t << delta_d, delta_theta;
+            this->predict(u_t);  // ШАГ 1 EKF: Предсказание состояния по модели движения
 
+            // ШАГ 2 EKF: Получение измерения от ICP
+            Eigen::Matrix4f icp_transformation = sm.addAndMatchScan(current_scan,odom_transformation);
+            
+            // Извлекаем матрицу вращения из ICP трансформации
+            rotation_matrix = icp_transformation.block<3,3>(0,0);
+
+            // Предполагаем ZYX (yaw, pitch, roll) порядок вращения.
+            // Вычисляем угол поворота (yaw) из матрицы вращения
+            double theta_icp = std::atan2(rotation_matrix(1, 0), rotation_matrix(0, 0));
+
+            // Получение измерения позы от ICP: z_t = [x_icp, y_icp, theta_icp]
+            Eigen::Vector3d z_t;
+            z_t << icp_transformation(0,3), icp_transformation(1,3), theta_icp;
+            correct(z_t);  // ШАГ 3 EKF: Коррекция состояния по измерению ICP
+
+            odom_previous_pose = odom_current_pose;
             is_new_scan = false;
 
             // Публикация сопоставленного облака для визуализации 
@@ -240,6 +328,8 @@ public:
 
 
         }
+
+        this->publishTF();  
     }            
     
     // Вычисление относительной трансформации между двумя позами
@@ -296,27 +386,134 @@ public:
 
     }
 
+
+    // ШАГ 1 EKF: Предсказание состояния по модели движения
+    // вход - оценка вектора перемещения
+    void predict(const Eigen::Vector2d& u_t){
+        // 1. Предсказание состояния 
+        double delta_d = u_t(0);  // Пройденное расстояние
+        double delta_theta = u_t(1);  // Угол поворота
+        double theta_prev = x_hat(2);  // Предыдущий угол (yaw)
+
+        // Модель движения: предсказание новой позы
+        Eigen::Vector3d x_hat_predicted;
+        x_hat_predicted(0) = x_hat(0) + delta_d * cos(theta_prev + delta_theta / 2.0);  // x
+        x_hat_predicted(1) = x_hat(1) + delta_d * sin(theta_prev + delta_theta / 2.0);  // y
+        x_hat_predicted(2) = x_hat(2) + delta_theta;
+
+        // 2. Вычисление матрицы Якоби модели движения F_x = ∂f(x_{t-1}, u_t)/∂x
+        // Матрица Якоби нужна для линеаризации нелинейной модели движения
+        Eigen::Matrix3d F_x = Eigen::Matrix3d::Identity();
+        F_x(0, 2) = -delta_d * sin(theta_prev + delta_theta / 2.0);  // ∂x/∂theta
+        F_x(1, 2) = delta_d * cos(theta_prev + delta_theta / 2.0);   // ∂y/∂theta
+
+        // 3. Предсказание ковариации: P_{t|t-1} = F_x * P_{t-1|t-1} * F_x^T + Q
+        // Q — ковариация шума модели движения
+        P_predicted = F_x * P * F_x.transpose() + Q;
+
+        // Обновление предсказанного состояния
+        x_hat = x_hat_predicted;  // Замена состояния на предсказанное
+        P = P_predicted; // Для следующей итерации предсказания, но для коррекции используем P_predict
+    }
+
+     // ШАГ 2 EKF: Коррекция состояния по измерению ICP
+     // вход - измерительные данные он состоит из x y и поворот от icp
+    void correct(const Eigen::Vector3d& z_t){
+        // 1. Вычисление матрицы Якоби модели измерений H_x
+        // В данном случае H_x = I, т.к. измеряем состояние напрямую (x, y, theta)
+        Eigen::Matrix3d H_x = Eigen::Matrix3d::Identity();
+
+        // 2. Вычисление инновации (ошибка измерения): y_t = z_t - h(x_hat_{t|t-1})
+        // h(x_hat) = x_hat, т.к. измерение напрямую соответствует состоянию
+        Eigen::Vector3d y_t = z_t - x_hat; // Вектор невязки между измерением и предсказанием
+
+        // 3. Вычисление ковариации инновации: S_t = H_x * P_{t|t-1} * H_x^T + R
+        // Поскольку H_x = I, формула упрощается до: S_t = P_predicted + R
+        Eigen::Matrix3d S_t = P_predicted + R; // Используем предсказанную ковариацию
+
+        // 4. Вычисление усиления Калмана: K_t = P_{t|t-1} * H_x^T * S_t^{-1}
+        // Поскольку H_x = I, формула упрощается до: K_t = P_predicted * S_t^{-1}
+        Eigen::Matrix3d K_t = P_predicted * H_x.transpose() * S_t.inverse();
+
+        // 5. Обновление состояния: x_hat_{t|t} = x_hat_{t|t-1} + K_t * y_t
+        x_hat = x_hat + K_t * y_t;
+
+        // Выводим предсказанное состояние в терминал (отладочная информация)
+        RCLCPP_INFO_STREAM(this->get_logger(),
+                           "EKF estimated \n"<<x_hat);
+
+        // 6. Обновление ковариации: P_{t|t} = (I - K_t * H_x) * P_{t|t-1}
+        // Поскольку H_x = I, формула упрощается до: P = (I - K_t) * P_predicted
+        Eigen::Matrix3d I = Eigen::Matrix3d::Identity();
+        P = (I - K_t * H_x) * P_predicted;
+    }
+
+
     void publishTF(){
-        // geometry_msgs::msg::TransformStamped transform_stamped;
+        // ========================================================================
+        // Формирование и публикация сообщения с позой робота
+        // ========================================================================
+        geometry_msgs::msg::PoseStamped pose_msg;
+        pose_msg.header.stamp = this->get_clock()->now();  // Текущая метка времени
+        pose_msg.header.frame_id = "map";  // Фрейм карты
+        pose_msg.pose.position.x = x_hat(0);  // X координата от EKF
+        pose_msg.pose.position.y = x_hat(1);  // Y координата от EKF
+        pose_msg.pose.position.z = 0.0;  // 2D SLAM, z=0 (робот движется в плоскости)
 
-        // transform_stamped.header.stamp = now();
-        // transform_stamped.header.frame_id = "odom";
-        // transform_stamped.child_frame_id = "base_link";
+        // Конвертация угла yaw в кватернион (для ROS ориентация задаётся кватернионом)
+        tf2::Quaternion q;
+        q.setRPY(0, 0, x_hat(2));  // Roll=0, Pitch=0, Yaw=x_hat(2)
+        pose_msg.pose.orientation.x = q.x();
+        pose_msg.pose.orientation.y = q.y();
+        pose_msg.pose.orientation.z = q.z();
+        pose_msg.pose.orientation.w = q.w();
+
+        pose_publisher->publish(pose_msg);
 
 
-        // // параметры перемещения
-        // transform_stamped.transform.translation.x = x;
-        // transform_stamped.transform.translation.y = y;
-        // transform_stamped.transform.translation.z = 0.0;
+         // ========================================================================
+        // Вычисление трансформации map -> odom для TF дерева
+        // ========================================================================
+        
+        // 1. Получаем позу одометрии в виде трансформации odom -> base_link
+        tf2::Transform odom_to_base;
+        odom_to_base = tf2::Transform(
+            tf2::Quaternion(
+                odom_current_pose.orientation.x,
+                odom_current_pose.orientation.y,
+                odom_current_pose.orientation.z,
+                odom_current_pose.orientation.w),
+            tf2::Vector3(
+                odom_current_pose.position.x,
+                odom_current_pose.position.y,
+                odom_current_pose.position.z));
 
-        // tf2::Quaternion q;
-        // q.setRPY(0,0, theta);
-        // transform_stamped.transform.rotation.x = q.x();
-        // transform_stamped.transform.rotation.y = q.y();
-        // transform_stamped.transform.rotation.z = q.z();
-        // transform_stamped.transform.rotation.w = q.w();
+        // 2. Получаем позу от сопоставления сканов (уже трансформация) map -> base_link
+        tf2::Transform map_to_base;
+        map_to_base = tf2::Transform(
+            tf2::Quaternion(
+                pose_msg.pose.orientation.x,
+                pose_msg.pose.orientation.y,
+                pose_msg.pose.orientation.z,
+                pose_msg.pose.orientation.w),
+            tf2::Vector3(
+                pose_msg.pose.position.x,
+                pose_msg.pose.position.y,
+                pose_msg.pose.position.z));
 
-        // tf_broadcaster-> sendTransform(transform_stamped);
+        // 3. Вычисляем map -> odom: map_to_odom = map_to_base * (odom_to_base)^-1
+        // Это нужно, чтобы связать глобальную карту (map) с локальной одометрией (odom)
+        tf2::Transform map_to_odom = map_to_base * odom_to_base.inverse();
+
+        // Формирование сообщения трансформации
+        geometry_msgs::msg::TransformStamped transform_stamped;
+        transform_stamped.header.stamp = this->get_clock()->now();
+        transform_stamped.header.frame_id = "map";  // Родительский фрейм
+        transform_stamped.child_frame_id = "odom";  // Дочерний фрейм
+
+        transform_stamped.transform = tf2::toMsg(map_to_odom);  // Конвертация в ROS сообщение
+
+        tf_broadcaster->sendTransform(transform_stamped);  // Публикация TF
     }
 
 
@@ -328,13 +525,20 @@ private:
     rclcpp::Subscription<sensor_msgs::msg::LaserScan>::SharedPtr scan_sub;
     // Броадкастер для публикации TF трансформаций (map -> odom)
     std::unique_ptr<tf2_ros::TransformBroadcaster> tf_broadcaster;
+     // Публикатор позы робота (от EKF) в топик /ekf_pose
+    rclcpp::Publisher<geometry_msgs::msg::PoseStamped>::SharedPtr pose_publisher;
 
     // Таймер для основного цикла обработки (1 Гц)
     rclcpp::TimerBase::SharedPtr timer;
-    // Объект класса сопоставления сканов (ICP + фильтры)
-    ScanMatcher sm;
+   
     // Текущий лазерный скан (последнее полученное сообщение)
     sensor_msgs::msg::LaserScan current_scan;
+
+    // Параметры шумов (launch)
+    std::vector<double> motion_noise;  // Шум модели движения [dx, dy, dtheta]
+    std::vector<double> measurement_noise;  // Шум измерений ICP [x, y, theta]
+    // Объект класса сопоставления сканов (ICP + фильтры)
+    ScanMatcher sm;
     // Флаг наличия нового скана для обработки
     bool is_new_scan;
 
@@ -344,6 +548,13 @@ private:
     geometry_msgs::msg::Pose odom_previous_pose;  // Предыдущая поза из одометрии
     geometry_msgs::msg::Pose odom_current_pose;   // Текущая поза из одометрии
     bool odom_has_previous_pose;  // Флаг инициализации (была ли получена первая поза)
+
+    //=============Переменные фильтр Калмана (EKF)
+    Eigen::Vector3d x_hat;  // Оценка состояния [x, y, theta] — поза робота
+    Eigen::Matrix3d P;  // Матрица ковариации ошибок оценки состояния
+    Eigen::Matrix3d P_predicted;  // Предсказанная ковариация (на шаге прогноза)
+    Eigen::Matrix3d Q;  // Матрица ковариации шума модели движения (берем из одометрии)
+    Eigen::Matrix3d R;  // Матрица ковариации шума измерений (берем из алгоритма icp)
 
 };
 

@@ -1967,8 +1967,155 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
   /usr/include/pcl-1.12/pcl/filters/voxel_grid.h \
   /usr/include/pcl-1.12/pcl/filters/filter.h \
   /usr/include/pcl-1.12/pcl/filters/statistical_outlier_removal.h \
-  /usr/include/pcl-1.12/pcl/filters/filter_indices.h
+  /usr/include/pcl-1.12/pcl/filters/filter_indices.h \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/pose_stamped.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__struct.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__builder.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__traits.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__type_support.hpp \
+  /opt/ros/humble/include/tf2_geometry_msgs/tf2_geometry_msgs/tf2_geometry_msgs.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/point_stamped.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point_stamped__struct.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point_stamped__builder.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point_stamped__traits.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point_stamped__type_support.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/quaternion_stamped.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion_stamped__struct.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion_stamped__builder.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion_stamped__traits.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion_stamped__type_support.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/transform.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/transform__builder.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/transform__type_support.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/vector3.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__builder.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__type_support.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/vector3_stamped.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3_stamped__struct.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3_stamped__builder.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3_stamped__traits.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3_stamped__type_support.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/pose.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__builder.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__type_support.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/point.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__builder.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__type_support.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/point32.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point32__struct.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point32__builder.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point32__traits.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point32__type_support.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/pose_with_covariance.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_with_covariance__builder.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_with_covariance__type_support.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/pose_with_covariance_stamped.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_with_covariance_stamped__struct.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_with_covariance_stamped__builder.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_with_covariance_stamped__traits.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_with_covariance_stamped__type_support.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/polygon_stamped.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/polygon_stamped__struct.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/polygon__struct.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/polygon_stamped__builder.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/polygon_stamped__traits.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/polygon__traits.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/polygon_stamped__type_support.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/velocity_stamped.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/velocity_stamped__struct.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/velocity_stamped__builder.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/velocity_stamped__traits.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/velocity_stamped__type_support.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/wrench.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/wrench__struct.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/wrench__builder.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/wrench__traits.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/wrench__type_support.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/wrench_stamped.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/wrench_stamped__struct.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/wrench_stamped__builder.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/wrench_stamped__traits.hpp \
+  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/wrench_stamped__type_support.hpp \
+  /usr/include/kdl/frames.hpp \
+  /usr/include/kdl/utilities/kdl-config.h \
+  /usr/include/kdl/utilities/utility.h \
+  /usr/include/kdl/utilities/kdl-config.h \
+  /usr/include/kdl/frames.inl \
+  /opt/ros/humble/include/tf2/tf2/convert.hpp \
+  /opt/ros/humble/include/tf2/tf2/exceptions.hpp \
+  /opt/ros/humble/include/tf2/tf2/impl/convert.hpp \
+  /opt/ros/humble/include/tf2/tf2/transform_datatypes.hpp \
+  /opt/ros/humble/include/tf2/tf2/time.hpp \
+  /opt/ros/humble/include/tf2/tf2/LinearMath/Transform.hpp \
+  /opt/ros/humble/include/tf2/tf2/LinearMath/Matrix3x3.hpp \
+  /opt/ros/humble/include/tf2/tf2/LinearMath/Quaternion.hpp \
+  /opt/ros/humble/include/tf2/tf2/LinearMath/Vector3.hpp \
+  /opt/ros/humble/include/tf2_ros/tf2_ros/buffer_interface.hpp
 
+
+/opt/ros/humble/include/tf2_ros/tf2_ros/buffer_interface.hpp:
+
+/opt/ros/humble/include/tf2/tf2/LinearMath/Matrix3x3.hpp:
+
+/opt/ros/humble/include/tf2/tf2/transform_datatypes.hpp:
+
+/opt/ros/humble/include/tf2/tf2/impl/convert.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/wrench_stamped__type_support.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/wrench_stamped__traits.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/wrench_stamped__struct.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/wrench_stamped.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/wrench__traits.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/velocity_stamped__type_support.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/velocity_stamped__traits.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/polygon_stamped__type_support.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/polygon__traits.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/polygon_stamped__builder.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/polygon_stamped__struct.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_with_covariance_stamped__type_support.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_with_covariance_stamped__builder.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/pose_with_covariance_stamped.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point32__traits.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/point.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3_stamped__traits.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3_stamped__struct.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/vector3_stamped.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion_stamped__builder.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion_stamped__struct.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point_stamped__type_support.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point_stamped__traits.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__type_support.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__traits.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__builder.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__struct.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/pose_stamped.hpp:
 
 /usr/include/pcl-1.12/pcl/filters/statistical_outlier_removal.h:
 
@@ -1997,6 +2144,8 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 /usr/include/boost/interprocess/sync/detail/common_algorithms.hpp:
 
 /usr/include/boost/date_time/posix_time/posix_time_duration.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/velocity_stamped__struct.hpp:
 
 /usr/include/boost/date_time/time.hpp:
 
@@ -2116,6 +2265,8 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 
 /usr/include/boost/algorithm/string/finder.hpp:
 
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/point32.hpp:
+
 /usr/include/boost/algorithm/string/compare.hpp:
 
 /usr/include/boost/algorithm/string/find.hpp:
@@ -2175,6 +2326,8 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 /usr/include/boost/numeric/conversion/detail/preprocessed/numeric_cast_traits_common.hpp:
 
 /usr/include/boost/numeric/conversion/detail/numeric_cast_traits.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__type_support.hpp:
 
 /usr/include/boost/numeric/conversion/numeric_cast_traits.hpp:
 
@@ -2292,6 +2445,8 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 
 /usr/include/boost/fusion/container/vector/detail/equal_to_impl.hpp:
 
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__builder.hpp:
+
 /usr/include/boost/fusion/container/vector/detail/next_impl.hpp:
 
 /usr/include/boost/fusion/container/vector/detail/deref_impl.hpp:
@@ -2318,11 +2473,15 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 
 /usr/include/boost/fusion/include/for_each.hpp:
 
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/wrench.hpp:
+
 /usr/include/boost/fusion/algorithm/transformation/pop_front.hpp:
 
 /usr/include/boost/mpl/aux_/pop_front_impl.hpp:
 
 /usr/include/boost/mpl/pop_front.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point32__type_support.hpp:
 
 /usr/include/boost/fusion/mpl/pop_front.hpp:
 
@@ -2343,6 +2502,8 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 /usr/include/boost/fusion/algorithm/transformation/insert.hpp:
 
 /usr/include/boost/mpl/aux_/insert_impl.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__builder.hpp:
 
 /usr/include/boost/mpl/insert_fwd.hpp:
 
@@ -2414,6 +2575,8 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 
 /usr/include/boost/fusion/container/list/detail/reverse_cons.hpp:
 
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/wrench__type_support.hpp:
+
 /usr/include/boost/fusion/algorithm/transformation/push_front.hpp:
 
 /usr/include/boost/fusion/view/single_view/detail/end_impl.hpp:
@@ -2421,6 +2584,8 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 /usr/include/boost/smart_ptr/detail/sp_counted_base.hpp:
 
 /usr/include/boost/fusion/view/single_view/detail/advance_impl.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/quaternion_stamped.hpp:
 
 /usr/include/boost/fusion/view/single_view/detail/prior_impl.hpp:
 
@@ -2556,6 +2721,8 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 
 /usr/include/boost/mpl/has_key.hpp:
 
+/opt/ros/humble/include/tf2/tf2/LinearMath/Transform.hpp:
+
 /usr/include/boost/fusion/adapted/mpl/detail/at_impl.hpp:
 
 /usr/include/boost/mpl/at.hpp:
@@ -2565,6 +2732,8 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 /usr/include/boost/mpl/aux_/size_impl.hpp:
 
 /usr/include/boost/mpl/size.hpp:
+
+/opt/ros/humble/include/tf2/tf2/exceptions.hpp:
 
 /usr/include/boost/fusion/adapted/mpl/detail/size_impl.hpp:
 
@@ -2584,11 +2753,15 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 
 /usr/include/boost/mpl/aux_/advance_forward.hpp:
 
+/usr/include/kdl/frames.inl:
+
 /usr/include/boost/mpl/negate.hpp:
 
 /usr/include/boost/fusion/adapted/mpl/detail/empty_impl.hpp:
 
 /usr/include/boost/mpl/aux_/comparison_op.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point32__builder.hpp:
 
 /usr/include/boost/fusion/support/category_of.hpp:
 
@@ -2610,6 +2783,8 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 
 /usr/include/boost/utility/enable_if.hpp:
 
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_with_covariance__builder.hpp:
+
 /usr/include/boost/fusion/iterator/next.hpp:
 
 /usr/include/boost/fusion/iterator/detail/advance.hpp:
@@ -2625,6 +2800,8 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 /usr/include/boost/mpl/iterator_range.hpp:
 
 /usr/include/pcl-1.12/pcl/impl/cloud_iterator.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_with_covariance_stamped__traits.hpp:
 
 /usr/include/boost/fusion/algorithm/query/detail/segmented_find.hpp:
 
@@ -2687,6 +2864,8 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 /usr/include/boost/type_traits/is_pointer.hpp:
 
 /usr/include/boost/iterator/detail/facade_iterator_category.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_with_covariance_stamped__struct.hpp:
 
 /usr/include/boost/iterator/iterator_facade.hpp:
 
@@ -2770,6 +2949,8 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 
 /usr/include/boost/core/addressof.hpp:
 
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/pose_with_covariance.hpp:
+
 /usr/include/boost/ref.hpp:
 
 /usr/include/boost/mpl/aux_/unwrap.hpp:
@@ -2822,7 +3003,11 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 
 /usr/include/boost/predef/detail/test.h:
 
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion_stamped__type_support.hpp:
+
 /usr/include/boost/predef/make.h:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/pose.hpp:
 
 /usr/include/boost/predef/version_number.h:
 
@@ -2917,6 +3102,8 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 /usr/include/boost/mpl/aux_/config/bcc.hpp:
 
 /usr/include/boost/mpl/aux_/has_type.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion_stamped__traits.hpp:
 
 /usr/include/boost/mpl/quote.hpp:
 
@@ -3024,6 +3211,8 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 
 /usr/include/boost/mpl/advance_fwd.hpp:
 
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/polygon_stamped.hpp:
+
 /usr/include/boost/mpl/aux_/preprocessed/gcc/minus.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/stat.h:
@@ -3097,6 +3286,8 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 /opt/ros/humble/include/rclcpp/rclcpp/message_memory_strategy.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/generic_publisher.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/wrench__builder.hpp:
 
 /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/joint_state.hpp:
 
@@ -3173,6 +3364,8 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 /opt/ros/humble/include/rclcpp/rclcpp/waitable.hpp:
 
 /usr/include/signal.h:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3_stamped__type_support.hpp:
 
 /opt/ros/humble/include/rmw/rmw/network_flow_endpoint_array.h:
 
@@ -3322,6 +3515,8 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 
 /usr/include/x86_64-linux-gnu/bits/signal_ext.h:
 
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__type_support.hpp:
+
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/set_parameters_atomically__struct.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/time.hpp:
@@ -3375,6 +3570,10 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 /usr/include/boost/preprocessor/list/fold_left.hpp:
 
 /usr/include/c++/11/bits/locale_facets_nonio.h:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/velocity_stamped__builder.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/point_stamped.hpp:
 
 /opt/ros/humble/include/rcl/rcl/timer.h:
 
@@ -3438,6 +3637,8 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 
 /usr/include/eigen3/Eigen/src/Core/PermutationMatrix.h:
 
+/usr/include/kdl/utilities/kdl-config.h:
+
 /usr/include/boost/type_traits/detail/is_function_cxx_11.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:
@@ -3475,6 +3676,8 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 /usr/include/c++/11/bits/list.tcc:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/vector3.hpp:
 
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__traits.hpp:
 
@@ -3570,6 +3773,8 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 
 /opt/ros/humble/include/rcutils/rcutils/testing/fault_injection.h:
 
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/velocity_stamped.hpp:
+
 /opt/ros/humble/include/rcutils/rcutils/macros.h:
 
 /usr/include/boost/mpl/less.hpp:
@@ -3619,6 +3824,8 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
 
 /usr/include/c++/11/bits/streambuf_iterator.h:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__type_support.hpp:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h:
 
@@ -3744,6 +3951,8 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 
 /usr/include/unistd.h:
 
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/transform__type_support.hpp:
+
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/floating_point_range__struct.hpp:
 
 /usr/include/c++/11/bits/stl_algobase.h:
@@ -3771,6 +3980,8 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 /opt/ros/humble/include/rclcpp/rclcpp/subscription_options.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/detail/synchronization_policy_common.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/polygon_stamped__traits.hpp:
 
 /usr/include/boost/mpl/aux_/config/integral.hpp:
 
@@ -4006,6 +4217,8 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
+/usr/include/kdl/frames.hpp:
+
 /usr/include/boost/date_time/posix_time/ptime.hpp:
 
 /usr/include/boost/range/iterator_range.hpp:
@@ -4166,6 +4379,8 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
+/opt/ros/humble/include/tf2/tf2/time.hpp:
+
 /usr/include/libintl.h:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/list_parameters_result__type_support.hpp:
@@ -4254,7 +4469,11 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 
 /opt/ros/humble/include/tf2/tf2/LinearMath/Quaternion.hpp:
 
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/wrench__struct.hpp:
+
 /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/wrench_stamped__builder.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/environments.h:
 
@@ -4400,6 +4619,8 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 
 /opt/ros/humble/include/rclcpp/rclcpp/qos_event.hpp:
 
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point_stamped__struct.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
 
 /usr/include/time.h:
@@ -4491,6 +4712,8 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 /usr/include/c++/11/limits:
 
 /opt/ros/humble/include/rcpputils/rcpputils/filesystem_helper.hpp:
+
+/opt/ros/humble/include/tf2_geometry_msgs/tf2_geometry_msgs/tf2_geometry_msgs.hpp:
 
 /usr/include/c++/11/unordered_map:
 
@@ -4709,6 +4932,8 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
+
+/opt/ros/humble/include/tf2/tf2/convert.hpp:
 
 /usr/include/c++/11/bits/stl_bvector.h:
 
@@ -4980,6 +5205,8 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 
 /usr/include/boost/mpl/int.hpp:
 
+/usr/include/kdl/utilities/utility.h:
+
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameter_types__traits.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameter_types__type_support.hpp:
@@ -4991,6 +5218,8 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 /opt/ros/humble/include/tf2_ros/tf2_ros/transform_broadcaster.h:
 
 /opt/ros/humble/include/tf2_ros/tf2_ros/transform_broadcaster.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__builder.hpp:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h:
 
@@ -5018,6 +5247,8 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 
 /usr/include/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h:
 
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/transform__builder.hpp:
+
 /usr/include/boost/fusion/iterator/value_of.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/list_parameters__type_support.hpp:
@@ -5039,6 +5270,8 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 /usr/include/c++/11/tr1/riemann_zeta.tcc:
 
 /usr/include/limits.h:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point_stamped__builder.hpp:
 
 /usr/include/c++/11/bits/stl_numeric.h:
 
@@ -5128,6 +5361,8 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 
 /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/point_cloud2__builder.hpp:
 
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/transform.hpp:
+
 /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/point_cloud2__traits.hpp:
 
 /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/point_field__traits.hpp:
@@ -5137,6 +5372,8 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/transform_stamped.hpp:
 
 /usr/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3_stamped__builder.hpp:
 
 /opt/ros/humble/include/nav_msgs/nav_msgs/msg/odometry.hpp:
 
@@ -5243,6 +5480,8 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 /usr/include/boost/mpl/has_xxx.hpp:
 
 /usr/include/c++/11/cstddef:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/polygon__struct.hpp:
 
 /usr/include/c++/11/climits:
 
@@ -5713,6 +5952,10 @@ CMakeFiles/robot_slam_node.dir/src/robot_slam_node.cpp.o: /home/misha/Documents/
 /usr/include/boost/mpl/aux_/nested_type_wknd.hpp:
 
 /usr/include/boost/mpl/aux_/na_spec.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_with_covariance__type_support.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point32__struct.hpp:
 
 /usr/include/boost/mpl/lambda_fwd.hpp:
 

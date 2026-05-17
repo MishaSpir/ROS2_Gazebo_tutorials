@@ -15,11 +15,18 @@ public:
     KeyboardTeleop()
         :Node("keyboard_teleop")
     {
+        this->declare_parameter("linear_speed", 1.0);
+        this->declare_parameter("angular_speed", 1.0);
+
+        linear_speed = get_parameter("linear_speed").as_double();
+        angular_speed = get_parameter("angular_speed").as_double();
+
         // Инициализация
         cmd_pub = this->create_publisher<geometry_msgs::msg::Twist>("/cmd_vel",10); // публикатор
 
         // const char *device ="/dev/input/by-path/platform-i8042-serio-0-event-kbd"; // Встроенная клава
-        const char *device ="/dev/input/by-path/pci-0000:00:14.0-usb-0:1:1.0-event-kbd"; // домашняя клава
+        const char *device ="/dev/input/by-path/pci-0000:00:14.0-usb-0:2:1.0-event-kbd"; // домашняя клава
+        // const char *device ="/dev/input/by-path/pci-0000:00:14.0-usb-0:2:1.0-event-kbd"; // БИ
 
         fd = open(device,O_RDONLY | O_NONBLOCK); // окрываем в режиме чтения и не блокирующем режиме
         if(fd  < 0){
@@ -110,12 +117,12 @@ public:
         msg.angular.z = 0.0;
 
         // Линейное движение (W/S)
-        if (key_states[17] > 0) msg.linear.x = 0.1;   // W - вперед
-        if (key_states[31] > 0) msg.linear.x = -0.1;  // S - назад
+        if (key_states[17] > 0) msg.linear.x = linear_speed;   // W - вперед
+        if (key_states[31] > 0) msg.linear.x = -linear_speed;  // S - назад
 
         // Поворот (A/D)
-        if (key_states[30] > 0) msg.angular.z = 0.1;  // A - поворот налево
-        if (key_states[32] > 0) msg.angular.z = -0.1; // D - поворот направо
+        if (key_states[30] > 0) msg.angular.z = angular_speed;  // A - поворот налево
+        if (key_states[32] > 0) msg.angular.z = -angular_speed; // D - поворот направо
 
         // Комбинации работают автоматически!
         // W + A = вперед + поворот = движение по дуге
@@ -127,6 +134,8 @@ private:
     struct libevdev *dev = NULL; // структура для работы с устройством через libevdev
     int rc; // Идентификатор libevdev c открытым файловым дескриптором
     geometry_msgs::msg::Twist msg;
+    double linear_speed;
+    double angular_speed;
 
 
 };

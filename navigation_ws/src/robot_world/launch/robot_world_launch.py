@@ -15,7 +15,17 @@ def generate_launch_description():
     # Перевод в xml
     robot_xml = open(robot_path,'r').read()
     robot_xml = robot_xml.replace('"','\\"')
-    robot_spawn_args = '{name: \"robot_vac\", xml: \"' + robot_xml + '\"}'
+
+    # Параметры спавна (координаты и угол)
+    spawn_x = -3.0   # метры
+    spawn_y = 1.0   # метры  
+    spawn_z = 0.0   # метры
+    spawn_yaw = -1.0  # по z = - 1 (-90 градусов)
+    
+    # Добавляем pose в аргументы спавна
+    robot_spawn_args = f'{{name: "robot_vac", xml: "{robot_xml}", initial_pose: {{position: {{x: {spawn_x}, y: {spawn_y}, z: {spawn_z}}}, orientation: {{z: {spawn_yaw}}}}}}}'
+
+    # robot_spawn_args = '{name: \"robot_vac\", xml: \"' + robot_xml + '\"}'
 
 
     # Параметры платформы (можно менять здесь)
@@ -40,7 +50,12 @@ def generate_launch_description():
         package='robot_teleop',
         executable='robot_teleop_node',
         name='robot_teleop_node',
-        output='screen'
+        output='screen',
+        parameters=[ 
+                {"linear_speed": 0.08,
+                "angular_speed": 0.06            
+                }
+                ]
     )
 
     return LaunchDescription([

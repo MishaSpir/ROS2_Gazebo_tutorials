@@ -1,0 +1,57 @@
+[0.101s] Invoking command in '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/global_map_ex': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/global_map_ex -- -j8 -l8
+[0.280s] [35m[1mConsolidate compiler generated dependencies of target global_map_ex_node[0m
+[0.392s] [ 50%] [32mBuilding CXX object CMakeFiles/global_map_ex_node.dir/src/global_map_ex_node.cpp.o[0m
+[5.427s] [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/global_map_ex/src/global_map_ex_node.cpp:[m[K In member function ‘[01m[Kvoid GlobalMap::scanCallback(sensor_msgs::msg::LaserScan_<std::allocator<void> >::SharedPtr)[m[K’:
+[5.427s] [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/global_map_ex/src/global_map_ex_node.cpp:161:50:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmin(float&, double&)[m[K’
+[5.427s]   161 |             float trace_distance = float([01;31m[Kstd::min(distance, max_trace_dist)[m[K);
+[5.427s]       |                                          [01;31m[K~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.427s] In file included from [01m[K/usr/include/c++/11/memory:63[m[K,
+[5.428s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[5.428s]                  from [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/global_map_ex/src/global_map_ex_node.cpp:1[m[K:
+[5.428s] [01m[K/usr/include/c++/11/bits/stl_algobase.h:230:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> constexpr const _Tp& std::min(const _Tp&, const _Tp&)[m[K’
+[5.428s]   230 |     [01;36m[Kmin[m[K(const _Tp& __a, const _Tp& __b)
+[5.428s]       |     [01;36m[K^~~[m[K
+[5.428s] [01m[K/usr/include/c++/11/bits/stl_algobase.h:230:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.428s] [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/global_map_ex/src/global_map_ex_node.cpp:161:50:[m[K [01;36m[Knote: [m[K  deduced conflicting types for parameter ‘[01m[Kconst _Tp[m[K’ (‘[01m[Kfloat[m[K’ and ‘[01m[Kdouble[m[K’)
+[5.428s]   161 |             float trace_distance = float([01;36m[Kstd::min(distance, max_trace_dist)[m[K);
+[5.428s]       |                                          [01;36m[K~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.429s] In file included from [01m[K/usr/include/c++/11/memory:63[m[K,
+[5.429s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[5.429s]                  from [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/global_map_ex/src/global_map_ex_node.cpp:1[m[K:
+[5.429s] [01m[K/usr/include/c++/11/bits/stl_algobase.h:278:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Compare> constexpr const _Tp& std::min(const _Tp&, const _Tp&, _Compare)[m[K’
+[5.429s]   278 |     [01;36m[Kmin[m[K(const _Tp& __a, const _Tp& __b, _Compare __comp)
+[5.429s]       |     [01;36m[K^~~[m[K
+[5.429s] [01m[K/usr/include/c++/11/bits/stl_algobase.h:278:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.429s] [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/global_map_ex/src/global_map_ex_node.cpp:161:50:[m[K [01;36m[Knote: [m[K  deduced conflicting types for parameter ‘[01m[Kconst _Tp[m[K’ (‘[01m[Kfloat[m[K’ and ‘[01m[Kdouble[m[K’)
+[5.429s]   161 |             float trace_distance = float([01;36m[Kstd::min(distance, max_trace_dist)[m[K);
+[5.429s]       |                                          [01;36m[K~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.430s] In file included from [01m[K/usr/include/c++/11/algorithm:62[m[K,
+[5.430s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:18[m[K,
+[5.430s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[5.430s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[5.430s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[5.430s]                  from [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/global_map_ex/src/global_map_ex_node.cpp:1[m[K:
+[5.430s] [01m[K/usr/include/c++/11/bits/stl_algo.h:3449:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> constexpr _Tp std::min(std::initializer_list<_Tp>)[m[K’
+[5.430s]  3449 |     [01;36m[Kmin[m[K(initializer_list<_Tp> __l)
+[5.430s]       |     [01;36m[K^~~[m[K
+[5.431s] [01m[K/usr/include/c++/11/bits/stl_algo.h:3449:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.431s] [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/global_map_ex/src/global_map_ex_node.cpp:161:50:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::initializer_list<_Tp>[m[K’ and ‘[01m[Kfloat[m[K’
+[5.431s]   161 |             float trace_distance = float([01;36m[Kstd::min(distance, max_trace_dist)[m[K);
+[5.431s]       |                                          [01;36m[K~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.431s] In file included from [01m[K/usr/include/c++/11/algorithm:62[m[K,
+[5.431s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:18[m[K,
+[5.431s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[5.431s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[5.432s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[5.432s]                  from [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/global_map_ex/src/global_map_ex_node.cpp:1[m[K:
+[5.432s] [01m[K/usr/include/c++/11/bits/stl_algo.h:3455:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Compare> constexpr _Tp std::min(std::initializer_list<_Tp>, _Compare)[m[K’
+[5.432s]  3455 |     [01;36m[Kmin[m[K(initializer_list<_Tp> __l, _Compare __comp)
+[5.432s]       |     [01;36m[K^~~[m[K
+[5.432s] [01m[K/usr/include/c++/11/bits/stl_algo.h:3455:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.432s] [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/global_map_ex/src/global_map_ex_node.cpp:161:50:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::initializer_list<_Tp>[m[K’ and ‘[01m[Kfloat[m[K’
+[5.432s]   161 |             float trace_distance = float([01;36m[Kstd::min(distance, max_trace_dist)[m[K);
+[5.432s]       |                                          [01;36m[K~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[11.161s] gmake[2]: *** [CMakeFiles/global_map_ex_node.dir/build.make:76: CMakeFiles/global_map_ex_node.dir/src/global_map_ex_node.cpp.o] Error 1
+[11.161s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/global_map_ex_node.dir/all] Error 2
+[11.162s] gmake: *** [Makefile:146: all] Error 2
+[11.165s] Invoked command in '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/global_map_ex' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/global_map_ex -- -j8 -l8

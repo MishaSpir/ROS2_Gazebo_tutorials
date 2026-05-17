@@ -7,19 +7,12 @@
 #include <geometry_msgs/msg/transform_stamped.hpp>
 #include <tf2/LinearMath/Quaternion.h>  
 #include <Eigen/Dense> // для матриц
-// Типы точек PCL (Point Cloud Library) — например, PointXYZRGB
 #include <pcl/point_types.h>
-// Generalized ICP — алгоритм сопоставления облаков точек
 #include <pcl/registration/gicp.h>
-// Конвертация между форматами PCL и ROS сообщений
 #include <pcl_conversions/pcl_conversions.h>
-// Фильтр вокселизации для уменьшения плотности облака (downsampling)
 #include <pcl/filters/voxel_grid.h>
-// Фильтр удаления выбросов на основе статистики соседей
 #include <pcl/filters/statistical_outlier_removal.h>
-// Тип сообщения позы с меткой времени (для публикации результата EKF)
 #include <geometry_msgs/msg/pose_stamped.hpp>
-// Конвертация геометрии (Pose, Transform) для TF
 #include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
 
 
@@ -51,7 +44,7 @@ public:
     void setMode(MatcherMode m){
         mode = m;
     } 
-    // Алгоритм сопоставления сканов, возвращает матр 4х4 трансвормаицию положения
+    // Алгоритм сопоставления сканов, возвращает матр 4х4 трансвормаицию положения между двумя сканами
     Eigen::Matrix4f addAndMatchScan(const sensor_msgs::msg::LaserScan &scan,
                                     const Eigen::Matrix4f odom_tf = Eigen::Matrix4f::Identity())
     {
@@ -73,13 +66,13 @@ public:
         pcl::PointCloud<pcl::PointXYZRGB>::Ptr output(new pcl::PointCloud<pcl::PointXYZRGB>);
 
         // Запуск ICP с начальным приближением от одометрии (odom_tf)
-        icp.align(*output, odom_tf);
+        icp.align(*output, odom_tf);// Начинаем поиск с позиции odom_tf
         fitnessScore = icp.getFitnessScore();  // Получение метрики качества совпадения
         std::cout<<"Fitness score: "<<fitnessScore<<std::endl;  // Вывод в терминал
 
         // Накопление глобальной трансформации: умножаем на обратную трансформацию ICP
         global_transformation = global_transformation * icp.getFinalTransformation().inverse();
-        std::cout<<"Global transformation"<<std::endl<<global_transformation<<std::endl;
+        // std::cout<<"Global transformation"<<std::endl<<global_transformation<<std::endl;
 
 
         // Обновление предыдущего облака в зависимости от режима
@@ -220,7 +213,11 @@ public:
         is_new_scan(false),
         odom_has_previous_pose(false)
     {
-       
+        this->declare_parameter("timer_period_ms", 50);
+        int period_ms = this->get_parameter("timer_period_ms").as_int();
+        auto period = std::chrono::milliseconds(period_ms);
+
+
 
         auto motion_noise_params = motion_noise;
         auto measurement_noise_params = measurement_noise;
@@ -256,7 +253,7 @@ public:
         
         sm.setMode(MatcherMode::Multiscan); // Установка режима накопления карты
         // Таймер на 1 секунду — основной цикл обработки
-        timer = this->create_wall_timer(100ms, std::bind(&RobotSlam::timer_callback, this));
+        timer = this->create_wall_timer(period, std::bind(&RobotSlam::timer_callback, this));
     }
 
     void scanCallback(const sensor_msgs::msg::LaserScan &scan) {
@@ -287,7 +284,6 @@ public:
 
             // Вычисляем трансформацию между текущей и предыдущей позой одометрии
             odom_transformation = computeTransformation(odom_previous_pose, odom_current_pose);
-
 
             // Получение данных одометрии: пройденное расстояние между кадрами
             double delta_d = sqrt(pow(odom_transformation(0, 3), 2) + pow(odom_transformation(1, 3), 2));
@@ -387,10 +383,10 @@ public:
     }
 
 
-    // ШАГ 1 EKF: Предсказание состояния по модели движения
+    // ШАГ 1 EKF: Предсказание Новая оценка позиции  по модели движения
     // вход - оценка вектора перемещения
     void predict(const Eigen::Vector2d& u_t){
-        // 1. Предсказание состояния 
+        // 1. Новая оценка позиции 
         double delta_d = u_t(0);  // Пройденное расстояние
         double delta_theta = u_t(1);  // Угол поворота
         double theta_prev = x_hat(2);  // Предыдущий угол (yaw)
@@ -429,11 +425,12 @@ public:
 
         // 3. Вычисление ковариации инновации: S_t = H_x * P_{t|t-1} * H_x^T + R
         // Поскольку H_x = I, формула упрощается до: S_t = P_predicted + R
-        Eigen::Matrix3d S_t = P_predicted + R; // Используем предсказанную ковариацию
-
+        // Eigen::Matrix3d S_t = P_predicted + R; // Используем предсказанную ковариацию
+        Eigen::Matrix3d S_t = P + R;  // P уже содержит P_predicted
         // 4. Вычисление усиления Калмана: K_t = P_{t|t-1} * H_x^T * S_t^{-1}
         // Поскольку H_x = I, формула упрощается до: K_t = P_predicted * S_t^{-1}
         Eigen::Matrix3d K_t = P_predicted * H_x.transpose() * S_t.inverse();
+        // Eigen::Matrix3d K_t = P * H_x.transpose() * S_t.inverse();  
 
         // 5. Обновление состояния: x_hat_{t|t} = x_hat_{t|t-1} + K_t * y_t
         x_hat = x_hat + K_t * y_t;
@@ -446,6 +443,7 @@ public:
         // Поскольку H_x = I, формула упрощается до: P = (I - K_t) * P_predicted
         Eigen::Matrix3d I = Eigen::Matrix3d::Identity();
         P = (I - K_t * H_x) * P_predicted;
+        // P = (I - K_t * H_x) * P;
     }
 
 

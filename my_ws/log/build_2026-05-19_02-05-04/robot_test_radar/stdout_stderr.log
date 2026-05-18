@@ -1,0 +1,33 @@
+[35m[1mConsolidate compiler generated dependencies of target robot_test_radar_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/robot_test_radar_node.dir/src/robot_test_radar_node.cpp.o[0m
+[01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/src/robot_test_radar/src/robot_test_radar_node.cpp:[m[K In member function ‘[01m[Kvoid RobotNode::processMeasurement()[m[K’:
+[01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/src/robot_test_radar/src/robot_test_radar_node.cpp:102:29:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator![m[K’ (operand type is ‘[01m[Ksensor_msgs::msg::Range[m[K’ {aka ‘[01m[Ksensor_msgs::msg::Range_<std::allocator<void> >[m[K’})
+  102 |         if (!is_new_scan || [01;31m[K!current_scan[m[K) return;
+      |                             [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/src/robot_test_radar/src/robot_test_radar_node.cpp:102:29:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Koperator!(bool)[m[K’ (built-in)
+[01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/src/robot_test_radar/src/robot_test_radar_node.cpp:102:29:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Ksensor_msgs::msg::Range[m[K’ {aka ‘[01m[Ksensor_msgs::msg::Range_<std::allocator<void> >[m[K’} to ‘[01m[Kbool[m[K’
+In file included from [01m[K/opt/ros/humble/include/libstatistics_collector/libstatistics_collector/moving_average_statistics/moving_average.hpp:30[m[K,
+                 from [01m[K/opt/ros/humble/include/libstatistics_collector/libstatistics_collector/collector/collector.hpp:22[m[K,
+                 from [01m[K/opt/ros/humble/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/topic_statistics_collector.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/received_message_age.hpp:26[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:26[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/subscription.hpp:50[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/src/robot_test_radar/src/robot_test_radar_node.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/rcpputils/rcpputils/thread_safety_annotations.hpp:55:27:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconst std::mutex& operator!(const std::mutex&)[m[K’
+   55 | inline const std::mutex & [01;36m[Koperator[m[K!(const std::mutex & a)
+      |                           [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/humble/include/rcpputils/rcpputils/thread_safety_annotations.hpp:55:56:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Ksensor_msgs::msg::Range[m[K’ {aka ‘[01m[Ksensor_msgs::msg::Range_<std::allocator<void> >[m[K’} to ‘[01m[Kconst std::mutex&[m[K’
+   55 | td::mutex & operator!([01;36m[Kconst std::mutex & a[m[K)
+      |                       [01;36m[K~~~~~~~~~~~~~~~~~~~^[m[K
+
+gmake[2]: *** [CMakeFiles/robot_test_radar_node.dir/build.make:76: CMakeFiles/robot_test_radar_node.dir/src/robot_test_radar_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/robot_test_radar_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

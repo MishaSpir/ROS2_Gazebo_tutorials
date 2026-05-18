@@ -1,0 +1,563 @@
+[0.000000] (-) TimerEvent: {}
+[0.000128] (robot_teleop) JobQueued: {'identifier': 'robot_teleop', 'dependencies': OrderedDict()}
+[0.000329] (robot_test_radar) JobQueued: {'identifier': 'robot_test_radar', 'dependencies': OrderedDict()}
+[0.000823] (robot_world) JobQueued: {'identifier': 'robot_world', 'dependencies': OrderedDict()}
+[0.000881] (test_robot_plugin) JobQueued: {'identifier': 'test_robot_plugin', 'dependencies': OrderedDict()}
+[0.000926] (robot_teleop) JobStarted: {'identifier': 'robot_teleop'}
+[0.007545] (robot_test_radar) JobStarted: {'identifier': 'robot_test_radar'}
+[0.011699] (robot_world) JobStarted: {'identifier': 'robot_world'}
+[0.018436] (test_robot_plugin) JobStarted: {'identifier': 'test_robot_plugin'}
+[0.025157] (robot_teleop) JobProgress: {'identifier': 'robot_teleop', 'progress': 'cmake'}
+[0.026819] (robot_teleop) JobProgress: {'identifier': 'robot_teleop', 'progress': 'build'}
+[0.027050] (robot_teleop) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/build/robot_teleop', '--', '-j8', '-l8'], 'cwd': '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/build/robot_teleop', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US'), ('USER', 'misha'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/misha'), ('CHROME_DESKTOP', 'code.desktop'), ('TERM_PROGRAM_VERSION', '1.109.5'), ('DESKTOP_SESSION', 'cinnamon'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('CINNAMON_VERSION', '5.4.12'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '33686'), ('QT_QPA_PLATFORMTHEME', 'qt5ct'), ('COLCON_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'misha'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GTK_OVERLAY_SCROLLING', '1'), ('XDG_SESSION_ID', 'c2'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/misha-ThinkPad-T480:@/tmp/.ICE-unix/1217,unix/misha-ThinkPad-T480:/tmp/.ICE-unix/1217'), ('GDM_LANG', 'en_US'), ('GTK3_MODULES', 'xapp-gtk3-module'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'X-Cinnamon'), ('XDG_SESSION_DESKTOP', 'cinnamon'), ('XAUTHORITY', '/home/misha/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/misha'), ('AMENT_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_test_radar:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_slam:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'cinnamon'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('XDG_VTNR', '7'), ('PWD', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/build/robot_teleop'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-cinnamon:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/cinnamon:/usr/share/gnome:/home/misha/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_test_radar:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_slam:/opt/ros/humble')]), 'shell': False}
+[0.032085] (robot_test_radar) JobProgress: {'identifier': 'robot_test_radar', 'progress': 'cmake'}
+[0.033895] (robot_test_radar) JobProgress: {'identifier': 'robot_test_radar', 'progress': 'build'}
+[0.035158] (robot_test_radar) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/build/robot_test_radar', '--', '-j8', '-l8'], 'cwd': '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/build/robot_test_radar', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US'), ('USER', 'misha'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/misha'), ('CHROME_DESKTOP', 'code.desktop'), ('TERM_PROGRAM_VERSION', '1.109.5'), ('DESKTOP_SESSION', 'cinnamon'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('CINNAMON_VERSION', '5.4.12'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '33686'), ('QT_QPA_PLATFORMTHEME', 'qt5ct'), ('COLCON_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'misha'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GTK_OVERLAY_SCROLLING', '1'), ('XDG_SESSION_ID', 'c2'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/misha-ThinkPad-T480:@/tmp/.ICE-unix/1217,unix/misha-ThinkPad-T480:/tmp/.ICE-unix/1217'), ('GDM_LANG', 'en_US'), ('GTK3_MODULES', 'xapp-gtk3-module'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'X-Cinnamon'), ('XDG_SESSION_DESKTOP', 'cinnamon'), ('XAUTHORITY', '/home/misha/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/misha'), ('AMENT_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_test_radar:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_slam:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'cinnamon'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('XDG_VTNR', '7'), ('PWD', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/build/robot_test_radar'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-cinnamon:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/cinnamon:/usr/share/gnome:/home/misha/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_test_radar:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_slam:/opt/ros/humble')]), 'shell': False}
+[0.040788] (robot_world) JobProgress: {'identifier': 'robot_world', 'progress': 'cmake'}
+[0.043052] (robot_world) JobProgress: {'identifier': 'robot_world', 'progress': 'build'}
+[0.046014] (robot_world) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/build/robot_world', '--', '-j8', '-l8'], 'cwd': '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/build/robot_world', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US'), ('USER', 'misha'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/misha'), ('CHROME_DESKTOP', 'code.desktop'), ('TERM_PROGRAM_VERSION', '1.109.5'), ('DESKTOP_SESSION', 'cinnamon'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('CINNAMON_VERSION', '5.4.12'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '33686'), ('QT_QPA_PLATFORMTHEME', 'qt5ct'), ('COLCON_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'misha'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GTK_OVERLAY_SCROLLING', '1'), ('XDG_SESSION_ID', 'c2'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/misha-ThinkPad-T480:@/tmp/.ICE-unix/1217,unix/misha-ThinkPad-T480:/tmp/.ICE-unix/1217'), ('GDM_LANG', 'en_US'), ('GTK3_MODULES', 'xapp-gtk3-module'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'X-Cinnamon'), ('XDG_SESSION_DESKTOP', 'cinnamon'), ('XAUTHORITY', '/home/misha/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/misha'), ('AMENT_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_test_radar:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_slam:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'cinnamon'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('XDG_VTNR', '7'), ('PWD', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/build/robot_world'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-cinnamon:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/cinnamon:/usr/share/gnome:/home/misha/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_test_radar:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_slam:/opt/ros/humble')]), 'shell': False}
+[0.058366] (test_robot_plugin) JobProgress: {'identifier': 'test_robot_plugin', 'progress': 'cmake'}
+[0.061158] (test_robot_plugin) Command: {'cmd': ['/usr/bin/cmake', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/src/test_robot_plugin', '-DCMAKE_INSTALL_PREFIX=/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/test_robot_plugin'], 'cwd': '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/build/test_robot_plugin', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US'), ('USER', 'misha'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/misha'), ('CHROME_DESKTOP', 'code.desktop'), ('TERM_PROGRAM_VERSION', '1.109.5'), ('DESKTOP_SESSION', 'cinnamon'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('CINNAMON_VERSION', '5.4.12'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '33686'), ('QT_QPA_PLATFORMTHEME', 'qt5ct'), ('COLCON_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'misha'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GTK_OVERLAY_SCROLLING', '1'), ('XDG_SESSION_ID', 'c2'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/misha-ThinkPad-T480:@/tmp/.ICE-unix/1217,unix/misha-ThinkPad-T480:/tmp/.ICE-unix/1217'), ('GDM_LANG', 'en_US'), ('GTK3_MODULES', 'xapp-gtk3-module'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'X-Cinnamon'), ('XDG_SESSION_DESKTOP', 'cinnamon'), ('XAUTHORITY', '/home/misha/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/misha'), ('AMENT_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_test_radar:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_slam:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'cinnamon'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('XDG_VTNR', '7'), ('PWD', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/build/test_robot_plugin'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-cinnamon:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/cinnamon:/usr/share/gnome:/home/misha/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_test_radar:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_slam:/opt/ros/humble')]), 'shell': False}
+[0.099734] (-) TimerEvent: {}
+[0.118103] (robot_world) CommandEnded: {'returncode': 0}
+[0.119563] (robot_world) JobProgress: {'identifier': 'robot_world', 'progress': 'install'}
+[0.120435] (robot_test_radar) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target robot_test_radar_node\x1b[0m\n'}
+[0.137545] (robot_world) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/build/robot_world'], 'cwd': '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/build/robot_world', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US'), ('USER', 'misha'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/misha'), ('CHROME_DESKTOP', 'code.desktop'), ('TERM_PROGRAM_VERSION', '1.109.5'), ('DESKTOP_SESSION', 'cinnamon'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('CINNAMON_VERSION', '5.4.12'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '33686'), ('QT_QPA_PLATFORMTHEME', 'qt5ct'), ('COLCON_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'misha'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GTK_OVERLAY_SCROLLING', '1'), ('XDG_SESSION_ID', 'c2'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/misha-ThinkPad-T480:@/tmp/.ICE-unix/1217,unix/misha-ThinkPad-T480:/tmp/.ICE-unix/1217'), ('GDM_LANG', 'en_US'), ('GTK3_MODULES', 'xapp-gtk3-module'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'X-Cinnamon'), ('XDG_SESSION_DESKTOP', 'cinnamon'), ('XAUTHORITY', '/home/misha/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/misha'), ('AMENT_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_test_radar:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_slam:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'cinnamon'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('XDG_VTNR', '7'), ('PWD', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/build/robot_world'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-cinnamon:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/cinnamon:/usr/share/gnome:/home/misha/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_test_radar:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_slam:/opt/ros/humble')]), 'shell': False}
+[0.141199] (robot_teleop) StdoutLine: {'line': b'[100%] Built target robot_teleop_node\n'}
+[0.152542] (robot_world) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.154030] (robot_world) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[0.155033] (robot_world) StdoutLine: {'line': b'-- Up-to-date symlink: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_world/share/robot_world/launch/robot_world_launch.py\n'}
+[0.155703] (robot_world) StdoutLine: {'line': b'-- Up-to-date symlink: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_world/share/ament_index/resource_index/package_run_dependencies/robot_world\n'}
+[0.156291] (robot_world) StdoutLine: {'line': b'-- Up-to-date symlink: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_world/share/ament_index/resource_index/parent_prefix_path/robot_world\n'}
+[0.156771] (robot_world) StdoutLine: {'line': b'-- Up-to-date symlink: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_world/share/robot_world/environment/ament_prefix_path.sh\n'}
+[0.157158] (robot_world) StdoutLine: {'line': b'-- Up-to-date symlink: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_world/share/robot_world/environment/ament_prefix_path.dsv\n'}
+[0.157553] (robot_world) StdoutLine: {'line': b'-- Up-to-date symlink: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_world/share/robot_world/environment/path.sh\n'}
+[0.157973] (robot_world) StdoutLine: {'line': b'-- Up-to-date symlink: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_world/share/robot_world/environment/path.dsv\n'}
+[0.158385] (robot_world) StdoutLine: {'line': b'-- Up-to-date symlink: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_world/share/robot_world/local_setup.bash\n'}
+[0.158862] (robot_world) StdoutLine: {'line': b'-- Up-to-date symlink: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_world/share/robot_world/local_setup.sh\n'}
+[0.159365] (robot_world) StdoutLine: {'line': b'-- Up-to-date symlink: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_world/share/robot_world/local_setup.zsh\n'}
+[0.159902] (robot_world) StdoutLine: {'line': b'-- Up-to-date symlink: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_world/share/robot_world/local_setup.dsv\n'}
+[0.160252] (robot_world) StdoutLine: {'line': b'-- Symlinking: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_world/share/robot_world/package.dsv\n'}
+[0.160558] (robot_test_radar) StdoutLine: {'line': b'[100%] Built target robot_test_radar_node\n'}
+[0.163632] (robot_teleop) CommandEnded: {'returncode': 0}
+[0.165120] (robot_teleop) JobProgress: {'identifier': 'robot_teleop', 'progress': 'install'}
+[0.165835] (robot_teleop) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/build/robot_teleop'], 'cwd': '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/build/robot_teleop', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US'), ('USER', 'misha'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/misha'), ('CHROME_DESKTOP', 'code.desktop'), ('TERM_PROGRAM_VERSION', '1.109.5'), ('DESKTOP_SESSION', 'cinnamon'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('CINNAMON_VERSION', '5.4.12'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '33686'), ('QT_QPA_PLATFORMTHEME', 'qt5ct'), ('COLCON_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'misha'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GTK_OVERLAY_SCROLLING', '1'), ('XDG_SESSION_ID', 'c2'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/misha-ThinkPad-T480:@/tmp/.ICE-unix/1217,unix/misha-ThinkPad-T480:/tmp/.ICE-unix/1217'), ('GDM_LANG', 'en_US'), ('GTK3_MODULES', 'xapp-gtk3-module'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'X-Cinnamon'), ('XDG_SESSION_DESKTOP', 'cinnamon'), ('XAUTHORITY', '/home/misha/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/misha'), ('AMENT_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_test_radar:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_slam:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'cinnamon'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('XDG_VTNR', '7'), ('PWD', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/build/robot_teleop'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-cinnamon:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/cinnamon:/usr/share/gnome:/home/misha/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_test_radar:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_slam:/opt/ros/humble')]), 'shell': False}
+[0.175510] (robot_world) StdoutLine: {'line': b'-- Up-to-date symlink: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_world/share/ament_index/resource_index/packages/robot_world\n'}
+[0.176187] (robot_world) StdoutLine: {'line': b'-- Up-to-date symlink: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_world/share/robot_world/cmake/robot_worldConfig.cmake\n'}
+[0.177188] (robot_world) StdoutLine: {'line': b'-- Up-to-date symlink: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_world/share/robot_world/cmake/robot_worldConfig-version.cmake\n'}
+[0.177559] (robot_world) StdoutLine: {'line': b'-- Up-to-date symlink: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_world/share/robot_world/package.xml\n'}
+[0.177948] (robot_test_radar) CommandEnded: {'returncode': 0}
+[0.179008] (test_robot_plugin) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.179526] (robot_teleop) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.179946] (robot_teleop) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_teleop/lib/robot_teleop/robot_teleop_node\n'}
+[0.180168] (robot_teleop) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_teleop/share/ament_index/resource_index/package_run_dependencies/robot_teleop\n'}
+[0.181593] (robot_teleop) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_teleop/share/ament_index/resource_index/parent_prefix_path/robot_teleop\n'}
+[0.184721] (robot_teleop) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_teleop/share/robot_teleop/environment/ament_prefix_path.sh\n'}
+[0.185040] (robot_teleop) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_teleop/share/robot_teleop/environment/ament_prefix_path.dsv\n'}
+[0.185414] (robot_teleop) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_teleop/share/robot_teleop/environment/path.sh\n'}
+[0.185788] (robot_teleop) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_teleop/share/robot_teleop/environment/path.dsv\n'}
+[0.186008] (robot_teleop) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_teleop/share/robot_teleop/local_setup.bash\n'}
+[0.186361] (robot_teleop) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_teleop/share/robot_teleop/local_setup.sh\n'}
+[0.186698] (robot_teleop) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_teleop/share/robot_teleop/local_setup.zsh\n'}
+[0.187339] (robot_teleop) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_teleop/share/robot_teleop/local_setup.dsv\n'}
+[0.187543] (robot_teleop) StdoutLine: {'line': b'-- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_teleop/share/robot_teleop/package.dsv\n'}
+[0.187923] (robot_test_radar) JobProgress: {'identifier': 'robot_test_radar', 'progress': 'install'}
+[0.187991] (robot_teleop) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_teleop/share/ament_index/resource_index/packages/robot_teleop\n'}
+[0.188303] (robot_test_radar) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/build/robot_test_radar'], 'cwd': '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/build/robot_test_radar', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US'), ('USER', 'misha'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/misha'), ('CHROME_DESKTOP', 'code.desktop'), ('TERM_PROGRAM_VERSION', '1.109.5'), ('DESKTOP_SESSION', 'cinnamon'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('CINNAMON_VERSION', '5.4.12'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '33686'), ('QT_QPA_PLATFORMTHEME', 'qt5ct'), ('COLCON_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'misha'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GTK_OVERLAY_SCROLLING', '1'), ('XDG_SESSION_ID', 'c2'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/misha-ThinkPad-T480:@/tmp/.ICE-unix/1217,unix/misha-ThinkPad-T480:/tmp/.ICE-unix/1217'), ('GDM_LANG', 'en_US'), ('GTK3_MODULES', 'xapp-gtk3-module'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'X-Cinnamon'), ('XDG_SESSION_DESKTOP', 'cinnamon'), ('XAUTHORITY', '/home/misha/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/misha'), ('AMENT_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_test_radar:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_slam:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'cinnamon'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('XDG_VTNR', '7'), ('PWD', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/build/robot_test_radar'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-cinnamon:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/cinnamon:/usr/share/gnome:/home/misha/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_test_radar:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_slam:/opt/ros/humble')]), 'shell': False}
+[0.189445] (robot_teleop) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_teleop/share/robot_teleop/cmake/robot_teleopConfig.cmake\n'}
+[0.189871] (robot_teleop) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_teleop/share/robot_teleop/cmake/robot_teleopConfig-version.cmake\n'}
+[0.190172] (robot_teleop) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_teleop/share/robot_teleop/package.xml\n'}
+[0.191149] (robot_world) CommandEnded: {'returncode': 0}
+[0.193076] (robot_test_radar) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.193463] (robot_test_radar) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_test_radar/lib/robot_test_radar/robot_test_radar_node\n'}
+[0.194028] (robot_test_radar) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_test_radar/share/robot_test_radar/launch\n'}
+[0.194506] (robot_test_radar) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_test_radar/share/robot_test_radar/launch/robot_slam_launch.py\n'}
+[0.194928] (robot_test_radar) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_test_radar/share/ament_index/resource_index/package_run_dependencies/robot_test_radar\n'}
+[0.195319] (robot_test_radar) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_test_radar/share/ament_index/resource_index/parent_prefix_path/robot_test_radar\n'}
+[0.195740] (robot_test_radar) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_test_radar/share/robot_test_radar/environment/ament_prefix_path.sh\n'}
+[0.196420] (robot_test_radar) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_test_radar/share/robot_test_radar/environment/ament_prefix_path.dsv\n'}
+[0.197073] (robot_test_radar) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_test_radar/share/robot_test_radar/environment/path.sh\n'}
+[0.197381] (robot_test_radar) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_test_radar/share/robot_test_radar/environment/path.dsv\n'}
+[0.197796] (robot_test_radar) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_test_radar/share/robot_test_radar/local_setup.bash\n'}
+[0.197971] (robot_test_radar) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_test_radar/share/robot_test_radar/local_setup.sh\n'}
+[0.198588] (robot_test_radar) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_test_radar/share/robot_test_radar/local_setup.zsh\n'}
+[0.198790] (robot_test_radar) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_test_radar/share/robot_test_radar/local_setup.dsv\n'}
+[0.199108] (robot_test_radar) StdoutLine: {'line': b'-- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_test_radar/share/robot_test_radar/package.dsv\n'}
+[0.199758] (-) TimerEvent: {}
+[0.199945] (robot_test_radar) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_test_radar/share/ament_index/resource_index/packages/robot_test_radar\n'}
+[0.200598] (robot_test_radar) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_test_radar/share/robot_test_radar/cmake/robot_test_radarConfig.cmake\n'}
+[0.201015] (robot_test_radar) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_test_radar/share/robot_test_radar/cmake/robot_test_radarConfig-version.cmake\n'}
+[0.203045] (robot_test_radar) StdoutLine: {'line': b'-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_test_radar/share/robot_test_radar/package.xml\n'}
+[0.222801] (robot_world) JobEnded: {'identifier': 'robot_world', 'rc': 0}
+[0.224380] (robot_teleop) CommandEnded: {'returncode': 0}
+[0.247543] (robot_teleop) JobEnded: {'identifier': 'robot_teleop', 'rc': 0}
+[0.250872] (robot_test_radar) CommandEnded: {'returncode': 0}
+[0.288463] (test_robot_plugin) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.290708] (robot_test_radar) JobEnded: {'identifier': 'robot_test_radar', 'rc': 0}
+[0.300137] (-) TimerEvent: {}
+[0.305317] (test_robot_plugin) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.400160] (-) TimerEvent: {}
+[0.423379] (test_robot_plugin) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.435981] (test_robot_plugin) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.436754] (test_robot_plugin) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.437429] (test_robot_plugin) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.442236] (test_robot_plugin) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.500314] (-) TimerEvent: {}
+[0.552036] (test_robot_plugin) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.564627] (test_robot_plugin) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.565001] (test_robot_plugin) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.565830] (test_robot_plugin) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.570066] (test_robot_plugin) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.13 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.600468] (-) TimerEvent: {}
+[0.700834] (-) TimerEvent: {}
+[0.773675] (test_robot_plugin) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.800959] (-) TimerEvent: {}
+[0.901258] (-) TimerEvent: {}
+[0.929671] (test_robot_plugin) StdoutLine: {'line': b'-- Found rclcpp: 16.0.18 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.988559] (test_robot_plugin) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.994604] (test_robot_plugin) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.001343] (-) TimerEvent: {}
+[1.004881] (test_robot_plugin) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[1.019691] (test_robot_plugin) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.040725] (test_robot_plugin) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.095475] (test_robot_plugin) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.098569] (test_robot_plugin) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.101445] (-) TimerEvent: {}
+[1.197399] (test_robot_plugin) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[1.201556] (-) TimerEvent: {}
+[1.230465] (test_robot_plugin) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[1.278445] (test_robot_plugin) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.294491] (test_robot_plugin) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.301657] (-) TimerEvent: {}
+[1.382705] (test_robot_plugin) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.383269] (test_robot_plugin) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.401765] (-) TimerEvent: {}
+[1.466475] (test_robot_plugin) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.467817] (test_robot_plugin) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.501887] (-) TimerEvent: {}
+[1.538041] (test_robot_plugin) StdoutLine: {'line': b'-- Found gazebo_ros: 3.9.0 (/opt/ros/humble/share/gazebo_ros/cmake)\n'}
+[1.551154] (test_robot_plugin) StdoutLine: {'line': b'-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") \n'}
+[1.552430] (test_robot_plugin) StdoutLine: {'line': b"-- Checking for module 'bullet>=2.82'\n"}
+[1.565352] (test_robot_plugin) StdoutLine: {'line': b'--   Found bullet, version 3.05\n'}
+[1.602021] (-) TimerEvent: {}
+[1.688473] (test_robot_plugin) StdoutLine: {'line': b'-- Found fcl: /usr/include (found suitable version "0.7.0", minimum required is "0.5.0") \n'}
+[1.702172] (-) TimerEvent: {}
+[1.766020] (test_robot_plugin) StdoutLine: {'line': b'-- Found assimp: /usr/include (found version "5.2.0") \n'}
+[1.802403] (-) TimerEvent: {}
+[1.807107] (test_robot_plugin) StdoutLine: {'line': b'-- Found DART: /usr/include (Required is at least version "6.6") found components: dart \n'}
+[1.872449] (test_robot_plugin) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.40.0") found components: thread system filesystem program_options regex iostreams date_time \n'}
+[1.902639] (-) TimerEvent: {}
+[1.903092] (test_robot_plugin) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.12.4") \n'}
+[1.912385] (test_robot_plugin) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[1.925945] (test_robot_plugin) StdoutLine: {'line': b'-- Searching for dependencies of ignition-math6\n'}
+[1.929228] (test_robot_plugin) StdoutLine: {'line': b'-- Looking for OGRE...\n'}
+[1.930108] (test_robot_plugin) StdoutLine: {'line': b'-- OGRE_PREFIX_WATCH changed.\n'}
+[1.939542] (test_robot_plugin) StdoutLine: {'line': b"-- Checking for module 'OGRE'\n"}
+[1.959063] (test_robot_plugin) StdoutLine: {'line': b'--   Found OGRE, version 1.9.0\n'}
+[2.002717] (-) TimerEvent: {}
+[2.006719] (test_robot_plugin) StdoutLine: {'line': b'-- Found Ogre Ghadamon (1.9.0)\n'}
+[2.019896] (test_robot_plugin) StdoutLine: {'line': b'-- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so\n'}
+[2.037659] (test_robot_plugin) StdoutLine: {'line': b'-- Looking for OGRE_Paging...\n'}
+[2.049404] (test_robot_plugin) StdoutLine: {'line': b'-- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so\n'}
+[2.050234] (test_robot_plugin) StdoutLine: {'line': b'-- Looking for OGRE_Terrain...\n'}
+[2.060982] (test_robot_plugin) StdoutLine: {'line': b'-- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so\n'}
+[2.061201] (test_robot_plugin) StdoutLine: {'line': b'-- Looking for OGRE_Property...\n'}
+[2.072138] (test_robot_plugin) StdoutLine: {'line': b'-- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so\n'}
+[2.072585] (test_robot_plugin) StdoutLine: {'line': b'-- Looking for OGRE_RTShaderSystem...\n'}
+[2.079502] (test_robot_plugin) StdoutLine: {'line': b'-- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so\n'}
+[2.079689] (test_robot_plugin) StdoutLine: {'line': b'-- Looking for OGRE_Volume...\n'}
+[2.090239] (test_robot_plugin) StdoutLine: {'line': b'-- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so\n'}
+[2.090466] (test_robot_plugin) StdoutLine: {'line': b'-- Looking for OGRE_Overlay...\n'}
+[2.097097] (test_robot_plugin) StdoutLine: {'line': b'-- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so\n'}
+[2.102903] (-) TimerEvent: {}
+[2.203246] (-) TimerEvent: {}
+[2.303766] (-) TimerEvent: {}
+[2.316227] (test_robot_plugin) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[2.327678] (test_robot_plugin) StdoutLine: {'line': b'-- Looking for ignition-transport8 -- found version 8.2.1\n'}
+[2.329275] (test_robot_plugin) StdoutLine: {'line': b'-- Searching for dependencies of ignition-transport8\n'}
+[2.361200] (test_robot_plugin) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found suitable version "3.12.4", minimum required is "3") \n'}
+[2.376600] (test_robot_plugin) StdoutLine: {'line': b'-- Config-file not installed for ZeroMQ -- checking for pkg-config\n'}
+[2.382614] (test_robot_plugin) StdoutLine: {'line': b"-- Checking for module 'libzmq >= 4'\n"}
+[2.403944] (-) TimerEvent: {}
+[2.405437] (test_robot_plugin) StdoutLine: {'line': b'--   Found libzmq , version 4.3.4\n'}
+[2.467139] (test_robot_plugin) StdoutLine: {'line': b'-- Found ZeroMQ: TRUE (Required is at least version "4") \n'}
+[2.477956] (test_robot_plugin) StdoutLine: {'line': b"-- Checking for module 'uuid'\n"}
+[2.500615] (test_robot_plugin) StdoutLine: {'line': b'--   Found uuid, version 2.37.2\n'}
+[2.504112] (-) TimerEvent: {}
+[2.557707] (test_robot_plugin) StdoutLine: {'line': b'-- Found UUID: TRUE  \n'}
+[2.562186] (test_robot_plugin) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.8.1\n'}
+[2.563247] (test_robot_plugin) StdoutLine: {'line': b'-- Searching for dependencies of ignition-msgs5\n'}
+[2.589293] (test_robot_plugin) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[2.595848] (test_robot_plugin) StdoutLine: {'line': b"-- Checking for module 'tinyxml2'\n"}
+[2.604226] (-) TimerEvent: {}
+[2.610697] (test_robot_plugin) StdoutLine: {'line': b'--   Found tinyxml2, version 9.0.0\n'}
+[2.658094] (test_robot_plugin) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.8.1\n'}
+[2.662206] (test_robot_plugin) StdoutLine: {'line': b'-- Looking for ignition-common3 -- found version 3.14.0\n'}
+[2.662967] (test_robot_plugin) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common3\n'}
+[2.663510] (test_robot_plugin) StdoutLine: {'line': b'-- Looking for dlfcn.h - found\n'}
+[2.664637] (test_robot_plugin) StdoutLine: {'line': b'-- Looking for libdl - found\n'}
+[2.666900] (test_robot_plugin) StdoutLine: {'line': b'-- Found DL: TRUE  \n'}
+[2.682057] (test_robot_plugin) StdoutLine: {'line': b'-- Found tinyobjloader: /usr/lib/x86_64-linux-gnu/cmake/tinyobjloader/tinyobjloader-config.cmake (found version "2.0.0") \n'}
+[2.683098] (test_robot_plugin) StdoutLine: {'line': b'-- Searching for <ignition-common3> component [graphics]\n'}
+[2.686527] (test_robot_plugin) StdoutLine: {'line': b'-- Looking for ignition-common3-graphics -- found version 3.14.0\n'}
+[2.687159] (test_robot_plugin) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common3-graphics\n'}
+[2.687593] (test_robot_plugin) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[2.692228] (test_robot_plugin) StdoutLine: {'line': b'-- Looking for ignition-fuel_tools4 -- found version 4.4.0\n'}
+[2.692795] (test_robot_plugin) StdoutLine: {'line': b'-- Searching for dependencies of ignition-fuel_tools4\n'}
+[2.704357] (-) TimerEvent: {}
+[2.788068] (test_robot_plugin) StdoutLine: {'line': b'-- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.81.0")  \n'}
+[2.801347] (test_robot_plugin) StdoutLine: {'line': b"-- Checking for module 'jsoncpp'\n"}
+[2.804484] (-) TimerEvent: {}
+[2.817638] (test_robot_plugin) StdoutLine: {'line': b'--   Found jsoncpp, version 1.9.5\n'}
+[2.866881] (test_robot_plugin) StdoutLine: {'line': b'-- Found JSONCPP: TRUE  \n'}
+[2.875527] (test_robot_plugin) StdoutLine: {'line': b"-- Checking for module 'libzip'\n"}
+[2.892416] (test_robot_plugin) StdoutLine: {'line': b'--   Found libzip, version 1.7.3\n'}
+[2.904620] (-) TimerEvent: {}
+[2.938523] (test_robot_plugin) StdoutLine: {'line': b'-- Found ZIP: TRUE  \n'}
+[2.939153] (test_robot_plugin) StdoutLine: {'line': b'-- Looking for ignition-common3 -- found version 3.14.0\n'}
+[2.939856] (test_robot_plugin) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[2.940440] (test_robot_plugin) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.8.1\n'}
+[2.945954] (test_robot_plugin) StdoutLine: {'line': b'-- Gazebo version: 11.10\n'}
+[2.946410] (test_robot_plugin) StdoutLine: {'line': b"-- Checking for module 'tbb'\n"}
+[2.963653] (test_robot_plugin) StdoutLine: {'line': b'--   Found tbb, version 2021.5.0\n'}
+[3.004767] (-) TimerEvent: {}
+[3.005633] (test_robot_plugin) StdoutLine: {'line': b'-- Found gazebo_msgs: 3.9.0 (/opt/ros/humble/share/gazebo_msgs/cmake)\n'}
+[3.081580] (test_robot_plugin) StdoutLine: {'line': b'-- Found sensor_msgs: 4.9.1 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[3.104493] (test_robot_plugin) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[3.104823] (-) TimerEvent: {}
+[3.205174] (-) TimerEvent: {}
+[3.238560] (test_robot_plugin) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[3.239284] (test_robot_plugin) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[3.239554] (test_robot_plugin) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[3.242365] (test_robot_plugin) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[3.244510] (test_robot_plugin) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[3.244675] (test_robot_plugin) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[3.245747] (test_robot_plugin) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[3.249600] (test_robot_plugin) StdoutLine: {'line': b'-- Configuring done\n'}
+[3.304047] (test_robot_plugin) StdoutLine: {'line': b'-- Generating done\n'}
+[3.305276] (-) TimerEvent: {}
+[3.312942] (test_robot_plugin) StdoutLine: {'line': b'-- Build files have been written to: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/build/test_robot_plugin\n'}
+[3.343492] (test_robot_plugin) CommandEnded: {'returncode': 0}
+[3.346602] (test_robot_plugin) JobProgress: {'identifier': 'test_robot_plugin', 'progress': 'build'}
+[3.346742] (test_robot_plugin) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/build/test_robot_plugin', '--', '-j8', '-l8'], 'cwd': '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/build/test_robot_plugin', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US'), ('USER', 'misha'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/misha'), ('CHROME_DESKTOP', 'code.desktop'), ('TERM_PROGRAM_VERSION', '1.109.5'), ('DESKTOP_SESSION', 'cinnamon'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('CINNAMON_VERSION', '5.4.12'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '33686'), ('QT_QPA_PLATFORMTHEME', 'qt5ct'), ('COLCON_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'misha'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GTK_OVERLAY_SCROLLING', '1'), ('XDG_SESSION_ID', 'c2'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/misha-ThinkPad-T480:@/tmp/.ICE-unix/1217,unix/misha-ThinkPad-T480:/tmp/.ICE-unix/1217'), ('GDM_LANG', 'en_US'), ('GTK3_MODULES', 'xapp-gtk3-module'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'X-Cinnamon'), ('XDG_SESSION_DESKTOP', 'cinnamon'), ('XAUTHORITY', '/home/misha/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/misha'), ('AMENT_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_test_radar:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_slam:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'cinnamon'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('XDG_VTNR', '7'), ('PWD', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/build/test_robot_plugin'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-cinnamon:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/cinnamon:/usr/share/gnome:/home/misha/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_test_radar:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_slam:/opt/ros/humble')]), 'shell': False}
+[3.405491] (-) TimerEvent: {}
+[3.427082] (test_robot_plugin) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/wheel_robot_controller.dir/src/wheel_robot_controller.cpp.o\x1b[0m\n'}
+[3.505632] (-) TimerEvent: {}
+[3.606014] (-) TimerEvent: {}
+[3.706418] (-) TimerEvent: {}
+[3.806796] (-) TimerEvent: {}
+[3.907182] (-) TimerEvent: {}
+[4.007605] (-) TimerEvent: {}
+[4.108078] (-) TimerEvent: {}
+[4.208406] (-) TimerEvent: {}
+[4.308729] (-) TimerEvent: {}
+[4.409069] (-) TimerEvent: {}
+[4.509407] (-) TimerEvent: {}
+[4.609758] (-) TimerEvent: {}
+[4.710100] (-) TimerEvent: {}
+[4.810435] (-) TimerEvent: {}
+[4.910764] (-) TimerEvent: {}
+[5.011075] (-) TimerEvent: {}
+[5.111448] (-) TimerEvent: {}
+[5.211836] (-) TimerEvent: {}
+[5.312225] (-) TimerEvent: {}
+[5.412622] (-) TimerEvent: {}
+[5.512989] (-) TimerEvent: {}
+[5.613329] (-) TimerEvent: {}
+[5.713669] (-) TimerEvent: {}
+[5.814013] (-) TimerEvent: {}
+[5.914356] (-) TimerEvent: {}
+[6.014700] (-) TimerEvent: {}
+[6.115069] (-) TimerEvent: {}
+[6.215422] (-) TimerEvent: {}
+[6.315767] (-) TimerEvent: {}
+[6.416087] (-) TimerEvent: {}
+[6.516660] (-) TimerEvent: {}
+[6.617162] (-) TimerEvent: {}
+[6.717484] (-) TimerEvent: {}
+[6.817781] (-) TimerEvent: {}
+[6.918088] (-) TimerEvent: {}
+[7.018405] (-) TimerEvent: {}
+[7.118715] (-) TimerEvent: {}
+[7.219014] (-) TimerEvent: {}
+[7.319322] (-) TimerEvent: {}
+[7.419592] (-) TimerEvent: {}
+[7.519861] (-) TimerEvent: {}
+[7.620159] (-) TimerEvent: {}
+[7.720465] (-) TimerEvent: {}
+[7.820857] (-) TimerEvent: {}
+[7.921481] (-) TimerEvent: {}
+[8.022025] (-) TimerEvent: {}
+[8.122342] (-) TimerEvent: {}
+[8.222660] (-) TimerEvent: {}
+[8.322963] (-) TimerEvent: {}
+[8.423262] (-) TimerEvent: {}
+[8.523578] (-) TimerEvent: {}
+[8.623850] (-) TimerEvent: {}
+[8.724148] (-) TimerEvent: {}
+[8.824501] (-) TimerEvent: {}
+[8.924920] (-) TimerEvent: {}
+[9.025242] (-) TimerEvent: {}
+[9.125578] (-) TimerEvent: {}
+[9.225876] (-) TimerEvent: {}
+[9.326182] (-) TimerEvent: {}
+[9.426488] (-) TimerEvent: {}
+[9.526840] (-) TimerEvent: {}
+[9.627334] (-) TimerEvent: {}
+[9.727660] (-) TimerEvent: {}
+[9.827986] (-) TimerEvent: {}
+[9.928343] (-) TimerEvent: {}
+[10.028734] (-) TimerEvent: {}
+[10.129141] (-) TimerEvent: {}
+[10.229559] (-) TimerEvent: {}
+[10.329937] (-) TimerEvent: {}
+[10.430239] (-) TimerEvent: {}
+[10.530529] (-) TimerEvent: {}
+[10.630835] (-) TimerEvent: {}
+[10.731131] (-) TimerEvent: {}
+[10.831449] (-) TimerEvent: {}
+[10.931756] (-) TimerEvent: {}
+[11.032158] (-) TimerEvent: {}
+[11.132719] (-) TimerEvent: {}
+[11.233044] (-) TimerEvent: {}
+[11.333414] (-) TimerEvent: {}
+[11.433718] (-) TimerEvent: {}
+[11.534030] (-) TimerEvent: {}
+[11.634339] (-) TimerEvent: {}
+[11.734689] (-) TimerEvent: {}
+[11.835014] (-) TimerEvent: {}
+[11.935435] (-) TimerEvent: {}
+[12.035934] (-) TimerEvent: {}
+[12.136286] (-) TimerEvent: {}
+[12.236652] (-) TimerEvent: {}
+[12.337019] (-) TimerEvent: {}
+[12.437379] (-) TimerEvent: {}
+[12.537750] (-) TimerEvent: {}
+[12.638121] (-) TimerEvent: {}
+[12.738482] (-) TimerEvent: {}
+[12.838841] (-) TimerEvent: {}
+[12.939250] (-) TimerEvent: {}
+[13.039833] (-) TimerEvent: {}
+[13.140240] (-) TimerEvent: {}
+[13.240608] (-) TimerEvent: {}
+[13.341003] (-) TimerEvent: {}
+[13.441372] (-) TimerEvent: {}
+[13.541852] (-) TimerEvent: {}
+[13.642489] (-) TimerEvent: {}
+[13.742867] (-) TimerEvent: {}
+[13.843224] (-) TimerEvent: {}
+[13.943616] (-) TimerEvent: {}
+[14.044042] (-) TimerEvent: {}
+[14.144461] (-) TimerEvent: {}
+[14.244914] (-) TimerEvent: {}
+[14.345344] (-) TimerEvent: {}
+[14.445716] (-) TimerEvent: {}
+[14.546114] (-) TimerEvent: {}
+[14.646544] (-) TimerEvent: {}
+[14.747006] (-) TimerEvent: {}
+[14.847451] (-) TimerEvent: {}
+[14.947896] (-) TimerEvent: {}
+[15.048387] (-) TimerEvent: {}
+[15.149271] (-) TimerEvent: {}
+[15.250607] (-) TimerEvent: {}
+[15.351289] (-) TimerEvent: {}
+[15.451761] (-) TimerEvent: {}
+[15.552391] (-) TimerEvent: {}
+[15.653301] (-) TimerEvent: {}
+[15.754124] (-) TimerEvent: {}
+[15.854932] (-) TimerEvent: {}
+[15.955883] (-) TimerEvent: {}
+[16.056515] (-) TimerEvent: {}
+[16.156944] (-) TimerEvent: {}
+[16.257531] (-) TimerEvent: {}
+[16.358105] (-) TimerEvent: {}
+[16.458813] (-) TimerEvent: {}
+[16.559576] (-) TimerEvent: {}
+[16.659918] (-) TimerEvent: {}
+[16.760252] (-) TimerEvent: {}
+[16.860615] (-) TimerEvent: {}
+[16.960981] (-) TimerEvent: {}
+[17.061349] (-) TimerEvent: {}
+[17.161731] (-) TimerEvent: {}
+[17.262071] (-) TimerEvent: {}
+[17.362476] (-) TimerEvent: {}
+[17.462809] (-) TimerEvent: {}
+[17.563341] (-) TimerEvent: {}
+[17.664089] (-) TimerEvent: {}
+[17.764617] (-) TimerEvent: {}
+[17.865156] (-) TimerEvent: {}
+[17.965558] (-) TimerEvent: {}
+[18.066259] (-) TimerEvent: {}
+[18.167403] (-) TimerEvent: {}
+[18.267896] (-) TimerEvent: {}
+[18.368372] (-) TimerEvent: {}
+[18.468951] (-) TimerEvent: {}
+[18.569635] (-) TimerEvent: {}
+[18.670230] (-) TimerEvent: {}
+[18.770992] (-) TimerEvent: {}
+[18.871415] (-) TimerEvent: {}
+[18.971834] (-) TimerEvent: {}
+[19.072212] (-) TimerEvent: {}
+[19.172706] (-) TimerEvent: {}
+[19.273156] (-) TimerEvent: {}
+[19.373613] (-) TimerEvent: {}
+[19.474081] (-) TimerEvent: {}
+[19.574710] (-) TimerEvent: {}
+[19.675366] (-) TimerEvent: {}
+[19.775987] (-) TimerEvent: {}
+[19.876554] (-) TimerEvent: {}
+[19.976927] (-) TimerEvent: {}
+[20.077289] (-) TimerEvent: {}
+[20.177643] (-) TimerEvent: {}
+[20.278177] (-) TimerEvent: {}
+[20.378641] (-) TimerEvent: {}
+[20.479257] (-) TimerEvent: {}
+[20.579680] (-) TimerEvent: {}
+[20.680052] (-) TimerEvent: {}
+[20.780458] (-) TimerEvent: {}
+[20.880803] (-) TimerEvent: {}
+[20.981207] (-) TimerEvent: {}
+[21.081615] (-) TimerEvent: {}
+[21.181962] (-) TimerEvent: {}
+[21.282354] (-) TimerEvent: {}
+[21.383141] (-) TimerEvent: {}
+[21.483759] (-) TimerEvent: {}
+[21.584242] (-) TimerEvent: {}
+[21.684610] (-) TimerEvent: {}
+[21.784973] (-) TimerEvent: {}
+[21.885548] (-) TimerEvent: {}
+[21.986303] (-) TimerEvent: {}
+[22.086774] (-) TimerEvent: {}
+[22.187101] (-) TimerEvent: {}
+[22.287440] (-) TimerEvent: {}
+[22.387845] (-) TimerEvent: {}
+[22.488449] (-) TimerEvent: {}
+[22.588815] (-) TimerEvent: {}
+[22.689224] (-) TimerEvent: {}
+[22.789616] (-) TimerEvent: {}
+[22.890369] (-) TimerEvent: {}
+[22.991372] (-) TimerEvent: {}
+[23.092285] (-) TimerEvent: {}
+[23.192880] (-) TimerEvent: {}
+[23.293532] (-) TimerEvent: {}
+[23.394119] (-) TimerEvent: {}
+[23.494775] (-) TimerEvent: {}
+[23.595527] (-) TimerEvent: {}
+[23.696165] (-) TimerEvent: {}
+[23.796706] (-) TimerEvent: {}
+[23.897275] (-) TimerEvent: {}
+[23.997807] (-) TimerEvent: {}
+[24.098230] (-) TimerEvent: {}
+[24.198718] (-) TimerEvent: {}
+[24.299266] (-) TimerEvent: {}
+[24.399599] (-) TimerEvent: {}
+[24.499893] (-) TimerEvent: {}
+[24.600199] (-) TimerEvent: {}
+[24.700491] (-) TimerEvent: {}
+[24.800813] (-) TimerEvent: {}
+[24.901198] (-) TimerEvent: {}
+[25.001524] (-) TimerEvent: {}
+[25.101847] (-) TimerEvent: {}
+[25.202252] (-) TimerEvent: {}
+[25.302594] (-) TimerEvent: {}
+[25.402919] (-) TimerEvent: {}
+[25.503331] (-) TimerEvent: {}
+[25.603664] (-) TimerEvent: {}
+[25.704132] (-) TimerEvent: {}
+[25.805035] (-) TimerEvent: {}
+[25.905442] (-) TimerEvent: {}
+[26.006076] (-) TimerEvent: {}
+[26.106570] (-) TimerEvent: {}
+[26.207497] (-) TimerEvent: {}
+[26.308088] (-) TimerEvent: {}
+[26.408440] (-) TimerEvent: {}
+[26.508760] (-) TimerEvent: {}
+[26.609084] (-) TimerEvent: {}
+[26.709399] (-) TimerEvent: {}
+[26.809688] (-) TimerEvent: {}
+[26.910004] (-) TimerEvent: {}
+[27.010287] (-) TimerEvent: {}
+[27.110627] (-) TimerEvent: {}
+[27.211182] (-) TimerEvent: {}
+[27.311976] (-) TimerEvent: {}
+[27.412815] (-) TimerEvent: {}
+[27.513745] (-) TimerEvent: {}
+[27.614267] (-) TimerEvent: {}
+[27.714776] (-) TimerEvent: {}
+[27.815149] (-) TimerEvent: {}
+[27.915470] (-) TimerEvent: {}
+[28.015818] (-) TimerEvent: {}
+[28.116283] (-) TimerEvent: {}
+[28.216688] (-) TimerEvent: {}
+[28.317134] (-) TimerEvent: {}
+[28.417442] (-) TimerEvent: {}
+[28.517832] (-) TimerEvent: {}
+[28.618159] (-) TimerEvent: {}
+[28.718561] (-) TimerEvent: {}
+[28.818958] (-) TimerEvent: {}
+[28.919554] (-) TimerEvent: {}
+[29.020225] (-) TimerEvent: {}
+[29.121209] (-) TimerEvent: {}
+[29.222073] (-) TimerEvent: {}
+[29.322938] (-) TimerEvent: {}
+[29.424296] (-) TimerEvent: {}
+[29.525355] (-) TimerEvent: {}
+[29.625834] (-) TimerEvent: {}
+[29.726354] (-) TimerEvent: {}
+[29.826854] (-) TimerEvent: {}
+[29.927387] (-) TimerEvent: {}
+[30.027814] (-) TimerEvent: {}
+[30.128519] (-) TimerEvent: {}
+[30.229007] (-) TimerEvent: {}
+[30.329407] (-) TimerEvent: {}
+[30.429807] (-) TimerEvent: {}
+[30.530169] (-) TimerEvent: {}
+[30.630512] (-) TimerEvent: {}
+[30.730921] (-) TimerEvent: {}
+[30.831419] (-) TimerEvent: {}
+[30.931849] (-) TimerEvent: {}
+[31.032387] (-) TimerEvent: {}
+[31.109994] (test_robot_plugin) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library libwheel_robot_controller.so\x1b[0m\n'}
+[31.132495] (-) TimerEvent: {}
+[31.232877] (-) TimerEvent: {}
+[31.333328] (-) TimerEvent: {}
+[31.433954] (-) TimerEvent: {}
+[31.535194] (-) TimerEvent: {}
+[31.636302] (-) TimerEvent: {}
+[31.737042] (-) TimerEvent: {}
+[31.837536] (-) TimerEvent: {}
+[31.938402] (-) TimerEvent: {}
+[32.039626] (-) TimerEvent: {}
+[32.140539] (-) TimerEvent: {}
+[32.241285] (-) TimerEvent: {}
+[32.341760] (-) TimerEvent: {}
+[32.442496] (-) TimerEvent: {}
+[32.543064] (-) TimerEvent: {}
+[32.643723] (-) TimerEvent: {}
+[32.744378] (-) TimerEvent: {}
+[32.838309] (test_robot_plugin) StdoutLine: {'line': b'[100%] Built target wheel_robot_controller\n'}
+[32.844525] (-) TimerEvent: {}
+[32.858450] (test_robot_plugin) CommandEnded: {'returncode': 0}
+[32.859501] (test_robot_plugin) JobProgress: {'identifier': 'test_robot_plugin', 'progress': 'install'}
+[32.860997] (test_robot_plugin) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/build/test_robot_plugin'], 'cwd': '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/build/test_robot_plugin', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US'), ('USER', 'misha'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/misha'), ('CHROME_DESKTOP', 'code.desktop'), ('TERM_PROGRAM_VERSION', '1.109.5'), ('DESKTOP_SESSION', 'cinnamon'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('CINNAMON_VERSION', '5.4.12'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '33686'), ('QT_QPA_PLATFORMTHEME', 'qt5ct'), ('COLCON_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'misha'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GTK_OVERLAY_SCROLLING', '1'), ('XDG_SESSION_ID', 'c2'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/misha-ThinkPad-T480:@/tmp/.ICE-unix/1217,unix/misha-ThinkPad-T480:/tmp/.ICE-unix/1217'), ('GDM_LANG', 'en_US'), ('GTK3_MODULES', 'xapp-gtk3-module'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'X-Cinnamon'), ('XDG_SESSION_DESKTOP', 'cinnamon'), ('XAUTHORITY', '/home/misha/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/misha'), ('AMENT_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_test_radar:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_slam:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'cinnamon'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('XDG_VTNR', '7'), ('PWD', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/build/test_robot_plugin'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-cinnamon:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/cinnamon:/usr/share/gnome:/home/misha/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_world:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_test_radar:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_teleop:/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/robot_slam:/opt/ros/humble')]), 'shell': False}
+[32.874714] (test_robot_plugin) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[32.875249] (test_robot_plugin) StdoutLine: {'line': b'-- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/test_robot_plugin/lib/libwheel_robot_controller.so\n'}
+[32.890699] (test_robot_plugin) StdoutLine: {'line': b'-- Set runtime path of "/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/test_robot_plugin/lib/libwheel_robot_controller.so" to ""\n'}
+[32.891342] (test_robot_plugin) StdoutLine: {'line': b'-- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/test_robot_plugin/share/ament_index/resource_index/package_run_dependencies/test_robot_plugin\n'}
+[32.891600] (test_robot_plugin) StdoutLine: {'line': b'-- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/test_robot_plugin/share/ament_index/resource_index/parent_prefix_path/test_robot_plugin\n'}
+[32.891897] (test_robot_plugin) StdoutLine: {'line': b'-- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/test_robot_plugin/share/test_robot_plugin/environment/ament_prefix_path.sh\n'}
+[32.892101] (test_robot_plugin) StdoutLine: {'line': b'-- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/test_robot_plugin/share/test_robot_plugin/environment/ament_prefix_path.dsv\n'}
+[32.892482] (test_robot_plugin) StdoutLine: {'line': b'-- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/test_robot_plugin/share/test_robot_plugin/environment/path.sh\n'}
+[32.892637] (test_robot_plugin) StdoutLine: {'line': b'-- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/test_robot_plugin/share/test_robot_plugin/environment/path.dsv\n'}
+[32.892753] (test_robot_plugin) StdoutLine: {'line': b'-- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/test_robot_plugin/share/test_robot_plugin/local_setup.bash\n'}
+[32.892860] (test_robot_plugin) StdoutLine: {'line': b'-- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/test_robot_plugin/share/test_robot_plugin/local_setup.sh\n'}
+[32.893007] (test_robot_plugin) StdoutLine: {'line': b'-- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/test_robot_plugin/share/test_robot_plugin/local_setup.zsh\n'}
+[32.893138] (test_robot_plugin) StdoutLine: {'line': b'-- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/test_robot_plugin/share/test_robot_plugin/local_setup.dsv\n'}
+[32.893257] (test_robot_plugin) StdoutLine: {'line': b'-- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/test_robot_plugin/share/test_robot_plugin/package.dsv\n'}
+[32.893547] (test_robot_plugin) StdoutLine: {'line': b'-- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/test_robot_plugin/share/ament_index/resource_index/packages/test_robot_plugin\n'}
+[32.893801] (test_robot_plugin) StdoutLine: {'line': b'-- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/test_robot_plugin/share/test_robot_plugin/cmake/test_robot_pluginConfig.cmake\n'}
+[32.893975] (test_robot_plugin) StdoutLine: {'line': b'-- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/test_robot_plugin/share/test_robot_plugin/cmake/test_robot_pluginConfig-version.cmake\n'}
+[32.894178] (test_robot_plugin) StdoutLine: {'line': b'-- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/install/test_robot_plugin/share/test_robot_plugin/package.xml\n'}
+[32.897147] (test_robot_plugin) CommandEnded: {'returncode': 0}
+[32.924431] (test_robot_plugin) JobEnded: {'identifier': 'test_robot_plugin', 'rc': 0}
+[32.925683] (-) EventReactorShutdown: {}

@@ -17,8 +17,8 @@ def generate_launch_description():
     robot_xml = robot_xml.replace('"','\\"')
 
     # Параметры спавна (координаты и угол)
-    spawn_x = -3.0   # метры
-    spawn_y = 1.0   # метры  
+    spawn_x = 0.0   # метры
+    spawn_y = 0.0   # метры  
     spawn_z = 0.0   # метры
     spawn_yaw = -1.0  # по z = - 1 (-90 градусов)
     
@@ -53,7 +53,9 @@ def generate_launch_description():
         output='screen',
         parameters=[ 
                 {"linear_speed": 1.0,
-                "angular_speed": 1.0            
+                "angular_speed": 1.0,
+                "radar_ang_speed": 1.0,
+                "radar_timer_period_ms": 1000           
                 }
                 ]
     )

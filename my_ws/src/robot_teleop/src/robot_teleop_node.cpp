@@ -5,6 +5,7 @@
 #include <unistd.h> // для POSIX операционнных системных вызовов
 
 
+
 using namespace std::chrono_literals;
 
 class KeyboardTeleop : public rclcpp::Node
@@ -17,12 +18,19 @@ public:
     {
         this->declare_parameter("linear_speed", 1.0);
         this->declare_parameter("angular_speed", 1.0);
+        this->declare_parameter("radar_ang_speed", 1.0);
+        this->declare_parameter("radar_timer_period_ms", 50);
+        int period_ms = this->get_parameter("radar_timer_period_ms").as_int();
+        auto radar_timer_period = std::chrono::milliseconds(period_ms);
+
 
         linear_speed = get_parameter("linear_speed").as_double();
         angular_speed = get_parameter("angular_speed").as_double();
+        radar_ang_speed = get_parameter("radar_ang_speed").as_double();
 
         // Инициализация
         cmd_pub = this->create_publisher<geometry_msgs::msg::Twist>("/cmd_vel",10); // публикатор
+        radar_cmd_pub = this->create_publisher<geometry_msgs::msg::Twist>("/radar_cmd_vel",10); // публикатор
 
         // const char *device ="/dev/input/by-path/platform-i8042-serio-0-event-kbd"; // Встроенная клава
         const char *device ="/dev/input/by-path/pci-0000:00:14.0-usb-0:1:1.0-event-kbd"; // домашняя клава
@@ -41,6 +49,7 @@ public:
         }
 
         timer = create_wall_timer(20ms,std::bind(&KeyboardTeleop::timer_callback,this));
+        radar_tick_timer = create_wall_timer(radar_timer_period,std::bind(&KeyboardTeleop::radar_tick_timer_callback,this));
         RCLCPP_INFO(this->get_logger(), "Используйте W A S D для управления");
     }
 
@@ -112,6 +121,12 @@ public:
 
     }
 
+    void radar_tick_timer_callback(){
+        radar_msg.angular.z = radar_ang_speed;
+        radar_cmd_pub->publish(radar_msg);
+        radar_msg.angular.z = 0;
+    }
+
     void update_velocity() {
         msg.linear.x = 0.0;
         msg.angular.z = 0.0;
@@ -129,13 +144,17 @@ public:
     }
 private:
     rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr cmd_pub;
+    rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr radar_cmd_pub;
     rclcpp::TimerBase::SharedPtr timer;
+    rclcpp::TimerBase::SharedPtr radar_tick_timer;
     int fd = -1; // файловый дескриптор для устройства
     struct libevdev *dev = NULL; // структура для работы с устройством через libevdev
     int rc; // Идентификатор libevdev c открытым файловым дескриптором
     geometry_msgs::msg::Twist msg;
+    geometry_msgs::msg::Twist radar_msg;
     double linear_speed;
     double angular_speed;
+    double radar_ang_speed;
 
 
 };

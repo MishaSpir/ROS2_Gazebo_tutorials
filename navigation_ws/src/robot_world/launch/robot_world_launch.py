@@ -52,7 +52,7 @@ def generate_launch_description():
         name='robot_teleop_node',
         output='screen',
         parameters=[ 
-                {"linear_speed": 0.08,
+                {"linear_speed": 0.1,
                 "angular_speed": 0.06            
                 }
                 ]

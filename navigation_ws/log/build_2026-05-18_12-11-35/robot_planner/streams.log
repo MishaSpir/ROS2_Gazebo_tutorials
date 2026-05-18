@@ -1,0 +1,40 @@
+[0.250s] Invoking command in '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_planner': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_planner -- -j8 -l8
+[0.836s] [ 50%] [32mBuilding CXX object CMakeFiles/robot_planner_node.dir/src/robot_planner_node.cpp.o[0m
+[15.698s] [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/robot_planner/src/robot_planner_node.cpp:[m[K In member function ‘[01m[Kbool RobotPlanner::isCellValid(int, int)[m[K’:
+[15.699s] [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/robot_planner/src/robot_planner_node.cpp:164:29:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Knav_msgs::msg::MapMetaData_<std::allocator<void> >::_width_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[15.699s]   164 |  return (x >= 0 && [01;35m[Kx < costmap.info.width[m[K && y >= 0 && y < costmap.info.height);
+[15.699s]       |                    [01;35m[K~~^~~~~~~~~~~~~~~~~~~~[m[K
+[15.699s] 
+[15.699s] [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/robot_planner/src/robot_planner_node.cpp:164:65:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Knav_msgs::msg::MapMetaData_<std::allocator<void> >::_height_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[15.699s]   164 | width && y >= 0 && [01;35m[Ky < costmap.info.height[m[K);
+[15.700s]       |                    [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~[m[K
+[15.700s] 
+[15.726s] [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/robot_planner/src/robot_planner_node.cpp:[m[K In member function ‘[01m[Kstd::vector<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<geometry_msgs::msg::PoseStamped_<std::allocator<void> > > > RobotPlanner::smoothPath(const std::vector<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<geometry_msgs::msg::PoseStamped_<std::allocator<void> > > >&)[m[K’:
+[15.726s] [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/robot_planner/src/robot_planner_node.cpp:329:18:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<geometry_msgs::msg::PoseStamped_<std::allocator<void> > > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[15.726s]   329 |         while ([01;35m[Ki < raw_path.size()[m[K) {
+[15.726s]       |                [01;35m[K~~^~~~~~~~~~~~~~~~~[m[K
+[45.562s] [100%] [32m[1mLinking CXX executable robot_planner_node[0m
+[48.216s] [100%] Built target robot_planner_node
+[48.262s] Invoked command in '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_planner' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_planner -- -j8 -l8
+[48.272s] Invoking command in '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_planner': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_planner
+[48.294s] -- Install configuration: ""
+[48.295s] -- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/lib/robot_planner/robot_planner_node
+[48.322s] -- Set runtime path of "/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/lib/robot_planner/robot_planner_node" to ""
+[48.324s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/launch
+[48.325s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/launch/robot_planner_launch.py
+[48.326s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/ament_index/resource_index/package_run_dependencies/robot_planner
+[48.326s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/ament_index/resource_index/parent_prefix_path/robot_planner
+[48.327s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/environment/ament_prefix_path.sh
+[48.327s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/environment/ament_prefix_path.dsv
+[48.327s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/environment/path.sh
+[48.328s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/environment/path.dsv
+[48.328s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/local_setup.bash
+[48.329s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/local_setup.sh
+[48.329s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/local_setup.zsh
+[48.329s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/local_setup.dsv
+[48.330s] -- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/package.dsv
+[48.330s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/ament_index/resource_index/packages/robot_planner
+[48.330s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/cmake/robot_plannerConfig.cmake
+[48.330s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/cmake/robot_plannerConfig-version.cmake
+[48.330s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/package.xml
+[48.339s] Invoked command in '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_planner' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_planner

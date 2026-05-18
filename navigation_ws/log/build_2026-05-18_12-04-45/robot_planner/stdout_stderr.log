@@ -1,0 +1,34 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/robot_planner_node.dir/src/robot_planner_node.cpp.o[0m
+[01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/robot_planner/src/robot_planner_node.cpp:[m[K In member function ‘[01m[Kbool RobotPlanner::isCellValid(int, int)[m[K’:
+[01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/robot_planner/src/robot_planner_node.cpp:164:29:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Knav_msgs::msg::MapMetaData_<std::allocator<void> >::_width_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  164 |         return (x >= 0 && [01;35m[Kx < costmap.info.width[m[K && y >= 0 && y < costmap.info.height);
+      |                           [01;35m[K~~^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/robot_planner/src/robot_planner_node.cpp:164:65:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Knav_msgs::msg::MapMetaData_<std::allocator<void> >::_height_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  164 |         return (x >= 0 && x < costmap.info.width && y >= 0 && [01;35m[Ky < costmap.info.height[m[K);
+      |                                                               [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/robot_planner/src/robot_planner_node.cpp:[m[K In member function ‘[01m[Kstd::vector<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<geometry_msgs::msg::PoseStamped_<std::allocator<void> > > > RobotPlanner::smoothPath(const std::vector<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<geometry_msgs::msg::PoseStamped_<std::allocator<void> > > >&)[m[K’:
+[01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/robot_planner/src/robot_planner_node.cpp:329:18:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<geometry_msgs::msg::PoseStamped_<std::allocator<void> > > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  329 |         while ([01;35m[Ki < raw_path.size()[m[K) {
+      |                [01;35m[K~~^~~~~~~~~~~~~~~~~[m[K
+[100%] [32m[1mLinking CXX executable robot_planner_node[0m
+[100%] Built target robot_planner_node
+-- Install configuration: ""
+-- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/lib/robot_planner/robot_planner_node
+-- Set runtime path of "/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/lib/robot_planner/robot_planner_node" to ""
+-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/launch
+-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/launch/robot_planner_launch.py
+-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/ament_index/resource_index/package_run_dependencies/robot_planner
+-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/ament_index/resource_index/parent_prefix_path/robot_planner
+-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/environment/ament_prefix_path.sh
+-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/environment/path.sh
+-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/environment/path.dsv
+-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/local_setup.bash
+-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/local_setup.sh
+-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/local_setup.zsh
+-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/local_setup.dsv
+-- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/package.dsv
+-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/ament_index/resource_index/packages/robot_planner
+-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/cmake/robot_plannerConfig.cmake
+-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/cmake/robot_plannerConfig-version.cmake
+-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/package.xml

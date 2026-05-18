@@ -25,8 +25,8 @@ public:
         cmd_pub = this->create_publisher<geometry_msgs::msg::Twist>("/cmd_vel",10); // публикатор
 
         // const char *device ="/dev/input/by-path/platform-i8042-serio-0-event-kbd"; // Встроенная клава
-        const char *device ="/dev/input/by-path/pci-0000:00:14.0-usb-0:2:1.0-event-kbd"; // домашняя клава
-        // const char *device ="/dev/input/by-path/pci-0000:00:14.0-usb-0:2:1.0-event-kbd"; // БИ
+        // const char *device ="/dev/input/by-path/pci-0000:00:14.0-usb-0:2:1.0-event-kbd"; // домашняя клава
+        const char *device ="/dev/input/by-path/pci-0000:00:14.0-usb-0:1:1.0-event-kbd"; // БИ
 
         fd = open(device,O_RDONLY | O_NONBLOCK); // окрываем в режиме чтения и не блокирующем режиме
         if(fd  < 0){

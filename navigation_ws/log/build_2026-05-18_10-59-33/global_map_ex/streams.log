@@ -1,0 +1,51 @@
+[0.103s] Invoking command in '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/global_map_ex': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/global_map_ex -- -j8 -l8
+[0.418s] [ 50%] [32mBuilding CXX object CMakeFiles/global_map_ex_node.dir/src/global_map_ex_node.cpp.o[0m
+[4.885s] [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/global_map_ex/src/global_map_ex_node.cpp:[m[K In member function ‘[01m[Kvoid GlobalMap::scanCallback(sensor_msgs::msg::LaserScan_<std::allocator<void> >::SharedPtr)[m[K’:
+[4.885s] [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/global_map_ex/src/global_map_ex_node.cpp:109:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<float>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[4.885s]   109 |         for (int i = 0; [01;35m[Ki < msg->ranges.size()[m[K; ++i) {
+[4.885s]       |                         [01;35m[K~~^~~~~~~~~~~~~~~~~~~~[m[K
+[4.886s] [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/global_map_ex/src/global_map_ex_node.cpp:139:26:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kuint[m[K’ {aka ‘[01m[Kunsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[4.886s]   139 |                 if ([01;35m[Kcell >= map_size[m[K || (x1_cell >= map_width) || (y1_cell >= map_height)){
+[4.886s]       |                     [01;35m[K~~~~~^~~~~~~~~~~[m[K
+[4.886s] [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/global_map_ex/src/global_map_ex_node.cpp:139:50:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kuint[m[K’ {aka ‘[01m[Kunsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[4.886s]   139 |                 if (cell >= map_size || ([01;35m[Kx1_cell >= map_width[m[K) || (y1_cell >= map_height)){
+[4.886s]       |                                          [01;35m[K~~~~~~~~^~~~~~~~~~~~[m[K
+[4.886s] [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/global_map_ex/src/global_map_ex_node.cpp:139:76:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kuint[m[K’ {aka ‘[01m[Kunsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[4.886s]   139 |         if (cell >= map_size || (x1_cell >= map_width) || ([01;35m[Ky1_cell >= map_height[m[K)){
+[4.886s]       |                                                            [01;35m[K~~~~~~~~^~~~~~~~~~~~~[m[K
+[4.886s] 
+[4.887s] [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/global_map_ex/src/global_map_ex_node.cpp:161:22:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kuint[m[K’ {aka ‘[01m[Kunsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[4.887s]   161 |             if ([01;35m[Kcell >= map_size[m[K || (x1_cell >= map_width) || (y1_cell >= map_height)){
+[4.887s]       |                 [01;35m[K~~~~~^~~~~~~~~~~[m[K
+[4.887s] [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/global_map_ex/src/global_map_ex_node.cpp:161:46:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kuint[m[K’ {aka ‘[01m[Kunsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[4.887s]   161 |             if (cell >= map_size || ([01;35m[Kx1_cell >= map_width[m[K) || (y1_cell >= map_height)){
+[4.887s]       |                                      [01;35m[K~~~~~~~~^~~~~~~~~~~~[m[K
+[4.887s] [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/global_map_ex/src/global_map_ex_node.cpp:161:72:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kuint[m[K’ {aka ‘[01m[Kunsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[4.887s]   161 |         if (cell >= map_size || (x1_cell >= map_width) || ([01;35m[Ky1_cell >= map_height[m[K)){
+[4.888s]       |                                                            [01;35m[K~~~~~~~~^~~~~~~~~~~~~[m[K
+[4.888s] 
+[18.644s] [100%] [32m[1mLinking CXX executable global_map_ex_node[0m
+[20.516s] [100%] Built target global_map_ex_node
+[20.532s] Invoked command in '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/global_map_ex' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/global_map_ex -- -j8 -l8
+[20.535s] Invoking command in '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/global_map_ex': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/global_map_ex
+[20.547s] -- Install configuration: ""
+[20.547s] -- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/global_map_ex/lib/global_map_ex/global_map_ex_node
+[20.556s] -- Set runtime path of "/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/global_map_ex/lib/global_map_ex/global_map_ex_node" to ""
+[20.557s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/global_map_ex/share/global_map_ex/launch
+[20.557s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/global_map_ex/share/global_map_ex/launch/global_map_launch.py
+[20.557s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/global_map_ex/share/ament_index/resource_index/package_run_dependencies/global_map_ex
+[20.557s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/global_map_ex/share/ament_index/resource_index/parent_prefix_path/global_map_ex
+[20.557s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/global_map_ex/share/global_map_ex/environment/ament_prefix_path.sh
+[20.558s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/global_map_ex/share/global_map_ex/environment/ament_prefix_path.dsv
+[20.558s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/global_map_ex/share/global_map_ex/environment/path.sh
+[20.558s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/global_map_ex/share/global_map_ex/environment/path.dsv
+[20.558s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/global_map_ex/share/global_map_ex/local_setup.bash
+[20.558s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/global_map_ex/share/global_map_ex/local_setup.sh
+[20.558s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/global_map_ex/share/global_map_ex/local_setup.zsh
+[20.559s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/global_map_ex/share/global_map_ex/local_setup.dsv
+[20.559s] -- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/global_map_ex/share/global_map_ex/package.dsv
+[20.559s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/global_map_ex/share/ament_index/resource_index/packages/global_map_ex
+[20.559s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/global_map_ex/share/global_map_ex/cmake/global_map_exConfig.cmake
+[20.559s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/global_map_ex/share/global_map_ex/cmake/global_map_exConfig-version.cmake
+[20.560s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/global_map_ex/share/global_map_ex/package.xml
+[20.562s] Invoked command in '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/global_map_ex' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/global_map_ex

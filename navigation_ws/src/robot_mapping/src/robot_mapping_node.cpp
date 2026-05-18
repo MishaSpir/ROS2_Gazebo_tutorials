@@ -65,6 +65,9 @@ private:
             float x = distance * cos(angle);
             float y = distance * sin(angle);
 
+            // float x = 1.0;
+            // float y = 2.0;
+
             int x_cell, y_cell;
 
             cellsFromCoordinates(x, y, x_cell, y_cell);
@@ -120,7 +123,7 @@ private:
     // Вычисление стоимости ячейки
     int8_t computeCost(double distance) {
         double weight = 5;
-        double inscribed_radius = 0.2;
+        double inscribed_radius = 0.2; // Радиус вписанноу окржунсоти (см параметры робота)
         int8_t cost = 0;
         if (distance == 0.0) cost = 100; // LETHAL_OBSTACLE
         else if (distance <= inscribed_radius) cost = 99;

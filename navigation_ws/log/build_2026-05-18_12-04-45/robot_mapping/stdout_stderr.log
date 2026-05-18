@@ -1,0 +1,36 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/robot_mapping_node.dir/src/robot_mapping_node.cpp.o[0m
+[01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/robot_mapping/src/robot_mapping_node.cpp:[m[K In member function ‘[01m[Kvoid RobotCostmap::scanCallback(sensor_msgs::msg::LaserScan_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/robot_mapping/src/robot_mapping_node.cpp:54:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<float>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   54 |         for (int i = 0; [01;35m[Ki < msg->ranges.size()[m[K; ++i) {
+      |                         [01;35m[K~~^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/robot_mapping/src/robot_mapping_node.cpp:50:15:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kangle[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+   50 |         float [01;35m[Kangle[m[K;
+      |               [01;35m[K^~~~~[m[K
+[01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/robot_mapping/src/robot_mapping_node.cpp:[m[K In member function ‘[01m[Kunsigned int RobotCostmap::indexFromCells(int, int)[m[K’:
+[01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/robot_mapping/src/robot_mapping_node.cpp:108:47:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Knav_msgs::msg::MapMetaData_<std::allocator<void> >::_width_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  108 |         if(x_cell > 0 && y_cell > 0 && [01;35m[Kx_cell < costmap.info.width[m[K && y_cell < costmap.info.width) {
+      |                                        [01;35m[K~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/robot_mapping/src/robot_mapping_node.cpp:108:78:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Knav_msgs::msg::MapMetaData_<std::allocator<void> >::_width_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  108 | (x_cell > 0 && y_cell > 0 && x_cell < costmap.info.width && [01;35m[Ky_cell < costmap.info.width[m[K) {
+      |                                                             [01;35m[K~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+
+[100%] [32m[1mLinking CXX executable robot_mapping_node[0m
+[100%] Built target robot_mapping_node
+-- Install configuration: ""
+-- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_mapping/lib/robot_mapping/robot_mapping_node
+-- Set runtime path of "/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_mapping/lib/robot_mapping/robot_mapping_node" to ""
+-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_mapping/share/ament_index/resource_index/package_run_dependencies/robot_mapping
+-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_mapping/share/ament_index/resource_index/parent_prefix_path/robot_mapping
+-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_mapping/share/robot_mapping/environment/ament_prefix_path.sh
+-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_mapping/share/robot_mapping/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_mapping/share/robot_mapping/environment/path.sh
+-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_mapping/share/robot_mapping/environment/path.dsv
+-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_mapping/share/robot_mapping/local_setup.bash
+-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_mapping/share/robot_mapping/local_setup.sh
+-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_mapping/share/robot_mapping/local_setup.zsh
+-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_mapping/share/robot_mapping/local_setup.dsv
+-- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_mapping/share/robot_mapping/package.dsv
+-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_mapping/share/ament_index/resource_index/packages/robot_mapping
+-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_mapping/share/robot_mapping/cmake/robot_mappingConfig.cmake
+-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_mapping/share/robot_mapping/cmake/robot_mappingConfig-version.cmake
+-- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_mapping/share/robot_mapping/package.xml

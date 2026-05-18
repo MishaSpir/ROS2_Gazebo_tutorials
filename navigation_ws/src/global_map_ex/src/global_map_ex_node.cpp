@@ -49,7 +49,7 @@ public:
         
         // Публикатор
         map_pub = create_publisher<nav_msgs::msg::OccupancyGrid>("/global_map", 10);
-        timer = this->create_wall_timer(period, std::bind(&GlobalMap::timerCallback, this));
+        // timer = this->create_wall_timer(period, std::bind(&GlobalMap::timerCallback, this));
         
         RCLCPP_INFO(this->get_logger(), "Global Map Node initialized with K=%.2f", K);
     }

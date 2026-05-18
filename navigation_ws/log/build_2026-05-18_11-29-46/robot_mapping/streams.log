@@ -1,0 +1,61 @@
+[0.287s] Invoking command in '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_mapping': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_mapping -- -j8 -l8
+[0.532s] -- Found ament_cmake: 1.3.13 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.522s] -- Found rclcpp: 16.0.18 (/opt/ros/humble/share/rclcpp/cmake)
+[1.781s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.805s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.852s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.919s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.017s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.264s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[2.277s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[2.980s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.385s] -- Found nav_msgs: 4.9.1 (/opt/ros/humble/share/nav_msgs/cmake)
+[3.620s] -- Found sensor_msgs: 4.9.1 (/opt/ros/humble/share/sensor_msgs/cmake)
+[3.766s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[4.211s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[4.211s] -- Configured cppcheck include dirs: 
+[4.212s] -- Configured cppcheck exclude dirs and/or files: 
+[4.216s] -- Added test 'lint_cmake' to check CMake code style
+[4.220s] -- Added test 'uncrustify' to check C / C++ code style
+[4.220s] -- Configured uncrustify additional arguments: 
+[4.221s] -- Added test 'xmllint' to check XML markup files
+[4.226s] -- Configuring done
+[4.275s] -- Generating done
+[4.283s] -- Build files have been written to: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_mapping
+[4.397s] [35m[1mConsolidate compiler generated dependencies of target robot_mapping_node[0m
+[4.465s] [ 50%] [32mBuilding CXX object CMakeFiles/robot_mapping_node.dir/src/robot_mapping_node.cpp.o[0m
+[8.703s] [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/robot_mapping/src/robot_mapping_node.cpp:[m[K In member function ‘[01m[Kvoid RobotCostmap::scanCallback(sensor_msgs::msg::LaserScan_<std::allocator<void> >::SharedPtr)[m[K’:
+[8.703s] [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/robot_mapping/src/robot_mapping_node.cpp:54:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<float>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[8.703s]    54 |         for (int i = 0; [01;35m[Ki < msg->ranges.size()[m[K; ++i) {
+[8.703s]       |                         [01;35m[K~~^~~~~~~~~~~~~~~~~~~~[m[K
+[8.704s] [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/robot_mapping/src/robot_mapping_node.cpp:[m[K In member function ‘[01m[Kunsigned int RobotCostmap::indexFromCells(int, int)[m[K’:
+[8.704s] [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/robot_mapping/src/robot_mapping_node.cpp:105:47:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Knav_msgs::msg::MapMetaData_<std::allocator<void> >::_width_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[8.705s]   105 |         if(x_cell > 0 && y_cell > 0 && [01;35m[Kx_cell < costmap.info.width[m[K && y_cell < costmap.info.width) {
+[8.705s]       |                                        [01;35m[K~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+[8.705s] [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/robot_mapping/src/robot_mapping_node.cpp:105:78:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Knav_msgs::msg::MapMetaData_<std::allocator<void> >::_width_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[8.705s]   105 | (x_cell > 0 && y_cell > 0 && x_cell < costmap.info.width && [01;35m[Ky_cell < costmap.info.width[m[K) {
+[8.705s]       |                                                             [01;35m[K~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+[8.705s] 
+[21.700s] [100%] [32m[1mLinking CXX executable robot_mapping_node[0m
+[24.234s] [100%] Built target robot_mapping_node
+[24.288s] Invoked command in '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_mapping' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_mapping -- -j8 -l8
+[24.296s] Invoking command in '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_mapping': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_mapping
+[24.319s] -- Install configuration: ""
+[24.320s] -- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_mapping/lib/robot_mapping/robot_mapping_node
+[24.332s] -- Set runtime path of "/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_mapping/lib/robot_mapping/robot_mapping_node" to ""
+[24.333s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_mapping/share/ament_index/resource_index/package_run_dependencies/robot_mapping
+[24.333s] -- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_mapping/share/ament_index/resource_index/parent_prefix_path/robot_mapping
+[24.335s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_mapping/share/robot_mapping/environment/ament_prefix_path.sh
+[24.336s] -- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_mapping/share/robot_mapping/environment/ament_prefix_path.dsv
+[24.337s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_mapping/share/robot_mapping/environment/path.sh
+[24.338s] -- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_mapping/share/robot_mapping/environment/path.dsv
+[24.339s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_mapping/share/robot_mapping/local_setup.bash
+[24.339s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_mapping/share/robot_mapping/local_setup.sh
+[24.340s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_mapping/share/robot_mapping/local_setup.zsh
+[24.340s] -- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_mapping/share/robot_mapping/local_setup.dsv
+[24.341s] -- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_mapping/share/robot_mapping/package.dsv
+[24.341s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_mapping/share/ament_index/resource_index/packages/robot_mapping
+[24.342s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_mapping/share/robot_mapping/cmake/robot_mappingConfig.cmake
+[24.343s] -- Up-to-date: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_mapping/share/robot_mapping/cmake/robot_mappingConfig-version.cmake
+[24.344s] -- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_mapping/share/robot_mapping/package.xml
+[24.351s] Invoked command in '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_mapping' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_mapping

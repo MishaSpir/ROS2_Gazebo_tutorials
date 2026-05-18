@@ -283,7 +283,7 @@ public:
             // Если есть предыдущая поза, вычисляем разницу
 
             // Вычисляем трансформацию между текущей и предыдущей позой одометрии
-            odom_transformation = computeTransformation(odom_previous_pose, odom_current_pose);
+            odom_transformation = computeTransformation(odom_previous_pose, odom_current_pose); 
 
             // Получение данных одометрии: пройденное расстояние между кадрами
             double delta_d = sqrt(pow(odom_transformation(0, 3), 2) + pow(odom_transformation(1, 3), 2));
@@ -299,8 +299,8 @@ public:
 
             // ШАГ 2 EKF: Получение измерения от ICP
             Eigen::Matrix4f icp_transformation = sm.addAndMatchScan(current_scan,odom_transformation);
-            
-            // Извлекаем матрицу вращения из ICP трансформации
+
+             // Извлекаем матрицу вращения из ICP трансформации
             rotation_matrix = icp_transformation.block<3,3>(0,0);
 
             // Предполагаем ZYX (yaw, pitch, roll) порядок вращения.
@@ -310,7 +310,32 @@ public:
             // Получение измерения позы от ICP: z_t = [x_icp, y_icp, theta_icp]
             Eigen::Vector3d z_t;
             z_t << icp_transformation(0,3), icp_transformation(1,3), theta_icp;
-            correct(z_t);  // ШАГ 3 EKF: Коррекция состояния по измерению ICP
+
+            // В timer_callback после получения icp_transformation:
+            double fitness_score = sm.getFitnessScore();
+
+            // Пороги качества
+            if (fitness_score > 0.05) {  // >5 см среднеквадратичной ошибки
+                RCLCPP_WARN(this->get_logger(), 
+                            "Poor ICP quality: fitness=%.4f, skipping correction", 
+                            fitness_score);
+                // Не используем ICP для коррекции, но карту обновляем
+                // Просто публикуем карту без коррекции EKF
+            } else if (fitness_score > 0.02) {
+                RCLCPP_WARN(this->get_logger(), 
+                            "Medium ICP quality: fitness=%.4f, reducing trust", 
+                            fitness_score);
+                // Увеличиваем шум измерения (уменьшаем доверие к ICP)
+                Eigen::Matrix3d R_adapted = R;
+                R_adapted *= 2.0;  // Увеличиваем шум в 2 раза
+                // Используем R_adapted для коррекции
+                correct(z_t,R_adapted);
+            } else {
+                // Хорошее качество, используем стандартный R
+                correct(z_t,R);// ШАГ 3 EKF: Коррекция состояния по измерению ICP
+            }
+           
+            // correct(z_t);  
 
             odom_previous_pose = odom_current_pose;
             is_new_scan = false;
@@ -323,7 +348,7 @@ public:
             pointCloud_pub->publish(pointCloud);
 
 
-        }
+        }   
 
         this->publishTF();  
     }            
@@ -414,7 +439,8 @@ public:
 
      // ШАГ 2 EKF: Коррекция состояния по измерению ICP
      // вход - измерительные данные он состоит из x y и поворот от icp
-    void correct(const Eigen::Vector3d& z_t){
+    void correct(const Eigen::Vector3d& z_t,Eigen::Matrix3d R_){
+        R = R_;
         // 1. Вычисление матрицы Якоби модели измерений H_x
         // В данном случае H_x = I, т.к. измеряем состояние напрямую (x, y, theta)
         Eigen::Matrix3d H_x = Eigen::Matrix3d::Identity();

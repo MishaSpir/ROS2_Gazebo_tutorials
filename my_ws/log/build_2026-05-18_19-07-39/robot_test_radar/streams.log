@@ -1,0 +1,22 @@
+[0.029s] Invoking command in '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/build/robot_test_radar': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/build/robot_test_radar -- -j8 -l8
+[0.096s] [35m[1mConsolidate compiler generated dependencies of target robot_test_radar_node[0m
+[0.132s] [ 50%] [32mBuilding CXX object CMakeFiles/robot_test_radar_node.dir/src/robot_test_radar_node.cpp.o[0m
+[3.585s] [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/src/robot_test_radar/src/robot_test_radar_node.cpp:[m[K In constructor ‘[01m[KRobotSlam::RobotSlam()[m[K’:
+[3.585s] [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/src/robot_test_radar/src/robot_test_radar_node.cpp:43:40:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KRobotSlam::create_wall_timer(int, std::_Bind_helper<false, void (RobotSlam::*)(), RobotSlam*>::type)[m[K’
+[3.585s]    43 |         timer = [01;31m[Kthis->create_wall_timer(1000, std::bind(&RobotSlam::timer_callback, this))[m[K;
+[3.586s]       |                 [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.586s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[3.586s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+[3.586s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[3.586s]                  from [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/src/robot_test_radar/src/robot_test_radar_node.cpp:1[m[K:
+[3.587s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:238:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class DurationRepT, class DurationT, class CallbackT> typename rclcpp::WallTimer<CallbackT>::SharedPtr rclcpp::Node::create_wall_timer(std::chrono::duration<_Rep1, _Period1>, CallbackT, rclcpp::CallbackGroup::SharedPtr)[m[K’
+[3.587s]   238 |   [01;36m[Kcreate_wall_timer[m[K(
+[3.587s]       |   [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[3.587s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:238:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[3.587s] [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/src/robot_test_radar/src/robot_test_radar_node.cpp:43:40:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::chrono::duration<_Rep1, _Period1>[m[K’ and ‘[01m[Kint[m[K’
+[3.587s]    43 |         timer = [01;36m[Kthis->create_wall_timer(1000, std::bind(&RobotSlam::timer_callback, this))[m[K;
+[3.587s]       |                 [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.302s] gmake[2]: *** [CMakeFiles/robot_test_radar_node.dir/build.make:76: CMakeFiles/robot_test_radar_node.dir/src/robot_test_radar_node.cpp.o] Error 1
+[7.302s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/robot_test_radar_node.dir/all] Error 2
+[7.303s] gmake: *** [Makefile:146: all] Error 2
+[7.305s] Invoked command in '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/build/robot_test_radar' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/build/robot_test_radar -- -j8 -l8

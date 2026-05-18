@@ -1,0 +1,84 @@
+[0.315s] Invoking command in '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_planner': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/robot_planner -DCMAKE_INSTALL_PREFIX=/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner
+[1.061s] -- The C compiler identification is GNU 11.4.0
+[1.426s] -- The CXX compiler identification is GNU 11.4.0
+[1.479s] -- Detecting C compiler ABI info
+[1.909s] -- Detecting C compiler ABI info - done
+[1.977s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.978s] -- Detecting C compile features
+[1.978s] -- Detecting C compile features - done
+[1.978s] -- Detecting CXX compiler ABI info
+[2.359s] -- Detecting CXX compiler ABI info - done
+[2.407s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.408s] -- Detecting CXX compile features
+[2.410s] -- Detecting CXX compile features - done
+[2.432s] -- Found ament_cmake: 1.3.13 (/opt/ros/humble/share/ament_cmake/cmake)
+[3.127s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[3.768s] -- Found rclcpp: 16.0.18 (/opt/ros/humble/share/rclcpp/cmake)
+[4.053s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[4.089s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[4.118s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[4.175s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[4.237s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[4.467s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[4.483s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[4.971s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[5.126s] -- Found FastRTPS: /opt/ros/humble/include  
+[5.250s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[5.293s] -- Looking for pthread.h
+[5.568s] -- Looking for pthread.h - found
+[5.572s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[5.915s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[5.918s] -- Found Threads: TRUE  
+[6.293s] -- Found nav_msgs: 4.9.1 (/opt/ros/humble/share/nav_msgs/cmake)
+[6.523s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[7.070s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[7.070s] -- Configured cppcheck include dirs: 
+[7.070s] -- Configured cppcheck exclude dirs and/or files: 
+[7.072s] -- Added test 'flake8' to check Python code syntax and style conventions
+[7.074s] -- Added test 'lint_cmake' to check CMake code style
+[7.076s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[7.086s] -- Added test 'uncrustify' to check C / C++ code style
+[7.087s] -- Configured uncrustify additional arguments: 
+[7.091s] -- Added test 'xmllint' to check XML markup files
+[7.099s] -- Configuring done
+[7.171s] -- Generating done
+[7.196s] -- Build files have been written to: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_planner
+[7.280s] Invoked command in '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_planner' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/robot_planner -DCMAKE_INSTALL_PREFIX=/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner
+[7.285s] Invoking command in '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_planner': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_planner -- -j8 -l8
+[7.549s] [ 50%] [32mBuilding CXX object CMakeFiles/robot_planner_node.dir/src/robot_planner_node.cpp.o[0m
+[21.434s] [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/robot_planner/src/robot_planner_node.cpp:[m[K In member function ‘[01m[Kbool RobotPlanner::isCellValid(int, int)[m[K’:
+[21.434s] [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/robot_planner/src/robot_planner_node.cpp:160:29:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Knav_msgs::msg::MapMetaData_<std::allocator<void> >::_width_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[21.434s]   160 |         return (x >= 0 && [01;35m[Kx < costmap.info.width[m[K && y >= 0 && y < costmap.info.height);
+[21.435s]       |                           [01;35m[K~~^~~~~~~~~~~~~~~~~~~~[m[K
+[21.435s] [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/robot_planner/src/robot_planner_node.cpp:160:65:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Knav_msgs::msg::MapMetaData_<std::allocator<void> >::_height_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[21.435s]   160 |         return (x >= 0 && x < costmap.info.width && y >= 0 && [01;35m[Ky < costmap.info.height[m[K);
+[21.435s]       |                                                               [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~[m[K
+[21.477s] [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/robot_planner/src/robot_planner_node.cpp:[m[K In member function ‘[01m[Kstd::vector<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<geometry_msgs::msg::PoseStamped_<std::allocator<void> > > > RobotPlanner::smoothPath(const std::vector<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<geometry_msgs::msg::PoseStamped_<std::allocator<void> > > >&)[m[K’:
+[21.477s] [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/src/robot_planner/src/robot_planner_node.cpp:325:18:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<geometry_msgs::msg::PoseStamped_<std::allocator<void> > > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[21.478s]   325 |         while ([01;35m[Ki < raw_path.size()[m[K) {
+[21.478s]       |                [01;35m[K~~^~~~~~~~~~~~~~~~~[m[K
+[52.878s] [100%] [32m[1mLinking CXX executable robot_planner_node[0m
+[55.868s] [100%] Built target robot_planner_node
+[55.903s] Invoked command in '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_planner' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_planner -- -j8 -l8
+[55.907s] Invoking command in '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_planner': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_planner
+[55.935s] -- Install configuration: ""
+[55.936s] -- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/lib/robot_planner/robot_planner_node
+[55.951s] -- Set runtime path of "/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/lib/robot_planner/robot_planner_node" to ""
+[55.952s] -- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/launch
+[55.952s] -- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/launch/robot_planner_launch.py
+[55.952s] -- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/ament_index/resource_index/package_run_dependencies/robot_planner
+[55.953s] -- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/ament_index/resource_index/parent_prefix_path/robot_planner
+[55.953s] -- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/environment/ament_prefix_path.sh
+[55.953s] -- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/environment/ament_prefix_path.dsv
+[55.954s] -- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/environment/path.sh
+[55.954s] -- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/environment/path.dsv
+[55.955s] -- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/local_setup.bash
+[55.955s] -- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/local_setup.sh
+[55.956s] -- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/local_setup.zsh
+[55.956s] -- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/local_setup.dsv
+[55.956s] -- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/package.dsv
+[55.956s] -- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/ament_index/resource_index/packages/robot_planner
+[55.957s] -- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/cmake/robot_plannerConfig.cmake
+[55.957s] -- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/cmake/robot_plannerConfig-version.cmake
+[55.957s] -- Installing: /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/install/robot_planner/share/robot_planner/package.xml
+[55.964s] Invoked command in '/home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_planner' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/misha/Documents/ROS2_Gazebo_tutorials/navigation_ws/build/robot_planner

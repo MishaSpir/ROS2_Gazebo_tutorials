@@ -67,10 +67,10 @@ def generate_launch_description():
         parameters=[ 
                 {"linear_speed": 1.0,
                 "angular_speed": 1.0,
-                "radar_ang_speed": 0.5,
+                "radar_ang_speed": 0.4,
                 "radar_timer_period_ms": 50,
-                "radar_min_angle": -1.5,
-                "radar_max_angle": 1.5           
+                "radar_min_angle": -1.2,
+                "radar_max_angle": 1.2           
                 }
                 ]
     )
@@ -89,6 +89,24 @@ def generate_launch_description():
             '--roll', '0',
             '--frame-id', 'base_link', # link робота
             '--child-frame-id', 'radar_link'] # link лидара
+        ),
+        Node(
+            package='robot_test_radar',
+            executable='robot_test_radar_node',
+            output='screen',
+            name='robot_test_radar_node',
+        parameters=[{
+                    
+                            # Параметры ICP
+                            'MaximumIterations': 100,
+                            'EuclideanFitnessEpsilon': 1e-6,
+                            'MaxCorrespondenceDistance': 0.3,
+
+                            # # Параметры фильтрации облака точек
+                            'Leaf': 0.05, #
+                            # 'MeanK': 30,
+                            # 'StddevMulThresh': 1.5,
+                        }]
         ),
         ExecuteProcess(
             cmd = ['gazebo','--verbose', world_path, '-s', 'libgazebo_ros_factory.so'],

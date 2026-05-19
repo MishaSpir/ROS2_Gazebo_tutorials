@@ -1,0 +1,16 @@
+[0.063s] Invoking command in '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/build/robot_test_radar': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/build/robot_test_radar -- -j8 -l8
+[0.246s] [ 50%] [32mBuilding CXX object CMakeFiles/robot_test_radar_node.dir/src/robot_test_radar_node.cpp.o[0m
+[5.349s] [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/src/robot_test_radar/src/robot_test_radar_node.cpp:[m[K In constructor ‘[01m[KRobotNode::RobotNode()[m[K’:
+[5.349s] [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/src/robot_test_radar/src/robot_test_radar_node.cpp:72:35:[m[K [01;31m[Kerror: [m[K‘[01m[KscanCallback[m[K’ is not a member of ‘[01m[KRobotNode[m[K’
+[5.350s]    72 |             std::bind(&RobotNode::[01;31m[KscanCallback[m[K, this, std::placeholders::_1));
+[5.350s]       |                                   [01;31m[K^~~~~~~~~~~~[m[K
+[5.350s] [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/src/robot_test_radar/src/robot_test_radar_node.cpp:76:35:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoint_callback[m[K’ is not a member of ‘[01m[KRobotNode[m[K’
+[5.350s]    76 |             std::bind(&RobotNode::[01;31m[Kjoint_callback[m[K, this, std::placeholders::_1));
+[5.350s]       |                                   [01;31m[K^~~~~~~~~~~~~~[m[K
+[5.352s] [01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/src/robot_test_radar/src/robot_test_radar_node.cpp:86:35:[m[K [01;31m[Kerror: [m[K‘[01m[Kdirection_callback[m[K’ is not a member of ‘[01m[KRobotNode[m[K’
+[5.353s]    86 |             std::bind(&RobotNode::[01;31m[Kdirection_callback[m[K, this, std::placeholders::_1));
+[5.353s]       |                                   [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[7.482s] gmake[2]: *** [CMakeFiles/robot_test_radar_node.dir/build.make:76: CMakeFiles/robot_test_radar_node.dir/src/robot_test_radar_node.cpp.o] Error 1
+[7.483s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/robot_test_radar_node.dir/all] Error 2
+[7.483s] gmake: *** [Makefile:146: all] Error 2
+[7.488s] Invoked command in '/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/build/robot_test_radar' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/build/robot_test_radar -- -j8 -l8

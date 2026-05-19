@@ -59,12 +59,12 @@ def main(args=None):
     
     # Параметры движения
     model_name = 'moving_block'
-    start_x = -2.0
-    end_x = 2.0
+    start_x = -1.5
+    end_x = 1.5
     step = 0.1  # шаг перемещения в метрах
     y_pos = 1.5
     z_pos = 0.25
-    delay = 0.1  # задержка между перемещениями (секунды)
+    delay = 0.2  # задержка между перемещениями (секунды)
     
     current_x = start_x
     direction = 1  # 1 = вперед, -1 = назад

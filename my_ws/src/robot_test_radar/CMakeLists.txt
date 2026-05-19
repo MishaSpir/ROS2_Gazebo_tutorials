@@ -10,10 +10,11 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 # find_package(nav_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
+find_package(visualization_msgs REQUIRED)  # Для маркеров (опционально)
 # find_package(tf2_ros REQUIRED)
 # find_package(Eigen3 REQUIRED)
-# find_package(PCL REQUIRED)
-# find_package(pcl_conversions REQUIRED)
+find_package(PCL REQUIRED)
+find_package(pcl_conversions REQUIRED)
 # find_package(tf2_geometry_msgs REQUIRED)
 # uncomment the following section in order to fill in
 # further dependencies manually.
@@ -35,14 +36,15 @@ include_directories(
 )
 add_executable(${PROJECT_NAME}_node src/${PROJECT_NAME}_node.cpp)
 # include_directories(${LIBEVDEV_INCLUDE_DIRS})
-# target_link_libraries(${PROJECT_NAME}_node Eigen3::Eigen)
+# target_link_libraries(${PROJECT_NAME}_node Eigen3::Eigen )
 ament_target_dependencies(${PROJECT_NAME}_node 
 rclcpp
 # nav_msgs
 sensor_msgs
+visualization_msgs
 # tf2_ros
-# PCL
-# pcl_conversions
+PCL
+pcl_conversions
 # tf2_geometry_msgs
 )
 install(TARGETS

@@ -5,6 +5,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <cmath>
+#include <std_msgs/msg/int8.hpp>  // Для публикации направления
 
 using namespace std::chrono_literals;
 
@@ -53,6 +54,11 @@ public:
         joint_sub = this->create_subscription<sensor_msgs::msg::JointState>(
             "/joint_states", 10,
             std::bind(&KeyboardTeleop::joint_callback, this, std::placeholders::_1));
+
+
+        // Публикатор направления радара
+        radar_direction_pub = this->create_publisher<std_msgs::msg::Int8>(
+            "/radar_direction", 10);    
         
         // Инициализация клавиатуры
         const char *device = "/dev/input/by-path/pci-0000:00:14.0-usb-0:1:1.0-event-kbd";
@@ -72,7 +78,7 @@ public:
         timer = create_wall_timer(20ms, std::bind(&KeyboardTeleop::timer_callback, this));
         radar_tick_timer = create_wall_timer(radar_timer_period, std::bind(&KeyboardTeleop::radar_tick_timer_callback, this));
         
-        RCLCPP_INFO(this->get_logger(), "Используйте W A S D для управления");
+        RCLCPP_INFO(this->get_logger(), " W A S D для управления");
         RCLCPP_INFO(this->get_logger(), "Радар сканирует от %.1f до %.1f градусов", 
                    radar_min_angle * 180.0 / M_PI, radar_max_angle * 180.0 / M_PI);
     }
@@ -98,6 +104,10 @@ public:
                 // Проверяем границы и меняем направление
                 if (current_radar_angle >= radar_max_angle && radar_direction > 0 && !is_stopped) {     
                     radar_direction = -1;
+
+                    auto direction_msg = std_msgs::msg::Int8();
+                    direction_msg.data = radar_direction;
+                    radar_direction_pub->publish(direction_msg);
                     // Делаем паузу перед сменой направления
                     is_stopped = true;
                     stop_timer = this->create_wall_timer(
@@ -105,6 +115,9 @@ public:
                 }
                 else if (current_radar_angle <= radar_min_angle && radar_direction < 0 && !is_stopped) {
                     radar_direction = 1;
+                    auto direction_msg = std_msgs::msg::Int8();
+                    direction_msg.data = radar_direction;
+                    radar_direction_pub->publish(direction_msg);
                     // Делаем паузу перед сменой направления
                     is_stopped = true;
                     stop_timer = this->create_wall_timer(
@@ -118,7 +131,7 @@ public:
     void resume_rotation() {
         is_stopped = false;
         stop_timer.reset();  // Останавливаем таймер
-        RCLCPP_INFO(this->get_logger(), "Возобновляем вращение радара");
+        // RCLCPP_INFO(this->get_logger(), "Возобновляем вращение радара");
     }
     
     void timer_callback() {
@@ -174,6 +187,7 @@ private:
     rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr cmd_pub;
     rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr radar_cmd_pub;
     rclcpp::Subscription<sensor_msgs::msg::JointState>::SharedPtr joint_sub;
+    rclcpp::Publisher<std_msgs::msg::Int8>::SharedPtr radar_direction_pub;
     rclcpp::TimerBase::SharedPtr timer;
     rclcpp::TimerBase::SharedPtr radar_tick_timer;
     rclcpp::TimerBase::SharedPtr stop_timer;

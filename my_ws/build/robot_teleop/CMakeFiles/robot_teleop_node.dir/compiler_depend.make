@@ -731,8 +731,18 @@ CMakeFiles/robot_teleop_node.dir/src/robot_teleop_node.cpp.o: /home/misha/Docume
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
   /usr/include/linux/falloc.h \
   /usr/include/x86_64-linux-gnu/bits/stat.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_stat.h
+  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/int8.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int8__struct.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int8__builder.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int8__traits.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int8__type_support.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
 
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/int8.hpp:
 
 /usr/include/x86_64-linux-gnu/asm/posix_types_64.h:
 
@@ -765,6 +775,8 @@ CMakeFiles/robot_teleop_node.dir/src/robot_teleop_node.cpp.o: /home/misha/Docume
 /usr/include/x86_64-linux-gnu/sys/time.h:
 
 /usr/include/linux/input.h:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int8__type_support.hpp:
 
 /usr/include/libevdev-1.0/libevdev/libevdev.h:
 
@@ -1059,6 +1071,8 @@ CMakeFiles/robot_teleop_node.dir/src/robot_teleop_node.cpp.o: /home/misha/Docume
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_value__traits.hpp:
 
 /usr/include/c++/11/functional:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int8__traits.hpp:
 
 /usr/include/asm-generic/errno-base.h:
 
@@ -1380,6 +1394,8 @@ CMakeFiles/robot_teleop_node.dir/src/robot_teleop_node.cpp.o: /home/misha/Docume
 
 /opt/ros/humble/include/rmw/rmw/message_sequence.h:
 
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int8__builder.hpp:
+
 /opt/ros/humble/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:
 
 /usr/include/features.h:
@@ -1639,6 +1655,8 @@ CMakeFiles/robot_teleop_node.dir/src/robot_teleop_node.cpp.o: /home/misha/Docume
 /usr/include/c++/11/bits/uniform_int_dist.h:
 
 /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__traits.hpp:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int8__struct.hpp:
 
 /usr/include/c++/11/bits/cxxabi_init_exception.h:
 

@@ -1,0 +1,14 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/robot_test_radar_node.dir/src/robot_test_radar_node.cpp.o[0m
+[01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/src/robot_test_radar/src/robot_test_radar_node.cpp:[m[K In constructor ‘[01m[KRobotNode::RobotNode()[m[K’:
+[01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/src/robot_test_radar/src/robot_test_radar_node.cpp:72:35:[m[K [01;31m[Kerror: [m[K‘[01m[KscanCallback[m[K’ is not a member of ‘[01m[KRobotNode[m[K’
+   72 |             std::bind(&RobotNode::[01;31m[KscanCallback[m[K, this, std::placeholders::_1));
+      |                                   [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/src/robot_test_radar/src/robot_test_radar_node.cpp:76:35:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoint_callback[m[K’ is not a member of ‘[01m[KRobotNode[m[K’
+   76 |             std::bind(&RobotNode::[01;31m[Kjoint_callback[m[K, this, std::placeholders::_1));
+      |                                   [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/misha/Documents/ROS2_Gazebo_tutorials/my_ws/src/robot_test_radar/src/robot_test_radar_node.cpp:86:35:[m[K [01;31m[Kerror: [m[K‘[01m[Kdirection_callback[m[K’ is not a member of ‘[01m[KRobotNode[m[K’
+   86 |             std::bind(&RobotNode::[01;31m[Kdirection_callback[m[K, this, std::placeholders::_1));
+      |                                   [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/robot_test_radar_node.dir/build.make:76: CMakeFiles/robot_test_radar_node.dir/src/robot_test_radar_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/robot_test_radar_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

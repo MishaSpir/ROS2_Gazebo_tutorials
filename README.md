@@ -92,4 +92,5 @@ sudo chmod 777 /dev/input/by-path/pci-0000:00:14.0-usb-0:1:1.0-event-kbd
 ## добавил подвижный куб (динамическое препятствие)
 ![alt text](image-5.png)
 прептствия разделены
-![alt text](image-6.png)
+
+![alt text](<Pasted image 20260519230742.png>)

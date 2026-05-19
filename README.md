@@ -88,3 +88,6 @@ sudo chmod 777 /dev/input/by-path/pci-0000:00:14.0-usb-0:1:1.0-event-kbd
 Чем меньше диаграмма направленности, тем меньше боковые искажения
 ![alt text](image-4.png)
 ![alt text](image-3.png)
+
+## добавил подвижный куб (динамическое препятствие)
+![alt text](image-5.png)

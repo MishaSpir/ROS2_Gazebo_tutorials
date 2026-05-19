@@ -4,7 +4,7 @@
 #include <sensor_msgs/msg/laser_scan.hpp>
 #include <sensor_msgs/msg/range.hpp>
 #include <sensor_msgs/msg/point_cloud2.hpp>
-#include <sensor_msgs/msg/joint_state.hpp> // для иметации обратной связи с колёс
+#include <sensor_msgs/msg/joint_state.hpp> 
 #include <cmath>
 #include <std_msgs/msg/int8.hpp>  // Для публикации направления
 
@@ -14,17 +14,7 @@
 #include <pcl/filters/voxel_grid.h>
 #include <pcl/filters/statistical_outlier_removal.h>
 
-// #include <tf2_ros/transform_broadcaster.h> // для созданние бродкастера трансформации
-// #include <geometry_msgs/msg/transform_stamped.hpp>
-// #include <tf2/LinearMath/Quaternion.h>  
-// #include <Eigen/Dense> // для матриц
-// #include <pcl/point_types.h>
-// #include <pcl/registration/gicp.h>
-// #include <pcl_conversions/pcl_conversions.h>
-// #include <pcl/filters/voxel_grid.h>
-// #include <pcl/filters/statistical_outlier_removal.h>
-// #include <geometry_msgs/msg/pose_stamped.hpp>
-// #include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
+
 
 
 using namespace std::chrono_literals;
@@ -53,9 +43,7 @@ public:
 
 
     
-        // pointCloud_pub = create_publisher<sensor_msgs::msg::PointCloud2>("/map_cloud", 1); // Публикатор карты
-        // pose_publisher = create_publisher<geometry_msgs::msg::PoseStamped>("/ekf_pose", 1); // Публикатор позы EKF
-        // // Подписчик на сканы лидара (топик /scan, очередь 10 сообщений)
+ 
         scan_sub = create_subscription<sensor_msgs::msg::Range>(
             "/ultrasonic_range", 10, std::bind(&RobotNode::scanCallback,
                       this, std::placeholders::_1));
@@ -77,15 +65,6 @@ public:
 
             current_direction = 1;
             scan_number = 0;
-        // // Подписчик на одометрию (топик /odom, очередь 1 сообщение)
-        // odom_sub =
-        //     this->create_subscription<nav_msgs::msg::Odometry>("/odom", 1,
-        //                                                               std::bind(&RobotSlam::odomCallback, this,
-        //                                                                                     std::placeholders::_1));              
-        // tf_broadcaster = std::make_unique<tf2_ros::TransformBroadcaster>(this); // Широковещатель трансформации
-        
-        // sm.setMode(MatcherMode::Multiscan); // Установка режима накопления карты
-        // // Таймер на 1 секунду — основной цикл обработки
         timer = this->create_wall_timer(100ms, std::bind(&RobotNode::timer_callback, this));
     }
 
@@ -514,37 +493,6 @@ private:
     std::vector<double> previous_points_y;
     std::vector<double> dynamic_points_x;
     std::vector<double> dynamic_points_y;
-
-    // // Броадкастер для публикации TF трансформаций (map -> odom)
-    // std::unique_ptr<tf2_ros::TransformBroadcaster> tf_broadcaster;
-    //  // Публикатор позы робота (от EKF) в топик /ekf_pose
-    // rclcpp::Publisher<geometry_msgs::msg::PoseStamped>::SharedPtr pose_publisher;
-
-   
-    // // Текущий лазерный скан (последнее полученное сообщение)
-    // sensor_msgs::msg::LaserScan current_scan;
-
-    // // Параметры шумов (launch)
-    // std::vector<double> motion_noise;  // Шум модели движения [dx, dy, dtheta]
-    // std::vector<double> measurement_noise;  // Шум измерений ICP [x, y, theta]
-    // // Объект класса сопоставления сканов (ICP + фильтры)
-    // ScanMatcher sm;
-    // // Флаг наличия нового скана для обработки
-    // bool is_new_scan;
-
-
-    // //=============ОДОМЕТРИЯ
-    // rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr odom_sub;
-    // geometry_msgs::msg::Pose odom_previous_pose;  // Предыдущая поза из одометрии
-    // geometry_msgs::msg::Pose odom_current_pose;   // Текущая поза из одометрии
-    // bool odom_has_previous_pose;  // Флаг инициализации (была ли получена первая поза)
-
-    // //=============Переменные фильтр Калмана (EKF)
-    // Eigen::Vector3d x_hat;  // Оценка состояния [x, y, theta] — поза робота
-    // Eigen::Matrix3d P;  // Матрица ковариации ошибок оценки состояния
-    // Eigen::Matrix3d P_predicted;  // Предсказанная ковариация (на шаге прогноза)
-    // Eigen::Matrix3d Q;  // Матрица ковариации шума модели движения (берем из одометрии)
-    // Eigen::Matrix3d R;  // Матрица ковариации шума измерений (берем из алгоритма icp)
 
 };
 

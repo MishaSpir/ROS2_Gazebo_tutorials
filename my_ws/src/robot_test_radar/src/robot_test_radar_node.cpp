@@ -39,7 +39,9 @@ public:
         this->declare_parameter("MaximumIterations", 100);
         this->declare_parameter("EuclideanFitnessEpsilon", 1.0);     
         this->declare_parameter("MaxCorrespondenceDistance", 1.0); 
-        this->declare_parameter("Leaf", 1.0);         
+        this->declare_parameter("Leaf", 1.0);
+        this->declare_parameter("match_distance_pointcld", 1.0);
+                 
 
 
         
@@ -47,6 +49,7 @@ public:
         icp_epsilon = get_parameter("EuclideanFitnessEpsilon").as_double();
         icp_max_distance = get_parameter("MaxCorrespondenceDistance").as_double();
         leaf = get_parameter("Leaf").as_double();
+        match_distance = get_parameter("match_distance_pointcld").as_double();
 
 
     
@@ -64,11 +67,14 @@ public:
 
         dynamic_point_cloud_pub = create_publisher<sensor_msgs::msg::PointCloud2>(
             "/dynamic_point_cloud", 10);    
-            
+        static_point_cloud_pub = create_publisher<sensor_msgs::msg::PointCloud2>(
+            "/static_point_cloud", 10);    
+
         direction_sub = create_subscription<std_msgs::msg::Int8>(
             "/radar_direction", 10,
             std::bind(&RobotNode::direction_callback, this, std::placeholders::_1));
             
+
             current_direction = 1;
             scan_number = 0;
         // // Подписчик на одометрию (топик /odom, очередь 1 сообщение)
@@ -246,6 +252,7 @@ private:
     rclcpp::Subscription<sensor_msgs::msg::JointState>::SharedPtr joint_sub;
     rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr point_cloud_pub;
     rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr dynamic_point_cloud_pub;
+    rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr static_point_cloud_pub;
     sensor_msgs::msg::Range current_scan;
     rclcpp::Subscription<std_msgs::msg::Int8>::SharedPtr direction_sub;
     bool is_new_scan = false;
@@ -265,7 +272,6 @@ private:
 
 
 
-    private:
     // PCL типы
     pcl::PointCloud<pcl::PointXYZ>::Ptr prev_cloud;
     pcl::PointCloud<pcl::PointXYZ>::Ptr current_cloud;
@@ -275,6 +281,8 @@ private:
     double icp_epsilon ;
     double icp_max_distance;
     
+    double match_distance;
+
     double leaf;
     
     // Преобразование из точек в PCL облако
@@ -348,7 +356,7 @@ private:
         
         // Находим динамические точки (которые не совпадают с предыдущим облаком)
         std::vector<size_t> dynamic_indices;
-        double match_distance = 0.2;  // 10 см порог совпадения
+        match_distance = 0.2;  // порог совпадения
         
         for (size_t i = 0; i < transformed_curr->size(); ++i) {
             const auto& curr_point = (*transformed_curr)[i];
@@ -407,6 +415,7 @@ private:
         previous_points_y = points_y;
         
         // Публикуем динамические точки (красным цветом)
+        publishStaticPoints();     
         publishDynamicPoints();
     }
     
@@ -455,6 +464,51 @@ private:
         dynamic_point_cloud_pub->publish(std::move(cloud_msg));
     }
     
+        // Публикация статических точек (зеленым цветом)
+    void publishStaticPoints() {
+        if (previous_points_x.empty()) return;
+
+        auto cloud_msg = std::make_unique<sensor_msgs::msg::PointCloud2>();
+        cloud_msg->header.stamp = this->get_clock()->now();
+        cloud_msg->header.frame_id = "radar_link";
+        cloud_msg->height = 1;
+        cloud_msg->width = previous_points_x.size();
+        cloud_msg->is_dense = true;
+
+        // Настраиваем поля (x, y, z)
+        sensor_msgs::msg::PointField field_x, field_y, field_z;
+        field_x.name = "x";
+        field_x.offset = 0;
+        field_x.datatype = sensor_msgs::msg::PointField::FLOAT32;
+        field_x.count = 1;
+
+        field_y.name = "y";
+        field_y.offset = 4;
+        field_y.datatype = sensor_msgs::msg::PointField::FLOAT32;
+        field_y.count = 1;
+
+        field_z.name = "z";
+        field_z.offset = 8;
+        field_z.datatype = sensor_msgs::msg::PointField::FLOAT32;
+        field_z.count = 1;
+
+        cloud_msg->fields = {field_x, field_y, field_z};
+        cloud_msg->point_step = 12;
+        cloud_msg->row_step = cloud_msg->point_step * cloud_msg->width;
+        cloud_msg->data.resize(cloud_msg->row_step);
+
+        for (size_t i = 0; i < previous_points_x.size(); ++i) {
+            float x = static_cast<float>(previous_points_x[i]);
+            float y = static_cast<float>(previous_points_y[i]);
+            float z = 0.0f;
+            memcpy(&cloud_msg->data[i * cloud_msg->point_step + 0], &x, sizeof(float));
+            memcpy(&cloud_msg->data[i * cloud_msg->point_step + 4], &y, sizeof(float));
+            memcpy(&cloud_msg->data[i * cloud_msg->point_step + 8], &z, sizeof(float));
+        }
+
+        static_point_cloud_pub->publish(std::move(cloud_msg));
+    }
+
     // Переменные для хранения
     std::vector<double> previous_points_x;
     std::vector<double> previous_points_y;

@@ -98,12 +98,13 @@ def generate_launch_description():
         parameters=[{
                     
                             # Параметры ICP
-                            'MaximumIterations': 100,
+                            'MaximumIterations': 300,
                             'EuclideanFitnessEpsilon': 1e-6,
                             'MaxCorrespondenceDistance': 0.3,
+                            "match_distance_pointcld": 0.5,
 
                             # # Параметры фильтрации облака точек
-                            'Leaf': 0.05, #
+                            'Leaf': 0.04,
                             # 'MeanK': 30,
                             # 'StddevMulThresh': 1.5,
                         }]

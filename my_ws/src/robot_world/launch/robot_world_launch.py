@@ -101,7 +101,7 @@ def generate_launch_description():
                             'MaximumIterations': 300,
                             'EuclideanFitnessEpsilon': 1e-6,
                             'MaxCorrespondenceDistance': 0.3,
-                            "match_distance_pointcld": 0.5,
+                            "match_distance_pointcld": 0.18,
 
                             # # Параметры фильтрации облака точек
                             'Leaf': 0.04,

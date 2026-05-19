@@ -15,7 +15,10 @@
 #include <pcl/filters/statistical_outlier_removal.h>
 
 
-
+struct ScanComparisonResult {
+    std::vector<size_t> dynamic_indices;  // Индексы динамических точек
+    std::vector<size_t> static_indices;   // Индексы статических точек
+};
 
 using namespace std::chrono_literals;
 
@@ -224,9 +227,6 @@ void processMeasurement() {
     }    
 
 private:
-    // // Публикатор объединённого облака точек (карты) в топик /map_cloud
-    // rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pointCloud_pub;
-    // Подписчик на сканы радара в топик /ultrasonic_range
     rclcpp::Subscription<sensor_msgs::msg::Range>::SharedPtr scan_sub;
     rclcpp::Subscription<sensor_msgs::msg::JointState>::SharedPtr joint_sub;
     rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr point_cloud_pub;
@@ -281,11 +281,13 @@ private:
     }
     
     // Функция для поиска динамических точек через ICP
-    std::vector<size_t> findDynamicPoints(const std::vector<double>& prev_x,
+ScanComparisonResult findDynamicPoints(const std::vector<double>& prev_x,
                                            const std::vector<double>& prev_y,
                                            const std::vector<double>& curr_x,
                                            const std::vector<double>& curr_y) {
         
+        ScanComparisonResult result;                                    
+
         if (prev_x.empty() || curr_x.empty()) {
             return {};
         }
@@ -334,8 +336,8 @@ private:
         pcl::transformPointCloud(*curr_filtered, *transformed_curr, transform);
         
         // Находим динамические точки (которые не совпадают с предыдущим облаком)
-        std::vector<size_t> dynamic_indices;
-        match_distance = 0.2;  // порог совпадения
+        // std::vector<size_t> dynamic_indices;
+        // match_distance = 0.2;  // порог совпадения
         
         for (size_t i = 0; i < transformed_curr->size(); ++i) {
             const auto& curr_point = (*transformed_curr)[i];
@@ -348,21 +350,24 @@ private:
                 double dist = sqrt(dx*dx + dy*dy);
                 
                 if (dist < match_distance) {
+                    result.static_indices.push_back(i); // Нашла совпадение -> статическая
                     has_match = true;
                     break;
                 }
             }
             
             if (!has_match) {
-                dynamic_indices.push_back(i);
+                // dynamic_indices.push_back(i);
+                result.dynamic_indices.push_back(i);  // Не нашла -> динамическая
+                
             }
         }
         
-        RCLCPP_INFO(this->get_logger(), 
-                   "Found %zu dynamic points out of %zu total", 
-                   dynamic_indices.size(), transformed_curr->size());
+        // RCLCPP_INFO(this->get_logger(), 
+        //            "Found %zu dynamic points out of %zu total", 
+        //            dynamic_indices.size(), transformed_curr->size());
         
-        return dynamic_indices;
+        return result;
     }
     
     // Обновленная версия сравнения сканов
@@ -374,18 +379,34 @@ private:
         }
         
         // Находим динамические точки
-        std::vector<size_t> dynamic_idx = findDynamicPoints(
-            previous_points_x, previous_points_y,
-            points_x, points_y);
+        // std::vector<size_t> dynamic_idx = findDynamicPoints(
+        //     previous_points_x, previous_points_y,
+        //     points_x, points_y);
+
+        // Получаем результат сравнения
+        ScanComparisonResult result = findDynamicPoints(
+        previous_points_x, previous_points_y,
+        points_x, points_y);
         
         // Визуализируем динамические точки
         dynamic_points_x.clear();
         dynamic_points_y.clear();
+
+        // Очищаем и заполняем статические точки для текущего скана
+        current_static_x.clear();
+        current_static_y.clear();
         
-        for (size_t idx : dynamic_idx) {
+        for (size_t idx : result.dynamic_indices) {
             if (idx < points_x.size()) {
                 dynamic_points_x.push_back(points_x[idx]);
                 dynamic_points_y.push_back(points_y[idx]);
+            }
+        }
+
+        for (size_t idx : result.static_indices) {
+            if (idx < points_x.size()) {
+                current_static_x.push_back(points_x[idx]);
+                current_static_y.push_back(points_y[idx]);
             }
         }
         
@@ -445,13 +466,13 @@ private:
     
         // Публикация статических точек (зеленым цветом)
     void publishStaticPoints() {
-        if (previous_points_x.empty()) return;
+        if (current_static_x.empty()) return;
 
         auto cloud_msg = std::make_unique<sensor_msgs::msg::PointCloud2>();
         cloud_msg->header.stamp = this->get_clock()->now();
         cloud_msg->header.frame_id = "radar_link";
         cloud_msg->height = 1;
-        cloud_msg->width = previous_points_x.size();
+        cloud_msg->width = current_static_x.size();
         cloud_msg->is_dense = true;
 
         // Настраиваем поля (x, y, z)
@@ -476,9 +497,9 @@ private:
         cloud_msg->row_step = cloud_msg->point_step * cloud_msg->width;
         cloud_msg->data.resize(cloud_msg->row_step);
 
-        for (size_t i = 0; i < previous_points_x.size(); ++i) {
-            float x = static_cast<float>(previous_points_x[i]);
-            float y = static_cast<float>(previous_points_y[i]);
+        for (size_t i = 0; i < current_static_x.size(); ++i) {
+            float x = static_cast<float>(current_static_x[i]);
+            float y = static_cast<float>(current_static_y[i]);
             float z = 0.0f;
             memcpy(&cloud_msg->data[i * cloud_msg->point_step + 0], &x, sizeof(float));
             memcpy(&cloud_msg->data[i * cloud_msg->point_step + 4], &y, sizeof(float));
@@ -493,6 +514,9 @@ private:
     std::vector<double> previous_points_y;
     std::vector<double> dynamic_points_x;
     std::vector<double> dynamic_points_y;
+    std::vector<double> current_static_x;
+    std::vector<double> current_static_y;
+
 
 };
 

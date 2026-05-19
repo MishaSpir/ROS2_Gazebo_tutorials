@@ -61,7 +61,7 @@ public:
             "/radar_direction", 10);    
         
         // Инициализация клавиатуры
-        const char *device = "/dev/input/by-path/pci-0000:00:14.0-usb-0:1:1.0-event-kbd";
+        const char *device = "/dev/input/by-path/pci-0000:00:14.0-usb-0:2:1.0-event-kbd";
         fd = open(device, O_RDONLY | O_NONBLOCK);
         if(fd < 0) {
             RCLCPP_ERROR_STREAM(this->get_logger(), "Не удалось открыть устройство");

@@ -10,7 +10,11 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(PkgConfig REQUIRED)
+find_package(gazebo_ros REQUIRED)
+find_package(gazebo_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
 pkg_check_modules(LIBEVDEV REQUIRED libevdev)
+
 
 # uncomment the following section in order to fill in
 # further dependencies manually.
@@ -34,6 +38,9 @@ target_link_libraries(${PROJECT_NAME}_node ${LIBEVDEV_LIBRARIES})
 ament_target_dependencies(${PROJECT_NAME}_node
   rclcpp
   geometry_msgs
+  gazebo_ros
+  gazebo_msgs
+  sensor_msgs
 )
 install(
   TARGETS

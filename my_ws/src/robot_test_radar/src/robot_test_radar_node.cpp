@@ -117,7 +117,7 @@ void processMeasurement() {
             // Преобразуем полярные координаты в декартовы
             // Точка в системе координат радара
             double x = range_val * cos(current_radar_angle);
-            double y = range_val * sin(current_radar_angle);
+            double y = -range_val * sin(current_radar_angle);
             
             // Добавляем точку в облако
             points_x.push_back(x);
